@@ -4,13 +4,13 @@
 	<meta charset="UTF-8">
 
 	<!--/ /---- Put your name in the title of the page ----/ /-->
-	<title>PES1UG22CS362</title>
+	<title>Pranav Mudar - Portfolio</title>
 	
 	<!--/ /-------- Normalize CSS --------/ /-->
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
 	
 	<!--/ /-------- Google Fonts --------/ /-->
-	<!-- Add a link to google fonts here if you want them -->
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 	
 	<!--/ /-------- Font Awesome --------/ /-->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
@@ -19,7 +19,7 @@
 	<link href="styles.css" rel="stylesheet">
 
 	<!--/ /---Put a short description for your site below. 20 words or less---/ /-->
-	<meta description="A short description for your site...">
+	<meta description="Pranav Mudar - Computer Science student and developer specializing in web technologies and AI/ML">
 
 	<!--/ /-------- Needed For Mobile Devices --------/ /-->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -34,15 +34,14 @@
 	content.
     ------------------------------------------------------- -->
     
-	<header class="primary">
+	<header>
         <div class="wrapper">
             
 			<div class="logo-container">
-				<h1>Mudar Pranav</h1>
-				<!-- ------------------------------------------------------
-				Note that the image of the logo is linked to the home page.
-				------------------------------------------------------- -->
-				<a href="index.html"><img src="https://dummyimage.com/175/c4c4c4/fff&text=logo" alt="logo image" id="logo"></a>
+				<div class="profile-image">
+					<img src="Me - 3 (Lake).jpeg" alt="Pranav Mudar" id="avatar">
+				</div>
+				<h1>Pranav Mudar</h1>
 			</div>
             
             
@@ -52,9 +51,10 @@
             ------------------------------------------------------- -->
 			<nav id="mainnav">
             	<ul>
-                	<li><a href="#work">Work</a></li>
+                	<li><a href="#work">Projects</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#education">Education</a></li>
                     <li><a href="#about-contact">About</a></li>
-                    <li><a href="#about-contact">Contact</a></li>
                 </ul>
             </nav>
             
@@ -67,70 +67,80 @@
 	section and the projects section.
     ------------------------------------------------------- -->
     
+    <section id="hero">
+        <div class="wrapper">
+            <div class="hero-content">
+                <h2>Computer Science Student & Developer</h2>
+                <p>Passionate about Web Technologies, Programming, and Data Analytics</p>
+                <div class="contact-info">
+                    <p><i class="fa fa-envelope" aria-hidden="true"></i> <a href="mailto:mudarpranav3@gmail.com">mudarpranav3@gmail.com</a></p>
+                    <p><i class="fa fa-phone" aria-hidden="true"></i> (+91) 9959956470</p>
+                    <p><i class="fab fa-linkedin" aria-hidden="true"></i> <a href="https://linkedin.com/in/Pranav-Mudar/" target="_blank">linkedin.com/in/Pranav-Mudar/</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
     <section id="work">
    		<div class="wrapper">
-        	<h2>Check Out My Best Projects</h2>
-        	<section class="featured">
-                <article>
-                	<!-- ------------------------------------------------------
-                    Link the image below to the detail page for this project.
-                    Use the page.html file to make that page. Also link the 
-                    anchor tag in the paragraph below to the same page.
-                    ------------------------------------------------------- -->
-                	<a href="#"><img src="https://dummyimage.com/510x300/c4c4c4/fff&text=Featured+Project" alt="image"></a>
-                </article>
-                
-                <article>
-                	<h3>Title of Project</h3>
-                    <h4>Challenge Statement</h4>
-                    <p>Before they sold out single-origin coffee fingerstache sartorial freegan master cleanse. Sartorial blog fap, shoreditch scenester tacos poutine. Bespoke brunch viral listicle, keffiyeh celiac paleo organic scenester next level cliche put a bird on it cardigan. Forage kombucha pitchfork literally. Art party narwhal food truck selfies, XOXO leggings distillery four loko fap. An additional sentence.</p> <p><a href="#">Find out how I solved this problem</a></p> 
-                </article>
-            </section> <!-- end row -->
-            
-            
-            <!-- ------------------------------------------------------
-            The projects section is for additional projects. I put four in
-			here, but it could be more, or less. You just have to pay
-			attention to how they wrap, and how many you want per row.
-            
-            Note that each image should be linked to the page with more
-            detailed information about that project. You can use a copy of
-            page.html to create those pages.
-            ------------------------------------------------------- -->
-            
+        	<h2>Featured Projects</h2>
+        	
             <section class="projects">
-            
-            	<article>
-                	<h3>Project Title</h3>
-                	<a href="#"><img src="https://dummyimage.com/340x200/c4c4c4/fff&text=Another+Project" alt="image"></a>
-                    <p><strong>Role:</strong> Designer</p>
-                    <p><strong>Description:</strong> Website for a restaurant and redesigned the online menu.</p>
+                <article>
+                	<h3>Disaster Management Website</h3>
+                	<a href="https://cdn.pixabay.com/photo/2016/10/28/13/09/usa-1777986_1280.jpg" target="_blank" class="project-image">
+                		<img src="https://cdn.pixabay.com/photo/2016/10/28/13/09/usa-1777986_640.jpg" alt="Disaster Management Project">
+                	</a>
+                    <p><strong>Technologies:</strong> HTML, JavaScript, Python, MySQL</p>
+                    <p><strong>Description:</strong> Developed a dynamic website that facilitates NGOs to get help for disasters within the country. Users and volunteers can check and access disasters while volunteers can apply for volunteering at disaster sites and admin can add disasters and training sessions.</p>
                 </article>
                 
                 <article>
-                	<h3>Project Title</h3>
-                	<a href="#"><img src="https://dummyimage.com/340x200/c4c4c4/fff&text=Another+Project" alt="image"></a>
-                    <p><strong>Role:</strong> Designer</p>
-                    <p><strong>Description:</strong> Website for a restaurant and redesigned the online menu.</p>
+                	<h3>Chat Server with File Transfer</h3>
+                	<a href="https://cdn.pixabay.com/photo/2013/07/12/18/17/equalizer-153212_1280.png" target="_blank" class="project-image">
+                		<img src="https://cdn.pixabay.com/photo/2013/07/12/18/17/equalizer-153212_640.png" alt="Chat Server Project">
+                	</a>
+                    <p><strong>Technologies:</strong> Socket Programming</p>
+                    <p><strong>Description:</strong> Created a chat server between multiple systems where users can share files and the admin can kick or ban systems from the server. Features include system entry/exit logs and chat history. Supports multiple clients within one system that can chat, share files, and use other features.</p>
                 </article>
                 
                 <article>
-                	<h3>Project Title</h3>
-                	<a href="#"><img src="https://dummyimage.com/340x200/c4c4c4/fff&text=Another+Project" alt="image"></a>
-                    <p><strong>Role:</strong> Designer</p>
-                    <p><strong>Description:</strong> Website for a restaurant and redesigned the online menu.</p>
+                	<h3>Website with Attendance Calculator</h3>
+                	<a href="https://cdn.pixabay.com/photo/2015/05/28/14/38/ux-787980_1280.jpg" target="_blank" class="project-image">
+                		<img src="https://cdn.pixabay.com/photo/2015/05/28/14/38/ux-787980_640.jpg" alt="Attendance Calculator Project">
+                	</a>
+                    <p><strong>Technologies:</strong> HTML, JavaScript, Python, MySQL</p>
+                    <p><strong>Description:</strong> Developed a dynamic website with an Attendance Calculator and a robust search engine, facilitating automated tracking and quick information retrieval. Utilized front-end technologies (HTML, CSS, JavaScript) and MySQL for storing attendance records.</p>
                 </article>
 				
 				<article>
-                	<h3>Project Title</h3>
-                	<a href="#"><img src="https://dummyimage.com/340x200/c4c4c4/fff&text=Another+Project" alt="image"></a>
-                    <p><strong>Role:</strong> Designer</p>
-                    <p><strong>Description:</strong> Website for a restaurant and redesigned the online menu.</p>
+                	<h3>Collision Detection Device</h3>
+                	<a href="https://cdn.pixabay.com/photo/2017/03/23/12/32/arduino-2168193_1280.png" target="_blank" class="project-image">
+                		<img src="https://cdn.pixabay.com/photo/2017/03/23/12/32/arduino-2168193_640.png" alt="Collision Detection Device">
+                	</a>
+                    <p><strong>Technologies:</strong> Arduino, UV Sensors</p>
+                    <p><strong>Description:</strong> Created a device that detects when an object is too close to a sensor, alerting the user with speakers and lights to help avoid collisions. Developed a working prototype that was validated by the project coordinator.</p>
                 </article>
-            
-            </section><!-- end row -->
-            
-        </div> <!-- end work wrapper -->
+                
+                <article>
+                	<h3>Event Management Website</h3>
+                	<a href="https://cdn.pixabay.com/photo/2018/05/10/11/34/concert-3387324_1280.jpg" target="_blank" class="project-image">
+                		<img src="https://cdn.pixabay.com/photo/2018/05/10/11/34/concert-3387324_640.jpg" alt="Event Management Website">
+                	</a>
+                    <p><strong>Technologies:</strong> HTML, JavaScript, Python, MySQL</p>
+                    <p><strong>Description:</strong> Developed a dynamic website with a robust system for managing college events (both upcoming and current). Facilitated automated tracking and quick information retrieval using front-end technologies and MySQL for storing event data.</p>
+                </article>
+                
+                <article>
+                	<h3>Research on Generative AI</h3>
+                	<a href="https://cdn.pixabay.com/photo/2020/01/22/10/18/ai-4784917_1280.jpg" target="_blank" class="project-image">
+                		<img src="https://static.liveperson.com/static-assets/2023/04/14142148/Blog_Generative_AI_small_2x.jpg" alt="Generative AI Research">
+                	</a>
+                    <p><strong>Technologies:</strong> Machine Learning, AI</p>
+                    <p><strong>Description:</strong> Currently working on a research paper on Generative AI. The team is exploring various research papers to determine the specific problem statement and focus area within Generative AI.</p>
+                </article>
+            </section>
+        </div>
     </section>
     
     
@@ -139,42 +149,156 @@
     navigation link to this section. 
     ------------------------------------------------------- -->
     
+    <section id="skills" class="secondary">
+        <div class="wrapper">
+            <h2>Technical Skills</h2>
+            
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3>Programming Languages</h3>
+                    <ul class="skill-list">
+                        <li>Python</li>
+                        <li>Java</li>
+                        <li>C</li>
+                        <li>JavaScript</li>
+                        <li>HTML/CSS</li>
+                        <li>SQL</li>
+                        <li>Linux (Shell Programming)</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Machine Learning & AI</h3>
+                    <ul class="skill-list">
+                        <li>Scikit-learn</li>
+                        <li>TensorFlow</li>
+                        <li>Keras</li>
+                        <li>Statistics</li>
+                        <li>Supervised Learning</li>
+                        <li>Unsupervised Learning</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Database & Tools</h3>
+                    <ul class="skill-list">
+                        <li>MySQL</li>
+                        <li>SQL</li>
+                        <li>Jupyter Notebook</li>
+                        <li>GitHub</li>
+                        <li>Microsoft Office</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="education">
+        <div class="wrapper">
+            <h2>Education</h2>
+            
+            <div class="education-item">
+                <div class="education-details">
+                    <h3>People Education Society (PES) University, Bangalore, India</h3>
+                    <p class="education-date">July 2022 - Present</p>
+                    <p class="education-degree">Bachelors of Science, Computer Science and Engineering (Junior)</p>
+                    <p class="education-gpa">CGPA: 8.52/10</p>
+                    <p class="education-achievements">Won 2 university-level hackathons</p>
+                </div>
+            </div>
+            
+            <div class="education-item">
+                <div class="education-details">
+                    <h3>Narayana Jr. College, Anantapur, India</h3>
+                    <p class="education-date">July 2020 - May 2022</p>
+                    <p class="education-degree">Maths, Physics, Chemistry</p>
+                    <p class="education-percentage">Percentage: 84.6%</p>
+                </div>
+            </div>
+            
+            <div class="education-item">
+                <div class="education-details">
+                    <h3>Vishwa Bharathi E.M. High School, Anantapur, India</h3>
+                    <p class="education-date">July 2015 – May 2020</p>
+                    <p class="education-degree">High School</p>
+                    <p class="education-percentage">Percentage: 98.67%</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="certifications" class="secondary">
+        <div class="wrapper">
+            <h2>Certifications</h2>
+            
+            <div class="certifications-container">
+                <div class="certification-item">
+                    <h3>Python Introduction Course</h3>
+                    <p>The University of Michigan</p>
+                </div>
+                
+                <div class="certification-item">
+                    <h3>Introduction to Artificial Intelligence</h3>
+                    <p>IBM</p>
+                </div>
+                
+                <div class="certification-item">
+                    <h3>Getting Started with AI using IBM Watson</h3>
+                    <p>IBM</p>
+                </div>
+                
+                <div class="certification-item">
+                    <h3>Tools of Trade: Linux and SQL</h3>
+                    <p>Google</p>
+                </div>
+                
+                <div class="certification-item">
+                    <h3>Introduction to Databases</h3>
+                    <p>Meta</p>
+                </div>
+                
+                <div class="certification-item">
+                    <h3>Introduction to Generative AI</h3>
+                    <p>Google Cloud</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="experience" class="primary-alt">
+        <div class="wrapper">
+            <h2>Experience</h2>
+            
+            <div class="experience-item">
+                <h3>University AIML Club Coordinator</h3>
+                <p class="experience-date">Jan 2023 – Present</p>
+                <p class="experience-location">PES University, Bangalore, India</p>
+                <ul class="experience-details">
+                    <li>Led the organization's design domain and managed 15 club meetings, workshops, hackathons, and events focused on AI and ML technologies, engaging an average of 30 attendees per session.</li>
+                    <li>Collaborated on five projects and research endeavors applying AI and ML techniques to real-world challenges, resulting in the development of solutions that garnered recognition within the club community.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    
     <section id="about-contact" class="secondary">
    		<div class="wrapper">
-        	
-			<div class="profile-photo">
-            	<img src="http://placehold.it/260?text=Your+Photo" alt="image">
-            </div>
-			
             <article>
 				<h2>About Me</h2>
-				<p>Fixie owner, father of 3, fender owner, reclaimed wood collector and javascripter. Acting at the junction of minimalism and intellectual purity to create great work for living breathing human beings. I'm a designer and this is my work.</p>
-				<h3>Skills</h3>
-				<p>I am particularly good at BLAH BLAH and really enjoy BLAH. I am currently learning BLAH and I'm very exited about BLAH BLAH.</p>
+				<p>I am currently pursuing my 5th semester at PES University, with a strong passion for Web Technologies, Programming, and Data Analytics. I have proficiency in multiple programming languages, including C, Python, Java, and Unix Shell scripting.</p>
+                <p>My technical skills extend to Big Data, Data Analytics, and Machine Learning, where I have gained valuable insights through academic projects and hands-on experience. Additionally, I am a creative individual with a background in art, copywriting, and editing, enabling me to approach problems with both technical expertise and creativity.</p>
 			</article> 
                 
 			<article>
-				<h2>Contact Me!</h2>
-				<p>I am currently looking for opportunities to work on a team at a design shop. Please feel free to contact me by phone, email or through the usual social media channels.</p>
+				<h2>Contact Me</h2>
+				<p>I am always open to new opportunities and collaborations. Feel free to reach out through any of the channels below:</p>
 
-				<!-- ------------------------------------------------------
-				Be sure to encode your email address at this site, so you 
-				don't get spam. http://wbwip.com/wbw/emailencoder.html
-				------------------------------------------------------- -->
-
-				<p><i class="fa fa-envelope" aria-hidden="true"></i> <a href="mailto:&#101;&#109;&#097;&#105;&#108;&#064;&#115;&#111;&#109;&#101;&#119;&#104;&#101;&#114;&#101;&#046;&#099;&#111;&#109;">&#101;&#109;&#097;&#105;&#108;&#064;&#115;&#111;&#109;&#101;&#119;&#104;&#101;&#114;&#101;&#046;&#099;&#111;&#109;</a><br>
-				<i class="fa fa-phone" aria-hidden="true"></i> 123-456-7890</p>
-
-				<!-- ------------------------------------------------------
-				You can see here that I have included font-awesome. It is used
-				to create the icons above and below. You can go to the font-awesome
-				website to see the available icons and swap some out.
-				------------------------------------------------------- -->
+				<p><i class="fa fa-envelope" aria-hidden="true"></i> <a href="mailto:mudarpranav3@gmail.com">mudarpranav3@gmail.com</a><br>
+				<i class="fa fa-phone" aria-hidden="true"></i> (+91) 9959956470</p>
 
 				<p class="social">
-					<a href="#"><i class="fab fa-facebook"></i></a>
-					<a href="#"><i class="fab fa-linkedin"></i></a> 
-					<a href="#"><i class="fab fa-twitter-square"></i></a>
+					<a href="https://linkedin.com/in/Pranav-Mudar/" target="_blank"><i class="fab fa-linkedin"></i></a> 
+					<a href="https://github.com/" target="_blank"><i class="fab fa-github-square"></i></a>
 				</p>
 			</article>
                    
@@ -188,7 +312,7 @@
     ------------------------------------------------------- -->
     <footer class="primary">
     	<div class="wrapper">
-        	<p class="centered">&copy; 2019 all rights reserved</p>
+        	<p class="centered">&copy; 2023 Pranav Mudar - All Rights Reserved</p>
         </div>
     </footer>
 
