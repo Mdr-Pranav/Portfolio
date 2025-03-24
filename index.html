@@ -54,7 +54,6 @@
                 	<li><a href="#work">Projects</a></li>
                     <li><a href="#skills">Skills</a></li>
                     <li><a href="#education">Education</a></li>
-                    <li><a href="#about-contact">About</a></li>
                 </ul>
             </nav>
             
@@ -281,40 +280,36 @@
         </div>
     </section>
     
-    <section id="about-contact" class="secondary">
-   		<div class="wrapper">
-            <article>
-				<h2>About Me</h2>
-				<p>I am currently pursuing my 5th semester at PES University, with a strong passion for Web Technologies, Programming, and Data Analytics. I have proficiency in multiple programming languages, including C, Python, Java, and Unix Shell scripting.</p>
-                <p>My technical skills extend to Big Data, Data Analytics, and Machine Learning, where I have gained valuable insights through academic projects and hands-on experience. Additionally, I am a creative individual with a background in art, copywriting, and editing, enabling me to approach problems with both technical expertise and creativity.</p>
-			</article> 
-                
-			<article>
-				<h2>Contact Me</h2>
-				<p>I am always open to new opportunities and collaborations. Feel free to reach out through any of the channels below:</p>
-
-				<p><i class="fa fa-envelope" aria-hidden="true"></i> <a href="mailto:mudarpranav3@gmail.com">mudarpranav3@gmail.com</a><br>
-				<i class="fa fa-phone" aria-hidden="true"></i> (+91) 9959956470</p>
-
-				<p class="social">
-					<a href="https://linkedin.com/in/Pranav-Mudar/" target="_blank"><i class="fab fa-linkedin"></i></a> 
-					<a href="https://github.com/" target="_blank"><i class="fab fa-github-square"></i></a>
-				</p>
-			</article>
-                   
-        </div>
-    </section>
-    
-    
-    <!-- ------------------------------------------------------
-    The footer section is not doing much on this page. Add more
-    content if necessary.
-    ------------------------------------------------------- -->
     <footer class="primary">
     	<div class="wrapper">
         	<p class="centered">&copy; 2023 Pranav Mudar - All Rights Reserved</p>
         </div>
     </footer>
 
+    <!-- Profile Picture Modal -->
+    <div class="modal" id="profileModal">
+        <span class="modal-close">&times;</span>
+        <img src="Me - 3 (Lake).jpeg" alt="Pranav Mudar">
+    </div>
+
+    <script>
+        const avatar = document.getElementById('avatar');
+        const modal = document.getElementById('profileModal');
+        const modalClose = document.querySelector('.modal-close');
+
+        avatar.addEventListener('click', () => {
+            modal.classList.add('active');
+        });
+
+        modalClose.addEventListener('click', () => {
+            modal.classList.remove('active');
+        });
+
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.classList.remove('active');
+            }
+        });
+    </script>
 </body>
 </html>

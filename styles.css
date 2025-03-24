@@ -77,7 +77,8 @@ h2:after {
     height: 3px;
     background: var(--accent);
     bottom: 0;
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .centered h2:after {
@@ -203,6 +204,8 @@ header .wrapper {
     object-fit: cover;
     box-shadow: 0 0 20px rgba(52, 152, 219, 0.9);
     animation: avatarGlow 2s infinite alternate;
+    cursor: pointer;
+    transition: transform 0.3s ease;
 }
 
 @keyframes avatarGlow {
@@ -215,6 +218,49 @@ header .wrapper {
     100% {
         box-shadow: 0 0 15px rgba(52, 152, 219, 0.6);
     }
+}
+
+#avatar:hover {
+    transform: scale(1.05);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal.active {
+    display: flex;
+}
+
+.modal img {
+    max-width: 90%;
+    max-height: 90vh;
+    border-radius: 50%;
+    border: 3px solid var(--accent);
+    box-shadow: 0 0 30px rgba(52, 152, 219, 0.9);
+}
+
+.modal-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.modal-close:hover {
+    color: var(--accent);
 }
 
 #mainnav {
@@ -519,7 +565,7 @@ header .wrapper {
 }
 
 #experience h2:after {
-    background: white;
+    background: var(--accent);
     left: 50%;
     transform: translateX(-50%);
 }
