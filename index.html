@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html id="top">
 <head>
 	<meta charset="UTF-8">
 
@@ -51,6 +51,7 @@
             ------------------------------------------------------- -->
 			<nav id="mainnav">
             	<ul>
+                	<li><a href="#top">Home</a></li>
                 	<li><a href="#work">Projects</a></li>
                     <li><a href="#skills">Skills</a></li>
                     <li><a href="#education">Education</a></li>
@@ -86,8 +87,9 @@
         	
             <section class="projects">
                 <article>
+                    <a href="projects/attendance-calculator.html" class="project-link"></a>
                 	<h3>Website with Attendance Calculator, CGPA Calculator, and PDF Combiner</h3>
-                	<a href="https://cdn.pixabay.com/photo/2015/05/28/14/38/ux-787980_1280.jpg" target="_blank" class="project-image">
+                	<a href="projects/attendance-calculator.html" class="project-image">
                 		<img src="https://cdn.pixabay.com/photo/2015/05/28/14/38/ux-787980_640.jpg" alt="Attendance Calculator Project">
                 	</a>
                     <p><strong>Technologies:</strong> HTML, JavaScript, Python, MySQL</p>
@@ -95,8 +97,9 @@
                 </article>
                 
                 <article>
+                    <a href="projects/chat-server.html" class="project-link"></a>
                 	<h3>Chat Server with File Transfer</h3>
-                	<a href="https://cdn.pixabay.com/photo/2013/07/12/18/17/equalizer-153212_1280.png" target="_blank" class="project-image">
+                	<a href="projects/chat-server.html" class="project-image">
                 		<img src="https://cdn.pixabay.com/photo/2013/07/12/18/17/equalizer-153212_640.png" alt="Chat Server Project">
                 	</a>
                     <p><strong>Technologies:</strong> Socket Programming</p>
@@ -104,8 +107,9 @@
                 </article>
                 
                 <article>
+                    <a href="projects/collision-detection.html" class="project-link"></a>
                 	<h3>Collision Detection and Prevention Device</h3>
-                	<a href="https://cdn.pixabay.com/photo/2017/03/23/12/32/arduino-2168193_1280.png" target="_blank" class="project-image">
+                	<a href="projects/collision-detection.html" class="project-image">
                 		<img src="https://cdn.pixabay.com/photo/2017/03/23/12/32/arduino-2168193_640.png" alt="Collision Detection Device">
                 	</a>
                     <p><strong>Technologies:</strong> Arduino, UV Sensors</p>
@@ -113,8 +117,9 @@
                 </article>
 				
 				<article>
+                    <a href="projects/event-management.html" class="project-link"></a>
                 	<h3>Website for Event Management</h3>
-                	<a href="https://cdn.pixabay.com/photo/2018/05/10/11/34/concert-3387324_1280.jpg" target="_blank" class="project-image">
+                	<a href="projects/event-management.html" class="project-image">
                 		<img src="https://cdn.pixabay.com/photo/2018/05/10/11/34/concert-3387324_640.jpg" alt="Event Management Website">
                 	</a>
                     <p><strong>Technologies:</strong> HTML, JavaScript, Python, MySQL</p>
@@ -122,8 +127,9 @@
                 </article>
                 
                 <article>
+                    <a href="projects/disaster-management.html" class="project-link"></a>
                 	<h3>Website for Disaster Management</h3>
-                	<a href="https://cdn.pixabay.com/photo/2016/10/28/13/09/usa-1777986_1280.jpg" target="_blank" class="project-image">
+                	<a href="projects/disaster-management.html" class="project-image">
                 		<img src="https://cdn.pixabay.com/photo/2016/10/28/13/09/usa-1777986_640.jpg" alt="Disaster Management Project">
                 	</a>
                     <p><strong>Technologies:</strong> HTML, JavaScript, Python, MySQL</p>
@@ -131,8 +137,9 @@
                 </article>
                 
                 <article>
+                    <a href="projects/generative-ai-research.html" class="project-link"></a>
                 	<h3>Research Paper on Generative AI</h3>
-                	<a href="https://cdn.pixabay.com/photo/2020/01/22/10/18/ai-4784917_1280.jpg" target="_blank" class="project-image">
+                	<a href="projects/generative-ai-research.html" class="project-image">
                 		<img src="https://static.liveperson.com/static-assets/2023/04/14142148/Blog_Generative_AI_small_2x.jpg" alt="Generative AI Research">
                 	</a>
                     <p><strong>Technologies:</strong> Machine Learning, AI</p>
@@ -286,7 +293,13 @@
         <img src="Me - 3 (Lake).jpeg" alt="Pranav Mudar">
     </div>
 
+    <!-- Back to Top Button -->
+    <a href="#top" class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
     <script>
+        // Profile Picture Modal
         const avatar = document.getElementById('avatar');
         const modal = document.getElementById('profileModal');
         const modalClose = document.querySelector('.modal-close');
@@ -303,6 +316,31 @@
             if (e.target === modal) {
                 modal.classList.remove('active');
             }
+        });
+
+        // Back to Top Button
+        const backToTopButton = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.add('visible');
+            } else {
+                backToTopButton.classList.remove('visible');
+            }
+        });
+        
+        // Make entire project card clickable
+        document.querySelectorAll('.projects article').forEach(article => {
+            article.addEventListener('click', (e) => {
+                // Only handle the click if not clicking on the existing links
+                if (!e.target.closest('a.project-image')) {
+                    const link = article.querySelector('a.project-link');
+                    if (link) {
+                        const href = link.getAttribute('href');
+                        window.location.href = href;
+                    }
+                }
+            });
         });
     </script>
 </body>

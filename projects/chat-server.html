@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Server Project | Pranav Mudar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="project-styles.css">
+</head>
+<body>
+    <header>
+        <div class="wrapper">
+            <div class="logo-container">
+                <img src="../Me - 3 (Lake).jpeg" alt="Pranav Mudar" id="avatar">
+                <h1>Pranav Mudar</h1>
+            </div>
+            
+            <nav id="mainnav">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../index.html#work">Projects</a></li>
+                    <li><a href="../index.html#skills">Skills</a></li>
+                    <li><a href="../index.html#education">Education</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="project-hero">
+        <div class="wrapper">
+            <h1>Chat Server with File Transfer</h1>
+            <p class="project-tags">
+                <span class="tag">Socket Programming</span>
+                <span class="tag">Python</span>
+                <span class="tag">Networking</span>
+                <span class="tag">File Transfer</span>
+            </p>
+        </div>
+    </section>
+
+    <section class="project-content">
+        <div class="wrapper">
+            <div class="project-details">
+                <div class="project-image-large">
+                    <img src="https://cdn.pixabay.com/photo/2013/07/12/18/17/equalizer-153212_1280.png" alt="Chat Server Project">
+                </div>
+                
+                <h2>Project Overview</h2>
+                <p>This project implements a robust chat server that enables communication between multiple systems with additional functionality including file sharing, administrative controls, and multi-client support within a single system. The server maintains comprehensive logs of system entries/exits and chat history for security and reference purposes.</p>
+                
+                <h2>Key Features</h2>
+                <ul class="feature-list">
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <h3>Multi-System Communication</h3>
+                            <p>Allows seamless communication between multiple computers connected to the server, enabling real-time messaging across different devices.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <h3>File Sharing</h3>
+                            <p>Users can exchange files of various formats through the chat interface, streamlining collaboration and data sharing without needing separate file transfer tools.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <h3>Admin Controls</h3>
+                            <p>Administrators have special privileges to kick or ban systems from the server, helping maintain a controlled environment and manage inappropriate behavior.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <h3>Multiple Clients per System</h3>
+                            <p>Supports running multiple client instances on a single computer, allowing for greater flexibility in testing and deployment scenarios.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <h3>Comprehensive Logging</h3>
+                            <p>Maintains detailed logs of system connections/disconnections and message history for security auditing and record-keeping.</p>
+                        </div>
+                    </li>
+                </ul>
+                
+                <h2>Technical Implementation</h2>
+                <p>The project was developed using the following technologies and approaches:</p>
+                <ul>
+                    <li><strong>Socket Programming:</strong> Used Python's socket library to establish and maintain network connections between clients and the server.</li>
+                    <li><strong>Threading:</strong> Implemented multi-threading to handle concurrent client connections and operations without blocking.</li>
+                    <li><strong>File Handling:</strong> Created protocols for breaking down, transferring, and reassembling files over the network.</li>
+                    <li><strong>Security:</strong> Implemented basic authentication and permission systems to control user access and privileges.</li>
+                    <li><strong>Data Persistence:</strong> Developed logging mechanisms to record chat history and connection events.</li>
+                </ul>
+                
+                <h2>Challenges & Solutions</h2>
+                <div class="challenge-solution">
+                    <div class="challenge">
+                        <h3>Challenge</h3>
+                        <p>Managing simultaneous connections and preventing race conditions in the chat application.</p>
+                    </div>
+                    <div class="solution">
+                        <h3>Solution</h3>
+                        <p>Implemented thread synchronization mechanisms and locks to ensure data integrity when multiple clients interact with the server simultaneously.</p>
+                    </div>
+                </div>
+                
+                <div class="challenge-solution">
+                    <div class="challenge">
+                        <h3>Challenge</h3>
+                        <p>Handling large file transfers efficiently without overwhelming network resources.</p>
+                    </div>
+                    <div class="solution">
+                        <h3>Solution</h3>
+                        <p>Developed a chunking system that breaks files into smaller packets for transmission and implements progress tracking and error recovery.</p>
+                    </div>
+                </div>
+                
+                <div class="challenge-solution">
+                    <div class="challenge">
+                        <h3>Challenge</h3>
+                        <p>Implementing robust admin controls without compromising system security.</p>
+                    </div>
+                    <div class="solution">
+                        <h3>Solution</h3>
+                        <p>Created a role-based permission system with secure authentication for administrator accounts and detailed logging of administrative actions.</p>
+                    </div>
+                </div>
+                
+                <h2>Learning Outcomes</h2>
+                <p>This project provided valuable experience in:</p>
+                <ul>
+                    <li>Understanding and implementing network communication protocols</li>
+                    <li>Managing concurrent operations through multi-threading in Python</li>
+                    <li>Designing systems for file transfers over networks</li>
+                    <li>Implementing user authentication and permission systems</li>
+                    <li>Building logging and auditing systems for network applications</li>
+                </ul>
+                
+                <div class="project-nav">
+                    <a href="../index.html#work" class="btn back-btn"><i class="fas fa-arrow-left"></i> Back to Projects</a>
+                    <div class="project-buttons">
+                        <a href="#" class="project-btn"><i class="fas fa-code"></i> Implementation</a>
+                        <a href="#" class="project-btn"><i class="fab fa-github"></i> Repository</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Profile Picture Modal -->
+    <div class="modal" id="profileModal">
+        <span class="modal-close">&times;</span>
+        <img src="../Me - 3 (Lake).jpeg" alt="Pranav Mudar">
+    </div>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <footer class="primary">
+        <div class="wrapper">
+            <p class="centered">&copy; 2023 Pranav Mudar - All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <script>
+        // Profile Picture Modal
+        const avatar = document.getElementById('avatar');
+        const modal = document.getElementById('profileModal');
+        const modalClose = document.querySelector('.modal-close');
+
+        avatar.addEventListener('click', () => {
+            modal.classList.add('active');
+        });
+
+        modalClose.addEventListener('click', () => {
+            modal.classList.remove('active');
+        });
+
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.classList.remove('active');
+            }
+        });
+        
+        // Back to Top Button
+        const backToTopButton = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.add('visible');
+            } else {
+                backToTopButton.classList.remove('visible');
+            }
+        });
+    </script>
+</body>
+</html> 
