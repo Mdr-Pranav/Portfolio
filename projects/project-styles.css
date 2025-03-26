@@ -52,6 +52,7 @@ header .wrapper {
     flex-wrap: wrap;
     justify-content: center;
     gap: 1rem;
+    margin-bottom: 2rem;
 }
 
 .tag {
@@ -60,6 +61,46 @@ header .wrapper {
     padding: 0.5rem 1rem;
     border-radius: 20px;
     font-size: 0.9rem;
+}
+
+.project-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.project-btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    background: var(--accent);
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    border: 2px solid transparent;
+    white-space: nowrap;
+}
+
+.project-btn:hover {
+    background: #2980b9;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    border-color: #3498db;
+    color: #ffffff;
+}
+
+.project-btn i {
+    margin-right: 0.5rem;
+    transition: transform 0.3s ease;
+}
+
+.project-btn:hover i {
+    transform: translateX(3px);
 }
 
 .project-content {
@@ -171,43 +212,6 @@ header .wrapper {
     gap: 1rem;
 }
 
-.project-buttons {
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
-}
-
-.project-btn {
-    display: inline-flex;
-    align-items: center;
-    padding: 0.8rem 1.5rem;
-    border-radius: 25px;
-    background: var(--accent);
-    color: white;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    font-weight: 600;
-    border: 2px solid transparent;
-    white-space: nowrap;
-}
-
-.project-btn:hover {
-    background: #2980b9;
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-    border-color: #3498db;
-    color: #ffffff;
-}
-
-.project-btn i {
-    margin-right: 0.5rem;
-    transition: transform 0.3s ease;
-}
-
-.project-btn:hover i {
-    transform: translateX(3px);
-}
-
 .back-btn {
     background: var(--light-gray);
 }
@@ -239,6 +243,7 @@ header .wrapper {
     .project-tags {
         flex-wrap: wrap;
         gap: 0.5rem;
+        margin-bottom: 1.5rem;
     }
 
     .tag {
@@ -309,6 +314,7 @@ header .wrapper {
         flex-direction: column;
         width: 100%;
         max-width: 300px;
+        margin: 1.5rem auto 0;
         gap: 0.8rem;
     }
 
@@ -337,6 +343,7 @@ header .wrapper {
 
     .project-tags {
         gap: 0.3rem;
+        margin-bottom: 1rem;
     }
 
     .tag {
@@ -386,6 +393,7 @@ header .wrapper {
 
     .project-buttons {
         max-width: 250px;
+        margin-top: 1rem;
     }
 
     .back-btn {
