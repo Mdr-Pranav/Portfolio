@@ -167,43 +167,14 @@ header .wrapper {
     margin-top: 3rem;
     padding-top: 2rem;
     border-top: 1px solid var(--border-color);
-}
-
-.btn {
-    display: inline-flex;
-    align-items: center;
-    padding: 0.8rem 1.5rem;
-    border-radius: 25px;
-    background: var(--accent);
-    color: white;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    font-weight: 600;
-}
-
-.btn:hover {
-    background: #2980b9;
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-}
-
-.btn i {
-    margin-right: 0.5rem;
-}
-
-.back-btn {
-    background: var(--light-gray);
-}
-
-.back-btn:hover {
-    background: #3d4b55;
+    flex-wrap: wrap;
+    gap: 1rem;
 }
 
 .project-buttons {
     display: flex;
     gap: 1rem;
-    justify-content: center;
-    margin-top: 2rem;
+    flex-wrap: wrap;
 }
 
 .project-btn {
@@ -217,6 +188,7 @@ header .wrapper {
     transition: all 0.3s ease;
     font-weight: 600;
     border: 2px solid transparent;
+    white-space: nowrap;
 }
 
 .project-btn:hover {
@@ -234,6 +206,14 @@ header .wrapper {
 
 .project-btn:hover i {
     transform: translateX(3px);
+}
+
+.back-btn {
+    background: var(--light-gray);
+}
+
+.back-btn:hover {
+    background: #3d4b55;
 }
 
 @media only screen and (min-width: 768px) {
@@ -321,19 +301,17 @@ header .wrapper {
 
     .project-nav {
         flex-direction: column;
+        align-items: stretch;
         gap: 1rem;
-        align-items: center;
     }
 
     .project-buttons {
         flex-direction: column;
         width: 100%;
-        max-width: 300px;
     }
 
     .project-btn {
         width: 100%;
-        text-align: center;
         justify-content: center;
     }
 }
