@@ -301,18 +301,28 @@ header .wrapper {
 
     .project-nav {
         flex-direction: column;
-        align-items: stretch;
+        align-items: center;
         gap: 1rem;
     }
 
     .project-buttons {
         flex-direction: column;
         width: 100%;
+        max-width: 300px;
+        gap: 0.8rem;
     }
 
     .project-btn {
         width: 100%;
         justify-content: center;
+        text-align: center;
+    }
+
+    .back-btn {
+        width: 100%;
+        max-width: 300px;
+        justify-content: center;
+        text-align: center;
     }
 }
 
@@ -372,5 +382,13 @@ header .wrapper {
 
     .challenge p, .solution p {
         font-size: 0.9rem;
+    }
+
+    .project-buttons {
+        max-width: 250px;
+    }
+
+    .back-btn {
+        max-width: 250px;
     }
 } 
