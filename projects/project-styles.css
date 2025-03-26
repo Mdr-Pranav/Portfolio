@@ -238,12 +238,14 @@ header .wrapper {
 
     .project-hero p {
         font-size: 1rem;
+        padding: 0 1rem;
     }
 
     .project-tags {
         flex-wrap: wrap;
         gap: 0.5rem;
         margin-bottom: 1.5rem;
+        padding: 0 1rem;
     }
 
     .tag {
@@ -252,31 +254,36 @@ header .wrapper {
     }
 
     .project-content {
-        padding: 2rem 1rem;
+        padding: 2rem 0.5rem;
     }
 
     .project-details {
-        padding: 1.5rem;
+        padding: 1rem;
     }
 
     .project-details h2 {
         font-size: 1.8rem;
+        padding: 0 0.5rem;
     }
 
     .project-details p {
         font-size: 0.95rem;
+        padding: 0 0.5rem;
     }
 
     .project-image-large {
         margin: 1.5rem 0;
+        padding: 0 0.5rem;
     }
 
     .project-image-large img {
         border-radius: 8px;
+        width: 100%;
+        height: auto;
     }
 
     .feature-list {
-        padding: 1rem;
+        padding: 1rem 0.5rem;
     }
 
     .feature-list h3 {
@@ -285,15 +292,17 @@ header .wrapper {
 
     .feature-list li {
         font-size: 0.95rem;
+        padding: 0.5rem 0;
     }
 
     .challenge-solution {
         grid-template-columns: 1fr;
         gap: 1.5rem;
+        padding: 0 0.5rem;
     }
 
     .challenge, .solution {
-        padding: 1.5rem;
+        padding: 1rem;
     }
 
     .challenge h3, .solution h3 {
@@ -308,14 +317,15 @@ header .wrapper {
         flex-direction: column;
         align-items: center;
         gap: 1rem;
+        padding: 2rem 0.5rem;
     }
 
     .project-buttons {
         flex-direction: column;
         width: 100%;
         max-width: 300px;
-        margin: 1.5rem auto 0;
         gap: 0.8rem;
+        margin: 1.5rem auto 0;
     }
 
     .project-btn {
@@ -339,11 +349,18 @@ header .wrapper {
 
     .project-hero h1 {
         font-size: 1.8rem;
+        padding: 0 0.5rem;
+    }
+
+    .project-hero p {
+        font-size: 0.95rem;
+        padding: 0 0.5rem;
     }
 
     .project-tags {
         gap: 0.3rem;
         margin-bottom: 1rem;
+        padding: 0 0.5rem;
     }
 
     .tag {
@@ -352,23 +369,25 @@ header .wrapper {
     }
 
     .project-content {
-        padding: 1.5rem 0.5rem;
+        padding: 1.5rem 0.25rem;
     }
 
     .project-details {
-        padding: 1rem;
+        padding: 0.5rem;
     }
 
     .project-details h2 {
         font-size: 1.5rem;
+        padding: 0 0.25rem;
     }
 
     .project-details p {
         font-size: 0.9rem;
+        padding: 0 0.25rem;
     }
 
     .feature-list {
-        padding: 0.8rem;
+        padding: 0.5rem 0.25rem;
     }
 
     .feature-list h3 {
@@ -377,10 +396,11 @@ header .wrapper {
 
     .feature-list li {
         font-size: 0.9rem;
+        padding: 0.4rem 0;
     }
 
     .challenge, .solution {
-        padding: 1rem;
+        padding: 0.8rem;
     }
 
     .challenge h3, .solution h3 {
@@ -394,9 +414,11 @@ header .wrapper {
     .project-buttons {
         max-width: 250px;
         margin-top: 1rem;
+        padding: 0 0.5rem;
     }
 
     .back-btn {
         max-width: 250px;
+        padding: 0 0.5rem;
     }
 } 
