@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Learning Platform | Pranav Mudar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/project-styles.css">
+    <link rel="stylesheet" href="../css/dark-theme.css">
+</head>
+<body>
+    <header>
+        <div class="wrapper">
+            <div class="logo-container">
+                <img src="../Me2.jpg" alt="Pranav Mudar" id="avatar">
+                <h1>Pranav Mudar</h1>
+                <a href="../docs/Pranav_Mudar_Resume.pdf" download class="header-download-btn" title="Download Resume">
+                    <i class="fas fa-file-download"></i>
+                </a>
+            </div>
+            
+            <nav id="mainnav">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../index.html#work">Projects</a></li>
+                    <li><a href="../index.html#skills">Skills</a></li>
+                    <li><a href="../index.html#education">Education</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="project-hero">
+        <div class="wrapper">
+            <h1>E-Learning Platform</h1>
+            <p>A comprehensive online learning platform with course management, student tracking, and interactive content delivery</p>
+            <div class="project-tags">
+                <span class="tag">Java</span>
+                <span class="tag">Spring Boot</span>
+                <span class="tag">React</span>
+                <span class="tag">PostgreSQL</span>
+                <span class="tag">MVC</span>
+                <span class="tag">OOP</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="project-content">
+        <div class="wrapper">
+            <div class="project-details">
+                <div class="project-image-large">
+                    <img src="/projects/pictures/elearning1.jpg" alt="E-Learning Platform">
+                </div>
+                
+                <h2>Project Overview</h2>
+                <p>This project involved developing a robust e-learning platform that enables educational institutions to create, manage, and deliver online courses effectively. Built using an MVC architecture, the platform leverages Spring Boot for backend services, React for the frontend interface, and PostgreSQL for data persistence. The entire system is developed using object-oriented programming principles in Java, ensuring scalability, maintainability, and extensibility.</p>
+                
+                <h2>Key Features</h2>
+                <ul class="feature-list">
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <h3>Course Management System</h3>
+                            <p>Comprehensive tools for instructors to create, organize, and update course content with support for various media types including video, audio, documents, and interactive quizzes.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <h3>Student Learning Dashboard</h3>
+                            <p>Personalized dashboard for students to track enrolled courses, progress, upcoming deadlines, and performance metrics with intuitive visualization tools.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <h3>Assessment and Grading System</h3>
+                            <p>Automated assessment tools including quizzes, assignments, and exams with immediate feedback and comprehensive grading functionalities for instructors.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <h3>Interactive Learning Elements</h3>
+                            <p>Integration of discussion forums, live sessions, peer review capabilities, and collaborative projects to enhance the learning experience and student engagement.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <h3>Analytics and Reporting</h3>
+                            <p>Detailed analytics on student performance, course effectiveness, and learning patterns to help instructors improve teaching methods and content delivery.</p>
+                        </div>
+                    </li>
+                </ul>
+                
+                <h2>Technical Implementation</h2>
+                <p>The platform was developed using a modern technology stack following MVC architecture:</p>
+                <ul>
+                    <li><strong>Backend (Model & Controller):</strong> Java with Spring Boot framework handling business logic, data processing, and API endpoints with robust error handling and validation.</li>
+                    <li><strong>Frontend (View):</strong> React.js creating a responsive and interactive single-page application with component-based architecture for reusability and maintainability.</li>
+                    <li><strong>Database:</strong> PostgreSQL storing structured data with optimized schemas, relationships, and indexes for efficient querying and data integrity.</li>
+                    <li><strong>Authentication:</strong> JWT-based authentication and role-based authorization system ensuring secure access to platform features based on user roles.</li>
+                    <li><strong>File Storage:</strong> Cloud-based storage solution for course materials with efficient caching mechanisms for improved content delivery.</li>
+                </ul>
+                
+                <h2>Architectural Highlights</h2>
+                <ul>
+                    <li><strong>MVC Pattern:</strong> Clear separation of concerns with Models representing data structures, Views handling presentation, and Controllers managing application flow and business logic.</li>
+                    <li><strong>Object-Oriented Design:</strong> Extensive use of OOP principles including inheritance, encapsulation, polymorphism, and abstraction for modular and maintainable code.</li>
+                    <li><strong>Microservices:</strong> Core functionalities separated into microservices (user management, course delivery, assessment handling) for better scalability and development workflow.</li>
+                    <li><strong>RESTful APIs:</strong> Well-defined API endpoints following REST principles for seamless communication between frontend and backend components.</li>
+                </ul>
+                
+                <h2>Challenges & Solutions</h2>
+                <div class="challenge-solution">
+                    <div class="challenge">
+                        <h3>Challenge</h3>
+                        <p>Handling concurrent user interactions and maintaining data consistency during peak usage periods.</p>
+                    </div>
+                    <div class="solution">
+                        <h3>Solution</h3>
+                        <p>Implemented optimistic locking mechanisms, connection pooling, and caching strategies to handle high concurrent loads while ensuring data integrity.</p>
+                    </div>
+                </div>
+                
+                <div class="challenge-solution">
+                    <div class="challenge">
+                        <h3>Challenge</h3>
+                        <p>Creating an intuitive content management system that allows instructors with varying technical expertise to create engaging course materials.</p>
+                    </div>
+                    <div class="solution">
+                        <h3>Solution</h3>
+                        <p>Developed a user-friendly WYSIWYG editor with drag-and-drop functionality and reusable content components that simplifies course creation while maintaining quality.</p>
+                    </div>
+                </div>
+                
+                <h2>Learning Outcomes</h2>
+                <p>This project provided valuable experience in:</p>
+                <ul>
+                    <li>Designing and implementing complex enterprise-level applications using MVC architecture</li>
+                    <li>Building scalable backend services with Spring Boot and robust data persistence with PostgreSQL</li>
+                    <li>Creating responsive and interactive user interfaces with React.js</li>
+                    <li>Applying object-oriented programming principles to real-world problems</li>
+                    <li>Implementing secure authentication and authorization mechanisms</li>
+                    <li>Performance optimization for web applications handling large amounts of data and concurrent users</li>
+                </ul>
+                
+                <div class="project-nav">
+                    <a href="../index.html#work" class="btn back-btn tag"><i class="fas fa-arrow-left"></i> Back to Projects</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Profile Picture Modal -->
+    <div class="modal" id="profileModal">
+        <span class="modal-close">&times;</span>
+        <img src="../Me2.jpg" alt="Pranav Mudar">
+    </div>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <script>
+        // Profile Picture Modal
+        const avatar = document.getElementById('avatar');
+        const modal = document.getElementById('profileModal');
+        const modalClose = document.querySelector('.modal-close');
+
+        avatar.addEventListener('click', () => {
+            modal.classList.add('active');
+        });
+
+        modalClose.addEventListener('click', () => {
+            modal.classList.remove('active');
+        });
+
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.classList.remove('active');
+            }
+        });
+        
+        // Back to Top Button
+        const backToTopButton = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.add('visible');
+            } else {
+                backToTopButton.classList.remove('visible');
+            }
+        });
+    </script>
+</body>
+</html> 

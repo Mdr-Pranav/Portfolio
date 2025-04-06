@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultimate Tic-Tac-Toe | Pranav Mudar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/project-styles.css">
+    <link rel="stylesheet" href="../css/dark-theme.css">
+</head>
+<body>
+    <header>
+        <div class="wrapper">
+            <div class="logo-container">
+                <img src="../Me2.jpg" alt="Pranav Mudar" id="avatar">
+                <h1>Pranav Mudar</h1>
+                <a href="../docs/Pranav_Mudar_Resume.pdf" download class="header-download-btn" title="Download Resume">
+                    <i class="fas fa-file-download"></i>
+                </a>
+            </div>
+            
+            <nav id="mainnav">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../index.html#work">Projects</a></li>
+                    <li><a href="../index.html#skills">Skills</a></li>
+                    <li><a href="../index.html#education">Education</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="project-hero">
+        <div class="wrapper">
+            <h1>Ultimate Tic-Tac-Toe</h1>
+            <p>An advanced implementation of Tic-Tac-Toe with AI opponents powered by Reinforcement Learning</p>
+            <div class="project-tags">
+                <span class="tag">Python</span>
+                <span class="tag">Flask</span>
+                <span class="tag">Q-Learning</span>
+                <span class="tag">Reinforcement Learning</span>
+                <span class="tag">JavaScript</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="project-content">
+        <div class="wrapper">
+            <div class="project-details">
+                <div class="project-image-large">
+                    <img src="/projects/Pictures/ultimate1.jpg" alt="Ultimate Tic-Tac-Toe">
+                </div>
+                
+                <h2>Project Overview</h2>
+                <p>Ultimate Tic-Tac-Toe is a complex variant of the classic game that adds a strategic layer by including multiple boards. I developed an interactive implementation with a learning AI opponent that improves its gameplay over time through reinforcement learning techniques.</p>
+                
+                <h2>How to Play</h2>
+                <ul>
+                    <li>The game is played on a 3x3 grid of 3x3 sub-boards</li>
+                    <li>Players take turns placing their marks (X or O) in empty cells</li>
+                    <li>The location of your move determines which sub-board your opponent must play in next</li>
+                    <li>Win a sub-board by getting three in a row</li>
+                    <li>Win the game by winning three sub-boards in a row</li>
+                </ul>
+                
+                <h2>AI Implementation</h2>
+                <p>The AI opponent uses Q-Learning, a type of reinforcement learning algorithm, to improve its gameplay over time:</p>
+                <ul>
+                    <li>The Q-table is saved after each game, preserving learned knowledge</li>
+                    <li>The AI learns from both wins and losses to optimize its strategy</li>
+                    <li>The model gradually improves as more games are played</li>
+                    <li>Three difficulty levels correspond to different training states of the AI</li>
+                </ul>
+                
+                <h2>Technical Features</h2>
+                <ul class="feature-list">
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <h3>Reinforcement Learning</h3>
+                            <p>Implemented Q-Learning algorithm that allows the AI to learn from experience and improve its gameplay strategy over time through trial and error.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <h3>Interactive Web Interface</h3>
+                            <p>Created a responsive frontend using HTML, CSS and JavaScript that clearly visualizes the nested board structure and provides an intuitive gaming experience.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <h3>Flask Backend</h3>
+                            <p>Developed a Flask server that handles game state, processes moves, and integrates with the AI models to provide real-time responses.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <h3>Difficulty Levels</h3>
+                            <p>Implemented three difficulty settings: Easy (random moves), Medium (partially trained Q-Learning), and Hard (fully trained Q-Learning with optimized parameters).</p>
+                        </div>
+                    </li>
+                </ul>
+                
+                <h2>Project Structure</h2>
+                <p>The codebase is organized into the following key components:</p>
+                <ul>
+                    <li><strong>app.py:</strong> Flask server and API endpoints for game management</li>
+                    <li><strong>medium.py:</strong> Q-Learning implementation for the AI opponent</li>
+                    <li><strong>index.html:</strong> Main game interface and user interactions</li>
+                    <li><strong>css/styles.css:</strong> Styling for the game board and controls</li>
+                    <li><strong>js/game.js:</strong> Game logic and UI interactions</li>
+                </ul>
+                
+                <h2>Learning Outcomes</h2>
+                <p>This project provided valuable experience in:</p>
+                <ul>
+                    <li>Implementing reinforcement learning algorithms in a practical application</li>
+                    <li>Developing a full-stack web application with Python backend and JavaScript frontend</li>
+                    <li>Creating intuitive user interfaces for complex game mechanics</li>
+                    <li>Designing systems that learn and improve from user interactions</li>
+                    <li>Building and training models that can adapt to different difficulty levels</li>
+                </ul>
+                
+                <h2>Future Enhancements</h2>
+                <ul>
+                    <li>Implementing neural network-based deep Q-learning for more sophisticated play</li>
+                    <li>Adding multiplayer support for online play between users</li>
+                    <li>Creating a tournament mode where users can compete against different AI versions</li>
+                    <li>Visualizing the AI's learning process to help users understand reinforcement learning</li>
+                </ul>
+                
+                <div class="project-nav">
+                    <a href="../index.html#work" class="btn back-btn tag"><i class="fas fa-arrow-left"></i> Back to Projects</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Profile Picture Modal -->
+    <div class="modal" id="profileModal">
+        <span class="modal-close">&times;</span>
+        <img src="../Me2.jpg" alt="Pranav Mudar">
+    </div>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <script>
+        // Profile Picture Modal
+        const avatar = document.getElementById('avatar');
+        const modal = document.getElementById('profileModal');
+        const modalClose = document.querySelector('.modal-close');
+
+        avatar.addEventListener('click', () => {
+            modal.classList.add('active');
+        });
+
+        modalClose.addEventListener('click', () => {
+            modal.classList.remove('active');
+        });
+
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.classList.remove('active');
+            }
+        });
+        
+        // Back to Top Button
+        const backToTopButton = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.add('visible');
+            } else {
+                backToTopButton.classList.remove('visible');
+            }
+        });
+    </script>
+</body>
+</html> 

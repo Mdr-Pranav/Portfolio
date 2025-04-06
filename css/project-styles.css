@@ -421,4 +421,37 @@ header .wrapper {
         max-width: 250px;
         padding: 0 0.5rem;
     }
+}
+
+/* Header Download Button */
+.header-download-btn {
+    margin-left: 10px;
+    color: var(--accent);
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-download-btn:hover {
+    color: white;
+    transform: translateY(-2px);
+}
+
+.header-download-btn:active {
+    transform: translateY(0);
+}
+
+/* Ensure consistent avatar styling between main page and project pages */
+#avatar {
+    width: 100px;
+    height: 100px;
+    box-shadow: 0 0 15px rgba(52, 152, 219, 0.7);
+    animation: none;
+}
+
+#avatar:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(52, 152, 219, 0.9);
 } 

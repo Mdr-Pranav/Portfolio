@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Music Generation | Pranav Mudar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/project-styles.css">
+    <link rel="stylesheet" href="../css/dark-theme.css">
+</head>
+<body>
+    <header>
+        <div class="wrapper">
+            <div class="logo-container">
+                <img src="../Me2.jpg" alt="Pranav Mudar" id="avatar">
+                <h1>Pranav Mudar</h1>
+                <a href="../docs/Pranav_Mudar_Resume.pdf" download class="header-download-btn" title="Download Resume">
+                    <i class="fas fa-file-download"></i>
+                </a>
+            </div>
+            
+            <nav id="mainnav">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../index.html#work">Projects</a></li>
+                    <li><a href="../index.html#skills">Skills</a></li>
+                    <li><a href="../index.html#education">Education</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="project-hero">
+        <div class="wrapper">
+            <h1>Background Music Generation</h1>
+            <p>A system for generating appropriate background music for videos using AI models and techniques like Retrieval-Augmented Generation (RAG)</p>
+            <div class="project-tags">
+                <span class="tag">Python</span>
+                <span class="tag">Deep Learning</span>
+                <span class="tag">Audio Processing</span>
+                <span class="tag">RAG</span>
+                <span class="tag">LLMs</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="project-content">
+        <div class="wrapper">
+            <div class="project-details">
+                <div class="project-image-large">
+                    <img src="/projects/Pictures/backgroundmusic1.jpg" alt="Background Music Generation">
+                </div>
+                
+                <h2>Project Overview</h2>
+                <p>This project aims to automatically generate suitable background music for videos by analyzing video content and generating or retrieving matching music. The system combines video analysis, text description generation, and music generation technologies to create a seamless end-to-end solution that enhances viewer engagement and emotional impact without requiring manual music selection or composition.</p>
+                
+                <h2>Key Features</h2>
+                <ul class="feature-list">
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <h3>Video Analysis</h3>
+                            <p>Extracts frames from videos and uses AI models (Google Gemini) to analyze content, mood, and themes, providing a comprehensive understanding of the video's context.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <h3>Retrieval-Augmented Generation (RAG)</h3>
+                            <p>Uses a dataset of music descriptions (MusicCaps) to retrieve relevant music based on video content, enhancing the quality and relevance of generated music through reference examples.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <h3>Music Generation</h3>
+                            <p>Creates custom background music using models like AudioCraft/MusicGen, producing original compositions tailored to the specific video content.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <h3>Agentic Workflow</h3>
+                            <p>Implements a conversational agent using LangGraph to guide users through the process, making the system accessible to users without technical expertise.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <h3>User Preference Integration</h3>
+                            <p>Takes into account user preferences for music style and mood, allowing for customization of the generated music to better match user expectations.</p>
+                        </div>
+                    </li>
+                </ul>
+                
+                <h2>System Architecture</h2>
+                <p>The system consists of several interconnected components:</p>
+                <ul>
+                    <li><strong>Video Analysis Module:</strong> Extracts frames from the input video and uses Gemini model to analyze video content and generate descriptions.</li>
+                    <li><strong>Video Transcript Analysis:</strong> Obtains transcript from the given video input and performs NLP tasks to understand context and themes.</li>
+                    <li><strong>Description Engine:</strong> Processes video analysis into detailed descriptions for music generation and incorporates user preferences for music style.</li>
+                    <li><strong>Music Generation System:</strong> Uses RAG approach to retrieve similar music descriptions from the MusicCaps dataset and AudioCraft/MusicGen to generate appropriate music.</li>
+                    <li><strong>Agent-based Orchestration:</strong> Uses LangGraph to create a conversational workflow that guides users through the process and collects feedback.</li>
+                </ul>
+                
+                <h2>Technologies Used</h2>
+                <p>The project leverages cutting-edge AI and machine learning technologies:</p>
+                <ul>
+                    <li><strong>Google Gemini:</strong> For video content analysis and text generation</li>
+                    <li><strong>MusicGen/AudioCraft:</strong> For music generation</li>
+                    <li><strong>Sentence Transformers:</strong> For embedding and similarity search in MusicCaps dataset</li>
+                    <li><strong>FAISS:</strong> For efficient similarity search</li>
+                    <li><strong>LangGraph:</strong> For agent-based workflow orchestration</li>
+                    <li><strong>OpenCV/Pillow:</strong> For video frame extraction and image processing</li>
+                    <li><strong>PyTorch:</strong> For deep learning model implementation</li>
+                </ul>
+                
+                <h2>Implementation Process</h2>
+                <ol>
+                    <li><strong>Video Input:</strong> User uploads a video file or provides a link to a video that requires background music.</li>
+                    <li><strong>Content Analysis:</strong> The system extracts key frames and transcripts, analyzing them with Gemini to understand context and mood.</li>
+                    <li><strong>Description Generation:</strong> Based on video analysis, the system generates detailed descriptions of the appropriate music.</li>
+                    <li><strong>Retrieval Step:</strong> Using RAG, the system searches the MusicCaps dataset for similar music descriptions to enhance generation quality.</li>
+                    <li><strong>Music Generation:</strong> AudioCraft/MusicGen creates original background music based on the enhanced descriptions.</li>
+                    <li><strong>User Refinement:</strong> The system allows users to provide feedback and adjust parameters to refine the generated music.</li>
+                    <li><strong>Final Output:</strong> The system integrates the generated music with the original video for seamless playback.</li>
+                </ol>
+                
+                <h2>Challenges & Solutions</h2>
+                <div class="challenge-solution">
+                    <div class="challenge">
+                        <h3>Challenge</h3>
+                        <p>Accurately matching music to video content with sufficient emotional and contextual alignment.</p>
+                    </div>
+                    <div class="solution">
+                        <h3>Solution</h3>
+                        <p>Implemented the RAG approach using the MusicCaps dataset, which significantly improved the relevance of generated music by providing high-quality reference examples.</p>
+                    </div>
+                </div>
+                
+                <div class="challenge-solution">
+                    <div class="challenge">
+                        <h3>Challenge</h3>
+                        <p>Creating dynamic music that adapts to changing scenes and emotional shifts within a single video.</p>
+                    </div>
+                    <div class="solution">
+                        <h3>Solution</h3>
+                        <p>Developed a segmentation approach that analyzes the video in chunks, generating music for each segment and then seamlessly combining them with proper transitions.</p>
+                    </div>
+                </div>
+                
+                <div class="challenge-solution">
+                    <div class="challenge">
+                        <h3>Challenge</h3>
+                        <p>Making the system accessible to users without technical expertise in AI or music composition.</p>
+                    </div>
+                    <div class="solution">
+                        <h3>Solution</h3>
+                        <p>Created an agent-based conversational interface with LangGraph that guides users through the process, explaining options and collecting preferences in natural language.</p>
+                    </div>
+                </div>
+                
+                <h2>Results and Impact</h2>
+                <p>The Background Music Generation system delivers several significant benefits:</p>
+                <ul>
+                    <li>Reduces the time content creators spend finding appropriate background music from hours to minutes</li>
+                    <li>Eliminates copyright concerns by generating original, royalty-free music</li>
+                    <li>Enhances viewer engagement through emotionally resonant audio-visual experiences</li>
+                    <li>Provides accessible music creation for creators without musical expertise</li>
+                    <li>Creates unique soundtracks tailored specifically to individual video content</li>
+                </ul>
+                
+                <div class="project-nav">
+                    <a href="../index.html#work" class="btn back-btn tag"><i class="fas fa-arrow-left"></i> Back to Projects</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Profile Picture Modal -->
+    <div class="modal" id="profileModal">
+        <span class="modal-close">&times;</span>
+        <img src="../Me2.jpg" alt="Pranav Mudar">
+    </div>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <script>
+        // Profile Picture Modal
+        const avatar = document.getElementById('avatar');
+        const modal = document.getElementById('profileModal');
+        const modalClose = document.querySelector('.modal-close');
+
+        avatar.addEventListener('click', () => {
+            modal.classList.add('active');
+        });
+
+        modalClose.addEventListener('click', () => {
+            modal.classList.remove('active');
+        });
+
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.classList.remove('active');
+            }
+        });
+        
+        // Back to Top Button
+        const backToTopButton = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.add('visible');
+            } else {
+                backToTopButton.classList.remove('visible');
+            }
+        });
+    </script>
+</body>
+</html> 

@@ -16,7 +16,8 @@
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
 	<!--/ /-------- Your Styles --------/ /-->
-	<link href="styles.css" rel="stylesheet">
+	<link href="css/styles.css" rel="stylesheet">
+	<link href="css/index-dark-theme.css" rel="stylesheet">
 
 	<!--/ /---Put a short description for your site below. 20 words or less---/ /-->
 	<meta description="Pranav Mudar - Computer Science student and developer specializing in web technologies and AI/ML">
@@ -39,9 +40,12 @@
             
 			<div class="logo-container">
 				<div class="profile-image">
-					<img src="Me - 3 (Lake).jpeg" alt="Pranav Mudar" id="avatar">
+					<img src="Me2.jpg" alt="Pranav Mudar" id="avatar" style="width: 100px; height: 100px;">
 				</div>
 				<h1>Pranav Mudar</h1>
+				<a href="docs/Pranav_Mudar_Resume.pdf" download class="header-download-btn" title="Download Resume">
+					<i class="fas fa-file-download"></i>
+				</a>
 			</div>
             
             
@@ -73,9 +77,9 @@
                 <h2>Computer Science Student & Developer</h2>
                 <p>Passionate about Web Technologies, Programming, and Data Analytics</p>
                 <div class="contact-info">
-                    <p><i class="fa fa-envelope" aria-hidden="true"></i> <a href="mailto:mudarpranav3@gmail.com">mudarpranav3@gmail.com</a></p>
-                    <p><i class="fa fa-phone" aria-hidden="true"></i> (+91) 9959956470</p>
-                    <p><i class="fab fa-linkedin" aria-hidden="true"></i> <a href="https://linkedin.com/in/Pranav-Mudar/" target="_blank">linkedin.com/in/Pranav-Mudar/</a></p>
+                    <p><i class="fa fa-envelope" aria-hidden="true"></i><br><a href="mailto:mudarpranav3@gmail.com">mudarpranav3@gmail.com</a></p>
+                    <p><i class="fa fa-phone" aria-hidden="true"></i><br>(+91) 9959956470</p>
+                    <p><i class="fab fa-linkedin" aria-hidden="true"></i><br><a href="https://linkedin.com/in/Pranav-Mudar/" target="_blank">linkedin.com/in/Pranav-Mudar/</a></p>
                 </div>
             </div>
         </div>
@@ -87,48 +91,28 @@
         	
             <section class="projects">
                 <article>
-                    <a href="projects/attendance-calculator.html" class="project-link"></a>
-                	<h3>Website with Attendance Calculator, CGPA Calculator, and PDF Combiner</h3>
-                	<a href="projects/attendance-calculator.html" class="project-image">
-                		<img src="https://cdn.pixabay.com/photo/2015/05/28/14/38/ux-787980_640.jpg" alt="Attendance Calculator Project">
+                    <a href="projects/generative-ai-research.html" class="project-link"></a>
+                	<h3>Research Paper on Generative AI</h3>
+                	<a href="projects/generative-ai-research.html" class="project-image">
+                		<img src="/projects/Pictures/GenAI1.jpeg" alt="Generative AI Research">
                 	</a>
-                    <p><strong>Technologies:</strong> HTML, JavaScript, Python, MySQL</p>
-                    <p><strong>Description:</strong> Developed a dynamic website with an Attendance Calculator and a robust search engine, facilitating automated tracking and quick information retrieval. Utilized front-end technologies (HTML, CSS, JavaScript) and MySQL for storing attendance records and enabling efficient search functionalities.</p>
+                    <p><strong>Technologies:</strong> Machine Learning, AI</p>
+                    <p><strong>Description:</strong> Currently working on a Research Paper on a Generative AI model that creates a 3D model of the heart based off of the given 2D input MRI scans. We are planing of using pre-trained models on the same thing but also modify it in such a way that it'll improve the overall accuracy by filling out the missing parts with the training data.</p>
                 </article>
-                
+
                 <article>
-                    <a href="projects/chat-server.html" class="project-link"></a>
-                	<h3>Chat Server with File Transfer</h3>
-                	<a href="projects/chat-server.html" class="project-image">
-                		<img src="https://cdn.pixabay.com/photo/2013/07/12/18/17/equalizer-153212_640.png" alt="Chat Server Project">
+                    <a href="projects/elearning.html" class="project-link"></a>
+                	<h3>E-Learning Platform</h3>
+                	<a href="projects/elearning.html" class="project-image">
+                		<img src="/projects/Pictures/elearning1.jpg" alt="E-Learning Platform">
                 	</a>
-                    <p><strong>Technologies:</strong> Socket Programming</p>
-                    <p><strong>Description:</strong> Made a chat server between multiple systems where the systems can share files and the admin can kick, or ban the systems in the server and has other features such as a log of the system entries/exits and the chat history. Also has the feature of having multiple clients within one system that can chat, share files, and other features.</p>
+                    <p><strong>Technologies:</strong> Java, Spring Boot, React, PostgreSQL</p>
+                    <p><strong>Description:</strong> Developed a comprehensive e-learning platform using MVC architecture that enables educational institutions to create, manage, and deliver online courses. Built with Java (OOP principles), Spring Boot for backend, React for frontend, and PostgreSQL for database, providing features like course management, student tracking, and interactive content delivery.</p>
                 </article>
-                
-                <article>
-                    <a href="projects/collision-detection.html" class="project-link"></a>
-                	<h3>Collision Detection and Prevention Device</h3>
-                	<a href="projects/collision-detection.html" class="project-image">
-                		<img src="https://cdn.pixabay.com/photo/2017/03/23/12/32/arduino-2168193_640.png" alt="Collision Detection Device">
-                	</a>
-                    <p><strong>Technologies:</strong> Arduino, UV Sensors</p>
-                    <p><strong>Description:</strong> Made a device that detects when an object is too close to a sensor which is connected to the device, lets the user know using speakers, and lights helping in avoiding collision. Made a working prototype that was shown to the co-ordinator and got validated.</p>
-                </article>
-				
-				<article>
-                    <a href="projects/event-management.html" class="project-link"></a>
-                	<h3>Website for Event Management</h3>
-                	<a href="projects/event-management.html" class="project-image">
-                		<img src="https://cdn.pixabay.com/photo/2018/05/10/11/34/concert-3387324_640.jpg" alt="Event Management Website">
-                	</a>
-                    <p><strong>Technologies:</strong> HTML, JavaScript, Python, MySQL</p>
-                    <p><strong>Description:</strong> Developed a dynamic website with a robust system in place for managing Events that are going to happen and are happening in college, facilitating automated tracking and quick information retrieval. Utilized front-end technologies and MySQL for storing events and enabling efficient search functionalities within the website.</p>
-                </article>
-                
+
                 <article>
                     <a href="projects/disaster-management.html" class="project-link"></a>
-                	<h3>Website for Disaster Management</h3>
+                	<h3>National Disaster Management</h3>
                 	<a href="projects/disaster-management.html" class="project-image">
                 		<img src="https://cdn.pixabay.com/photo/2016/10/28/13/09/usa-1777986_640.jpg" alt="Disaster Management Project">
                 	</a>
@@ -137,13 +121,63 @@
                 </article>
                 
                 <article>
-                    <a href="projects/generative-ai-research.html" class="project-link"></a>
-                	<h3>Research Paper on Generative AI</h3>
-                	<a href="projects/generative-ai-research.html" class="project-image">
-                		<img src="https://static.liveperson.com/static-assets/2023/04/14142148/Blog_Generative_AI_small_2x.jpg" alt="Generative AI Research">
+                    <a href="projects/background-music-generation.html" class="project-link"></a>
+                	<h3>Background Music Generation</h3>
+                	<a href="projects/background-music-generation.html" class="project-image">
+                		<img src="/projects/Pictures/backgroundmusic1.jpg" alt="Background Music Generation">
                 	</a>
-                    <p><strong>Technologies:</strong> Machine Learning, AI</p>
-                    <p><strong>Description:</strong> Currently working on a Research Paper on a Generative AI model that creates a 3D model of the heart based off of the given 2D input MRI scans. We are planing of using pre-trained models on the same thing but also modify it in such a way that it'll improve the overall accuracy by filling out the missing parts with the training data.</p>
+                    <p><strong>Technologies:</strong> Python, Deep Learning, NLP, Audio Processing</p>
+                    <p><strong>Description:</strong> Developed an AI system that generates customized background music for videos by analyzing their content. The system extracts video transcripts, converts them to music generation prompts, and creates tailored background music that matches the video's context and emotional tone.</p>
+                </article>
+                
+                <article>
+                    <a href="projects/ultimate-tic-tac-toe.html" class="project-link"></a>
+                	<h3>Ultimate Tic-Tac-Toe</h3>
+                	<a href="projects/ultimate-tic-tac-toe.html" class="project-image">
+                		<img src="/projects/Pictures/ultimate1.jpg" alt="Ultimate Tic-Tac-Toe">
+                	</a>
+                    <p><strong>Technologies:</strong> Python, Reinforcement Learning, Neural Networks, Q-Learning</p>
+                    <p><strong>Description:</strong> Created an AI-powered Tic-Tac-Toe game with three difficulty levels: Easy (random algorithm), Medium (Q-table learning), and Hard (deep Q-learning with neural networks). The system can train by playing against itself or learning from games against human players.</p>
+                </article>
+                
+                <article>
+                    <a href="projects/attendance-calculator.html" class="project-link"></a>
+                	<h3>StudentTools Website</h3>
+                	<a href="projects/attendance-calculator.html" class="project-image">
+                		<img src="projects/Pictures/StudentTools1.jpg" alt="Attendance Calculator Project">
+                	</a>
+                    <p><strong>Technologies:</strong> HTML, JavaScript, Python, MySQL</p>
+                    <p><strong>Description:</strong> Developed a dynamic website with an Attendance Calculator and a robust search engine, facilitating automated tracking and quick information retrieval. Utilized front-end technologies (HTML, CSS, JavaScript) and MySQL for storing attendance records and enabling efficient search functionalities.</p>
+                </article>
+                
+                <article>
+                    <a href="projects/event-management.html" class="project-link"></a>
+                	<h3>Event Management Platform</h3>
+                	<a href="projects/event-management.html" class="project-image">
+                		<img src="https://cdn.pixabay.com/photo/2018/05/10/11/34/concert-3387324_640.jpg" alt="Event Management Website">
+                	</a>
+                    <p><strong>Technologies:</strong> HTML, JavaScript, PHP, MySQL</p>
+                    <p><strong>Description:</strong> Developed a comprehensive web platform for managing college events, both upcoming and ongoing. The system provides centralized solutions for event organizers, participants, and administrators with features like event registration, attendance tracking, and interactive calendar interfaces.</p>
+                </article>
+                
+                <article>
+                    <a href="projects/chat-server.html" class="project-link"></a>
+                	<h3>Multi-Client Chat Server</h3>
+                	<a href="projects/chat-server.html" class="project-image">
+                		<img src="/projects/Pictures/Chatserver1.webp" alt="Chat Server Project">
+                	</a>
+                    <p><strong>Technologies:</strong> Python, Socket Programming, Threading</p>
+                    <p><strong>Description:</strong> Implemented a robust chat server that supports multiple clients with features like file sharing, private messaging, and admin controls (kick/ban). Includes comprehensive logging of system events and chat history while maintaining efficient network communication.</p>
+                </article>
+                
+                <article>
+                    <a href="projects/collision-detection.html" class="project-link"></a>
+                	<h3>Collision Detection Device</h3>
+                	<a href="projects/collision-detection.html" class="project-image">
+                		<img src="https://cdn.pixabay.com/photo/2017/03/23/12/32/arduino-2168193_640.png" alt="Collision Detection Device">
+                	</a>
+                    <p><strong>Technologies:</strong> Arduino, Ultrasonic Sensors, C++</p>
+                    <p><strong>Description:</strong> Designed and built a device that detects proximity to objects using ultrasonic sensors and provides real-time audio-visual alerts to help prevent collisions. Created a functioning prototype with practical applications for safety systems and automated vehicles.</p>
                 </article>
             </section>
         </div>
@@ -280,17 +314,11 @@
             </div>
         </div>
     </section>
-    
-    <footer class="primary">
-    	<div class="wrapper">
-        	<p class="centered">&copy; 2023 Pranav Mudar - All Rights Reserved</p>
-        </div>
-    </footer>
 
     <!-- Profile Picture Modal -->
     <div class="modal" id="profileModal">
         <span class="modal-close">&times;</span>
-        <img src="Me - 3 (Lake).jpeg" alt="Pranav Mudar">
+        <img src="Me2.jpg" alt="Pranav Mudar">
     </div>
 
     <!-- Back to Top Button -->

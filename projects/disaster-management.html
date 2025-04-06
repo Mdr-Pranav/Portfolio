@@ -3,18 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Disaster Management Website | Pranav Mudar</title>
+    <title>National Disaster Management | Pranav Mudar</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../styles.css">
-    <link rel="stylesheet" href="project-styles.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/project-styles.css">
+    <link rel="stylesheet" href="../css/dark-theme.css">
 </head>
 <body>
     <header>
         <div class="wrapper">
             <div class="logo-container">
-                <img src="../Me - 3 (Lake).jpeg" alt="Pranav Mudar" id="avatar">
+                <img src="../Me2.jpg" alt="Pranav Mudar" id="avatar">
                 <h1>Pranav Mudar</h1>
+                <a href="../docs/Pranav_Mudar_Resume.pdf" download class="header-download-btn" title="Download Resume">
+                    <i class="fas fa-file-download"></i>
+                </a>
             </div>
             
             <nav id="mainnav">
@@ -30,14 +34,14 @@
 
     <section class="project-hero">
         <div class="wrapper">
-            <h1>Disaster Management Website</h1>
-            <p>A comprehensive platform for disaster preparedness and response coordination</p>
+            <h1>National Disaster Management</h1>
+            <p>A website meant to keep track of vital resources/operations to help improve efficiency of managing Disasters and Volunteers</p>
             <div class="project-tags">
                 <span class="tag">HTML</span>
-                <span class="tag">CSS</span>
                 <span class="tag">JavaScript</span>
-                <span class="tag">PHP</span>
+                <span class="tag">Node.js</span>
                 <span class="tag">MySQL</span>
+                <span class="tag">Sequelize</span>
             </div>
             <div class="project-tags">
                 <!-- <a href="#" class="tag"><i class="fas fa-code"></i> Implementation</a> -->
@@ -50,103 +54,131 @@
         <div class="wrapper">
             <div class="project-details">
                 <div class="project-image-large">
-                    <img src="https://cdn.pixabay.com/photo/2016/10/28/13/09/usa-1777986_1280.jpg" alt="Disaster Management Project">
+                    <img src="https://cdn.pixabay.com/photo/2016/10/28/13/09/usa-1777986_640.jpg" alt="Disaster Management Project">
                 </div>
                 
                 <h2>Project Overview</h2>
-                <p>This comprehensive web platform connects NGOs with disaster relief resources and volunteers across the country. The system facilitates coordination between various stakeholders involved in disaster response, enabling more efficient allocation of resources and manpower during critical situations. By centralizing disaster information and providing structured volunteer management, the platform enhances the effectiveness of relief efforts.</p>
+                <p>The National Disaster Management Platform is a comprehensive web-based system designed to facilitate coordination between NGOs, volunteers, and administrators during disaster relief operations. The system centralizes critical information about ongoing disasters, available resources, and volunteer deployments, significantly improving response efficiency and resource allocation.</p>
                 
                 <h2>Key Features</h2>
                 <ul class="feature-list">
                     <li>
                         <i class="fas fa-check-circle"></i>
                         <div>
-                            <h3>Disaster Tracking and Mapping</h3>
-                            <p>Interactive map interface that displays current disaster zones with real-time updates on severity, affected areas, and resources needed.</p>
+                            <h3>User Registration and Authentication</h3>
+                            <p>Secure registration and login system with role-based access control for administrators, NGOs, and volunteers. Each user type has a customized dashboard with relevant functions and permissions.</p>
                         </div>
                     </li>
                     <li>
                         <i class="fas fa-check-circle"></i>
                         <div>
-                            <h3>Volunteer Registration and Management</h3>
-                            <p>Comprehensive system for volunteers to register, specify skills and availability, and apply for specific disaster relief initiatives.</p>
+                            <h3>Admin Management Tools</h3>
+                            <p>Administrative interface for creating and managing training sessions, approving volunteer applications, and overseeing disaster relief operations. Includes real-time statistics and reporting capabilities.</p>
                         </div>
                     </li>
                     <li>
                         <i class="fas fa-check-circle"></i>
                         <div>
-                            <h3>NGO Coordination Portal</h3>
-                            <p>Dedicated interface for NGOs to post disaster relief requirements, coordinate with other organizations, and manage volunteer deployments.</p>
+                            <h3>Volunteer Management System</h3>
+                            <p>Volunteers can browse current disasters, submit applications to assist, register for training sessions, and track their participation history. The system includes skill matching to connect volunteers with appropriate opportunities.</p>
                         </div>
                     </li>
                     <li>
                         <i class="fas fa-check-circle"></i>
                         <div>
-                            <h3>Training Session Management</h3>
-                            <p>System for administrators to create and manage volunteer training sessions, including registration, attendance tracking, and certification.</p>
+                            <h3>Disaster Tracking</h3>
+                            <p>Comprehensive database of ongoing and past disasters with detailed information, resource requirements, and current status. Includes geolocation data and severity classification.</p>
                         </div>
                     </li>
                     <li>
                         <i class="fas fa-check-circle"></i>
                         <div>
-                            <h3>Resource Allocation Tracking</h3>
-                            <p>Tools to monitor the allocation and distribution of resources across different disaster zones, ensuring efficient utilization of available supplies and funds.</p>
+                            <h3>Database Integrity</h3>
+                            <p>Implemented cascading database operations to maintain data consistency across related tables, ensuring that all records are properly updated or removed when parent records change.</p>
                         </div>
                     </li>
                 </ul>
                 
                 <h2>Technical Implementation</h2>
-                <p>The project was developed using modern web technologies and best practices:</p>
+                <h3>Frontend</h3>
+                <p>The user interface was built using HTML, CSS, and JavaScript to create a responsive design that works across devices. Key components include:</p>
                 <ul>
-                    <li><strong>Frontend:</strong> HTML5, CSS3, and JavaScript create a responsive interface that works across devices, with mapping APIs for geographical visualization.</li>
-                    <li><strong>Backend:</strong> Python handles server-side logic, data processing, and integration with external disaster information systems.</li>
-                    <li><strong>Database:</strong> MySQL database stores comprehensive records of volunteers, disasters, NGOs, training sessions, and resource allocations with optimized schema design.</li>
-                    <li><strong>Authentication:</strong> Multi-level user authentication system with distinct permission sets for volunteers, NGO representatives, and administrators.</li>
-                    <li><strong>Notifications:</strong> Automated alert system for updates on disaster situations, volunteer opportunities, and training sessions.</li>
+                    <li>Interactive dashboards with real-time updates</li>
+                    <li>Form validation for user inputs</li>
+                    <li>Data visualization for disaster statistics</li>
+                    <li>Responsive layouts for mobile and desktop access</li>
                 </ul>
+                
+                <h3>Backend</h3>
+                <p>The server-side implementation leverages Node.js with the following technologies:</p>
+                <ul>
+                    <li><strong>Node.js:</strong> Server runtime environment</li>
+                    <li><strong>Express.js:</strong> Web application framework</li>
+                    <li><strong>MySQL:</strong> Relational database for storing user, disaster, and training data</li>
+                    <li><strong>Sequelize ORM:</strong> Object-Relational Mapping for database interactions</li>
+                    <li><strong>JWT Authentication:</strong> Secure token-based user authentication</li>
+                </ul>
+                
+                <h2>Database Design</h2>
+                <p>The relational database structure includes the following main tables:</p>
+                <ul>
+                    <li><strong>Users:</strong> Stores user credentials and profile information with role designations</li>
+                    <li><strong>Disasters:</strong> Contains details about each disaster including location, type, severity, and status</li>
+                    <li><strong>Volunteers:</strong> Tracks volunteer skills, availability, and verification status</li>
+                    <li><strong>TrainingSessions:</strong> Manages upcoming and past training opportunities</li>
+                    <li><strong>DisasterApplications:</strong> Records volunteer applications for specific disasters</li>
+                    <li><strong>TrainingRegistrations:</strong> Connects volunteers with training sessions they've registered for</li>
+                </ul>
+                
+                <h2>Setup and Installation</h2>
+                <p>The application requires the following prerequisites:</p>
+                <ul>
+                    <li>Node.js and npm</li>
+                    <li>MySQL Server</li>
+                    <li>Git (optional)</li>
+                    <li>Sequelize CLI (optional)</li>
+                </ul>
+                
+                <p>Installation involves:</p>
+                <ol>
+                    <li>Cloning the repository</li>
+                    <li>Installing dependencies with npm</li>
+                    <li>Configuring environment variables</li>
+                    <li>Setting up the database</li>
+                    <li>Running the server</li>
+                </ol>
                 
                 <h2>Challenges & Solutions</h2>
                 <div class="challenge-solution">
                     <div class="challenge">
                         <h3>Challenge</h3>
-                        <p>Creating a reliable system that can operate effectively during emergencies when network connectivity might be compromised.</p>
+                        <p>Designing a database schema that efficiently handles the complex relationships between users, disasters, volunteers, and training sessions while maintaining data integrity.</p>
                     </div>
                     <div class="solution">
                         <h3>Solution</h3>
-                        <p>Implemented progressive web app features with offline functionality and data synchronization when connectivity is restored, ensuring the platform remains operational during critical periods.</p>
+                        <p>Implemented a normalized database design with foreign key constraints and cascading operations. Used Sequelize ORM to manage model associations and transactions, ensuring consistent database states even during complex operations.</p>
                     </div>
                 </div>
                 
                 <div class="challenge-solution">
                     <div class="challenge">
                         <h3>Challenge</h3>
-                        <p>Managing the complex volunteer matching process to ensure the right skills are deployed to appropriate disaster zones.</p>
+                        <p>Creating a secure yet user-friendly authorization system that enforces proper access controls while remaining accessible to users with varying technical skills.</p>
                     </div>
                     <div class="solution">
                         <h3>Solution</h3>
-                        <p>Developed an algorithm that matches volunteer skills, availability, and proximity to disaster zones, prioritizing critical skill requirements and suggesting optimal volunteer allocations.</p>
-                    </div>
-                </div>
-                
-                <div class="challenge-solution">
-                    <div class="challenge">
-                        <h3>Challenge</h3>
-                        <p>Maintaining data integrity across multiple stakeholders with varying levels of technical proficiency.</p>
-                    </div>
-                    <div class="solution">
-                        <h3>Solution</h3>
-                        <p>Created intuitive data entry forms with validation, standardized data formats, and administrative oversight capabilities to ensure accuracy of critical information.</p>
+                        <p>Developed a role-based access control system using JWT tokens with appropriate expiration policies. Created middleware to validate permissions for each route, and implemented intuitive UI elements that only display actions the current user is authorized to perform.</p>
                     </div>
                 </div>
                 
                 <h2>Learning Outcomes</h2>
                 <p>This project provided valuable experience in:</p>
                 <ul>
-                    <li>Developing systems for humanitarian and emergency response applications</li>
-                    <li>Creating platforms that coordinate multiple stakeholders toward a common goal</li>
-                    <li>Implementing mapping and geolocation features for practical applications</li>
-                    <li>Designing database schemas for complex relationships between different user types</li>
-                    <li>Building robust systems that can function reliably in challenging conditions</li>
+                    <li>Designing and implementing complex database schemas with relationships</li>
+                    <li>Creating role-based access control systems</li>
+                    <li>Building a full-stack web application with Node.js and MySQL</li>
+                    <li>Managing data integrity in a multi-user environment</li>
+                    <li>Implementing user authentication and session management</li>
                 </ul>
                 
                 <div class="project-nav">
@@ -159,19 +191,13 @@
     <!-- Profile Picture Modal -->
     <div class="modal" id="profileModal">
         <span class="modal-close">&times;</span>
-        <img src="../Me - 3 (Lake).jpeg" alt="Pranav Mudar">
+        <img src="../Me2.jpg" alt="Pranav Mudar">
     </div>
 
     <!-- Back to Top Button -->
     <a href="#" class="back-to-top" id="backToTop">
         <i class="fas fa-arrow-up"></i>
     </a>
-
-    <footer class="primary">
-        <div class="wrapper">
-            <p class="centered">&copy; 2023 Pranav Mudar - All Rights Reserved</p>
-        </div>
-    </footer>
 
     <script>
         // Profile Picture Modal

@@ -220,29 +220,18 @@ header .wrapper {
 	border-radius: 50%;
     border: 2px solid white;
     margin: 0 1rem 0 0;
-    width: 90px;
-    height: 90px;
+    width: 100px;
+    height: 100px;
     object-fit: cover;
-    box-shadow: 0 0 20px rgba(52, 152, 219, 0.9);
-    animation: avatarGlow 2s infinite alternate;
+    box-shadow: 0 0 15px rgba(52, 152, 219, 0.7);
     cursor: pointer;
-    transition: transform 0.3s ease;
-}
-
-@keyframes avatarGlow {
-    0% {
-        box-shadow: 0 0 15px rgba(52, 152, 219, 0.6);
-    }
-    50% {
-        box-shadow: 0 0 25px rgba(52, 152, 219, 1);
-    }
-    100% {
-        box-shadow: 0 0 15px rgba(52, 152, 219, 0.6);
-    }
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: none;
 }
 
 #avatar:hover {
     transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(52, 152, 219, 0.9);
 }
 
 .modal {
@@ -309,6 +298,26 @@ header .wrapper {
     color: var(--accent);
 }
 
+/* Header Download Button */
+.header-download-btn {
+    margin-left: 10px;
+    color: var(--accent);
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-download-btn:hover {
+    color: white;
+    transform: translateY(-2px);
+}
+
+.header-download-btn:active {
+    transform: translateY(0);
+}
+
 /***************** Hero Section *****************/
 #hero {
     background: linear-gradient(rgba(44, 62, 80, 0.9), rgba(44, 62, 80, 0.9)), url('https://cdn.pixabay.com/photo/2016/11/19/14/00/code-1839406_1280.jpg') no-repeat center center/cover;
@@ -326,11 +335,15 @@ header .wrapper {
     color: white;
     font-size: 2.5rem;
     margin-bottom: 1rem;
+    text-shadow: none;
+    animation: none;
 }
 
 .hero-content h2:after {
     left: 50%;
     transform: translateX(-50%);
+    box-shadow: none;
+    animation: none;
 }
 
 .hero-content p {
@@ -887,4 +900,40 @@ html {
 
 .back-to-top i {
     font-size: 1.5rem;
+}
+
+/* Resume Download Button */
+.resume-download {
+    margin: 2rem 0;
+}
+
+.download-btn {
+    display: inline-block;
+    background: var(--accent);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: none;
+    cursor: pointer;
+}
+
+.download-btn i {
+    margin-right: 8px;
+}
+
+.download-btn:hover {
+    background: #2779bd;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.download-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }

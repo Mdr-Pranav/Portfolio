@@ -3,18 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Event Management Website | Pranav Mudar</title>
+    <title>Event Management Platform | Pranav Mudar</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../styles.css">
-    <link rel="stylesheet" href="project-styles.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/project-styles.css">
+    <link rel="stylesheet" href="../css/dark-theme.css">
 </head>
 <body>
     <header>
         <div class="wrapper">
             <div class="logo-container">
-                <img src="../Me - 3 (Lake).jpeg" alt="Pranav Mudar" id="avatar">
+                <img src="../Me2.jpg" alt="Pranav Mudar" id="avatar">
                 <h1>Pranav Mudar</h1>
+                <a href="../docs/Pranav_Mudar_Resume.pdf" download class="header-download-btn" title="Download Resume">
+                    <i class="fas fa-file-download"></i>
+                </a>
             </div>
             
             <nav id="mainnav">
@@ -36,8 +40,8 @@
                 <span class="tag">HTML</span>
                 <span class="tag">CSS</span>
                 <span class="tag">JavaScript</span>
-                <span class="tag">PHP</span>
-                <span class="tag">MySQL</span>
+                <span class="tag">Node.js</span>
+                <span class="tag">MongoDB</span>
             </div>
             <!-- <div class="project-tags">
                 <a href="#" class="tag"><i class="fas fa-code"></i> Implementation</a>
@@ -99,8 +103,8 @@
                 <p>The project was developed using a stack of modern web technologies:</p>
                 <ul>
                     <li><strong>Frontend:</strong> HTML5, CSS3, and JavaScript were utilized to create a responsive and interactive user interface that works across devices.</li>
-                    <li><strong>Backend:</strong> Python with a web framework handled server-side logic, form processing, and business rules implementation.</li>
-                    <li><strong>Database:</strong> MySQL database stores event data, user accounts, registrations, and other related information with optimized queries for efficient retrieval.</li>
+                    <li><strong>Backend:</strong> Node.js with Express framework handled server-side logic, form processing, and business rules implementation.</li>
+                    <li><strong>Database:</strong> MongoDB database stores event data, user accounts, registrations, and other related information with a flexible document-based structure for efficient data organization.</li>
                     <li><strong>Data Visualization:</strong> Implemented charts and calendar views to help administrators analyze event popularity and attendance patterns.</li>
                     <li><strong>Authentication:</strong> Secure user authentication system with role-based permissions for different types of users (students, organizers, administrators).</li>
                 </ul>
@@ -139,7 +143,7 @@
                 </ul>
                 
                 <div class="project-nav">
-                    <a href="../index.html#work" class="btn back-btn"><i class="fas fa-arrow-left"></i> Back to Projects</a>
+                    <a href="../index.html#work" class="btn back-btn tag"><i class="fas fa-arrow-left"></i> Back to Projects</a>
                 </div>
             </div>
         </div>
@@ -148,19 +152,13 @@
     <!-- Profile Picture Modal -->
     <div class="modal" id="profileModal">
         <span class="modal-close">&times;</span>
-        <img src="../Me - 3 (Lake).jpeg" alt="Pranav Mudar">
+        <img src="../Me2.jpg" alt="Pranav Mudar">
     </div>
 
     <!-- Back to Top Button -->
     <a href="#" class="back-to-top" id="backToTop">
         <i class="fas fa-arrow-up"></i>
     </a>
-
-    <footer class="primary">
-        <div class="wrapper">
-            <p class="centered">&copy; 2023 Pranav Mudar - All Rights Reserved</p>
-        </div>
-    </footer>
 
     <script>
         // Profile Picture Modal
