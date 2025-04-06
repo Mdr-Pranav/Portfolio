@@ -966,3 +966,130 @@ html {
 .certification-item:nth-child(8) {
     animation-delay: 0s !important;
 }
+
+/* Contact Section */
+#contact {
+    padding: 4rem 0;
+}
+
+#contact h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.contact-info-section, .contact-form-section {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.contact-details {
+    margin-top: 2rem;
+}
+
+.contact-detail-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.contact-detail-item i {
+    color: var(--accent);
+    font-size: 1.2rem;
+    width: 30px;
+    text-align: center;
+    margin-right: 1rem;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-group {
+    position: relative;
+}
+
+.contact-form input, 
+.contact-form textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid var(--border-color);
+    background-color: rgba(255, 255, 255, 0.05);
+    color: var(--text);
+    border-radius: 4px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.contact-form input:focus, 
+.contact-form textarea:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 10px rgba(52, 152, 219, 0.3);
+}
+
+.send-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--accent);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 4px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    align-self: flex-start;
+}
+
+.send-button i {
+    margin-left: 8px;
+    transition: transform 0.3s ease;
+}
+
+.send-button:hover {
+    background: #2779bd;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.send-button:hover i {
+    transform: translateX(5px);
+}
+
+.form-status {
+    margin-top: 1rem;
+    text-align: center;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.form-status.success {
+    color: var(--success);
+}
+
+.form-status.error {
+    color: var(--highlight);
+}
+
+@media only screen and (min-width: 768px) {
+    .contact-container {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .contact-info-section {
+        padding: 3rem;
+    }
+}
