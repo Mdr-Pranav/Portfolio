@@ -630,12 +630,16 @@ header .wrapper {
     background: var(--card-bg);
     padding: 1.5rem;
     border-radius: 8px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
-    transition: transform 0.3s ease;
+    box-shadow: 0 0 10px rgba(52, 152, 219, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid var(--accent);
+    animation: none !important; /* Override any animation */
+    cursor: pointer;
 }
 
 .certification-item:hover {
     transform: translateY(-3px);
+    box-shadow: 0 0 25px rgba(52, 152, 219, 0.8);
 }
 
 .certification-item h3 {
@@ -817,12 +821,29 @@ footer p {
     }
 }
 
-.skill-category, .certification-item, .experience-item, .projects article {
+.skill-category, .experience-item, .projects article {
     transition: transform 0.3s ease;
     animation: pulsateGlow 3s infinite;
 }
 
-.skill-category:hover, .certification-item:hover, .experience-item:hover, .projects article:hover {
+/* Remove animation from certification items */
+.certification-item {
+    background: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(52, 152, 219, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid var(--accent);
+    animation: none !important; /* Override any animation */
+    cursor: pointer;
+}
+
+.certification-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 25px rgba(52, 152, 219, 0.8);
+}
+
+.skill-category:hover, .experience-item:hover, .projects article:hover {
     transform: translateY(-5px);
     animation: pulsateGlow 1.5s infinite;
 }
@@ -835,28 +856,28 @@ footer p {
     transform: translateY(-5px);
 }
 
-/* Staggered animation delays for a nice visual effect */
-.skill-category:nth-child(1), .certification-item:nth-child(1), .projects article:nth-child(1) {
+/* Staggered animation delays for projects and skills only */
+.skill-category:nth-child(1), .projects article:nth-child(1) {
     animation-delay: 0s;
 }
 
-.skill-category:nth-child(2), .certification-item:nth-child(2), .projects article:nth-child(2) {
+.skill-category:nth-child(2), .projects article:nth-child(2) {
     animation-delay: 0.5s;
 }
 
-.skill-category:nth-child(3), .certification-item:nth-child(3), .projects article:nth-child(3) {
+.skill-category:nth-child(3), .projects article:nth-child(3) {
     animation-delay: 1s;
 }
 
-.certification-item:nth-child(4), .projects article:nth-child(4) {
+.projects article:nth-child(4) {
     animation-delay: 1.5s;
 }
 
-.certification-item:nth-child(5), .projects article:nth-child(5) {
+.projects article:nth-child(5) {
     animation-delay: 2s;
 }
 
-.certification-item:nth-child(6), .projects article:nth-child(6) {
+.projects article:nth-child(6) {
     animation-delay: 2.5s;
 }
 
@@ -936,4 +957,12 @@ html {
 .download-btn:active {
     transform: translateY(0);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.certification-item:nth-child(7) {
+    animation-delay: 0s !important;
+}
+
+.certification-item:nth-child(8) {
+    animation-delay: 0s !important;
 }

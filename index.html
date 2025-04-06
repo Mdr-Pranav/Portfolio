@@ -267,33 +267,43 @@
             <h2>Certifications</h2>
             
             <div class="certifications-container">
-                <div class="certification-item">
+                <div class="certification-item" onclick="window.open('https://www.coursera.org/account/accomplishments/verify/GY7UFSTVLHYE', '_blank')">
                     <h3>Python Introduction Course</h3>
                     <p>The University of Michigan</p>
                 </div>
                 
-                <div class="certification-item">
+                <div class="certification-item" onclick="window.open('https://www.coursera.org/account/accomplishments/verify/6NS74ZTWMRFB', '_blank')">
                     <h3>Introduction to Artificial Intelligence</h3>
                     <p>IBM</p>
                 </div>
                 
-                <div class="certification-item">
+                <div class="certification-item" onclick="window.open('https://www.coursera.org/account/accomplishments/verify/PPQLQGSH3GAU', '_blank')">
                     <h3>Getting Started with AI using IBM Watson</h3>
-                    <p>IBM Watson</p>
+                    <p>IBM</p>
                 </div>
                 
-                <div class="certification-item">
+                <div class="certification-item" onclick="window.open('https://www.coursera.org/account/accomplishments/verify/78TX5G24H6LM', '_blank')">
                     <h3>Tools of Trade: Linux and SQL</h3>
                     <p>Google</p>
                 </div>
                 
-                <div class="certification-item">
+                <div class="certification-item" onclick="window.open('https://www.coursera.org/account/accomplishments/verify/VC7ZCH6XMTL7', '_blank')">
                     <h3>Introduction to Databases</h3>
                     <p>Meta</p>
                 </div>
                 
-                <div class="certification-item">
+                <div class="certification-item" onclick="window.open('https://www.coursera.org/account/accomplishments/verify/VHNSGW9VL9VW', '_blank')">
                     <h3>Introduction to Generative AI</h3>
+                    <p>Google Cloud</p>
+                </div>
+
+                <div class="certification-item" onclick="window.open('https://www.coursera.org/account/accomplishments/verify/DQFHS4YLLVE5', '_blank')">
+                    <h3>Introduction to Java</h3>
+                    <p>Learn Quest</p>
+                </div>
+
+                <div class="certification-item" onclick="window.open('https://www.coursera.org/account/accomplishments/verify/PJURZC9Z7DUX', '_blank')">
+                    <h3>Introduction to Large Language Models</h3>
                     <p>Google Cloud</p>
                 </div>
             </div>
@@ -369,6 +379,11 @@
                     }
                 }
             });
+        });
+        
+        // Make certification items clickable
+        document.querySelectorAll('.certification-item').forEach(item => {
+            item.style.cursor = 'pointer';
         });
     </script>
 </body>
