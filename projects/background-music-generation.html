@@ -13,6 +13,11 @@
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/project-styles.css">
     <link rel="stylesheet" href="../css/dark-theme.css">
+    
+    <!-- AOS - Animate On Scroll Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="../scripts/apply-animations.js"></script>
 </head>
 <body>
     <header>
@@ -38,9 +43,9 @@
 
     <section class="project-hero">
         <div class="wrapper">
-            <h1>Background Music Generation</h1>
-            <p>A system for generating appropriate background music for videos using AI models and techniques like Retrieval-Augmented Generation (RAG)</p>
-            <div class="project-tags">
+            <h1 data-aos="fade-up" data-aos-duration="800">Background Music Generation</h1>
+            <p data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">A system for generating appropriate background music for videos using AI models and techniques like Retrieval-Augmented Generation (RAG)</p>
+            <div class="project-tags" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
                 <span class="tag">Python</span>
                 <span class="tag">Deep Learning</span>
                 <span class="tag">Audio Processing</span>
@@ -53,44 +58,44 @@
     <section class="project-content">
         <div class="wrapper">
             <div class="project-details">
-                <div class="project-image-large">
+                <div class="project-image-large" data-aos="fade-up" data-aos-duration="800">
                     <img src="/projects/Pictures/backgroundmusic1.jpg" alt="Background Music Generation">
                 </div>
                 
-                <h2>Project Overview</h2>
-                <p>This project aims to automatically generate suitable background music for videos by analyzing video content and generating or retrieving matching music. The system combines video analysis, text description generation, and music generation technologies to create a seamless end-to-end solution that enhances viewer engagement and emotional impact without requiring manual music selection or composition.</p>
+                <h2 data-aos="fade-up" data-aos-duration="800">Project Overview</h2>
+                <p data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">This project aims to automatically generate suitable background music for videos by analyzing video content and generating or retrieving matching music. The system combines video analysis, text description generation, and music generation technologies to create a seamless end-to-end solution that enhances viewer engagement and emotional impact without requiring manual music selection or composition.</p>
                 
-                <h2>Key Features</h2>
+                <h2 data-aos="fade-up" data-aos-duration="800">Key Features</h2>
                 <ul class="feature-list">
-                    <li>
+                    <li data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
                         <i class="fas fa-check-circle"></i>
                         <div>
                             <h3>Video Analysis</h3>
                             <p>Extracts frames from videos and uses AI models (Google Gemini) to analyze content, mood, and themes, providing a comprehensive understanding of the video's context.</p>
                         </div>
                     </li>
-                    <li>
+                    <li data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
                         <i class="fas fa-check-circle"></i>
                         <div>
                             <h3>Retrieval-Augmented Generation (RAG)</h3>
                             <p>Uses a dataset of music descriptions (MusicCaps) to retrieve relevant music based on video content, enhancing the quality and relevance of generated music through reference examples.</p>
                         </div>
                     </li>
-                    <li>
+                    <li data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
                         <i class="fas fa-check-circle"></i>
                         <div>
                             <h3>Music Generation</h3>
                             <p>Creates custom background music using models like AudioCraft/MusicGen, producing original compositions tailored to the specific video content.</p>
                         </div>
                     </li>
-                    <li>
+                    <li data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
                         <i class="fas fa-check-circle"></i>
                         <div>
                             <h3>Agentic Workflow</h3>
                             <p>Implements a conversational agent using LangGraph to guide users through the process, making the system accessible to users without technical expertise.</p>
                         </div>
                     </li>
-                    <li>
+                    <li data-aos="fade-up" data-aos-duration="800" data-aos-delay="500">
                         <i class="fas fa-check-circle"></i>
                         <div>
                             <h3>User Preference Integration</h3>
@@ -99,8 +104,8 @@
                     </li>
                 </ul>
                 
-                <h2>System Architecture</h2>
-                <p>The system consists of several interconnected components:</p>
+                <h2 data-aos="fade-up" data-aos-duration="800">System Architecture</h2>
+                <p data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">The system consists of several interconnected components:</p>
                 <ul>
                     <li><strong>Video Analysis Module:</strong> Extracts frames from the input video and uses Gemini model to analyze video content and generate descriptions.</li>
                     <li><strong>Video Transcript Analysis:</strong> Obtains transcript from the given video input and performs NLP tasks to understand context and themes.</li>
@@ -109,8 +114,8 @@
                     <li><strong>Agent-based Orchestration:</strong> Uses LangGraph to create a conversational workflow that guides users through the process and collects feedback.</li>
                 </ul>
                 
-                <h2>Technologies Used</h2>
-                <p>The project leverages cutting-edge AI and machine learning technologies:</p>
+                <h2 data-aos="fade-up" data-aos-duration="800">Technologies Used</h2>
+                <p data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">The project leverages cutting-edge AI and machine learning technologies:</p>
                 <ul>
                     <li><strong>Google Gemini:</strong> For video content analysis and text generation</li>
                     <li><strong>MusicGen/AudioCraft:</strong> For music generation</li>
@@ -121,7 +126,7 @@
                     <li><strong>PyTorch:</strong> For deep learning model implementation</li>
                 </ul>
                 
-                <h2>Implementation Process</h2>
+                <h2 data-aos="fade-up" data-aos-duration="800">Implementation Process</h2>
                 <ol>
                     <li><strong>Video Input:</strong> User uploads a video file or provides a link to a video that requires background music.</li>
                     <li><strong>Content Analysis:</strong> The system extracts key frames and transcripts, analyzing them with Gemini to understand context and mood.</li>
@@ -132,7 +137,7 @@
                     <li><strong>Final Output:</strong> The system integrates the generated music with the original video for seamless playback.</li>
                 </ol>
                 
-                <h2>Challenges & Solutions</h2>
+                <h2 data-aos="fade-up" data-aos-duration="800">Challenges & Solutions</h2>
                 <div class="challenge-solution">
                     <div class="challenge">
                         <h3>Challenge</h3>
@@ -166,8 +171,8 @@
                     </div>
                 </div>
                 
-                <h2>Results and Impact</h2>
-                <p>The Background Music Generation system delivers several significant benefits:</p>
+                <h2 data-aos="fade-up" data-aos-duration="800">Results and Impact</h2>
+                <p data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">The Background Music Generation system delivers several significant benefits:</p>
                 <ul>
                     <li>Reduces the time content creators spend finding appropriate background music from hours to minutes</li>
                     <li>Eliminates copyright concerns by generating original, royalty-free music</li>
@@ -195,6 +200,13 @@
     </a>
 
     <script>
+        // Initialize AOS
+        AOS.init({
+            once: false,  // Whether animation should happen only once - while scrolling down
+            mirror: false, // Whether elements should animate out while scrolling past them
+            offset: 120,  // Offset (in px) from the original trigger point
+        });
+        
         // Profile Picture Modal
         const avatar = document.getElementById('avatar');
         const modal = document.getElementById('profileModal');

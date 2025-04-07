@@ -13,6 +13,11 @@
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/project-styles.css">
     <link rel="stylesheet" href="../css/dark-theme.css">
+    
+    <!-- AOS - Animate On Scroll Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="../scripts/apply-animations.js"></script>
 </head>
 <body>
     <header>
@@ -38,9 +43,9 @@
 
     <section class="project-hero">
         <div class="wrapper">
-            <h1>Ultimate Tic-Tac-Toe</h1>
-            <p>An advanced implementation of Tic-Tac-Toe with AI opponents powered by Reinforcement Learning</p>
-            <div class="project-tags">
+            <h1 data-aos="fade-up" data-aos-duration="800">Ultimate Tic-Tac-Toe</h1>
+            <p data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">An advanced implementation of Tic-Tac-Toe with AI opponents powered by Reinforcement Learning</p>
+            <div class="project-tags" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
                 <span class="tag">Python</span>
                 <span class="tag">Flask</span>
                 <span class="tag">Q-Learning</span>
@@ -53,55 +58,55 @@
     <section class="project-content">
         <div class="wrapper">
             <div class="project-details">
-                <div class="project-image-large">
+                <div class="project-image-large" data-aos="fade-up" data-aos-duration="800">
                     <img src="/projects/Pictures/ultimate1.jpg" alt="Ultimate Tic-Tac-Toe">
                 </div>
                 
-                <h2>Project Overview</h2>
-                <p>Ultimate Tic-Tac-Toe is a complex variant of the classic game that adds a strategic layer by including multiple boards. I developed an interactive implementation with a learning AI opponent that improves its gameplay over time through reinforcement learning techniques.</p>
+                <h2 data-aos="fade-up" data-aos-duration="800">Project Overview</h2>
+                <p data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">Ultimate Tic-Tac-Toe is a complex variant of the classic game that adds a strategic layer by including multiple boards. I developed an interactive implementation with a learning AI opponent that improves its gameplay over time through reinforcement learning techniques.</p>
                 
-                <h2>How to Play</h2>
-                <ul>
-                    <li>The game is played on a 3x3 grid of 3x3 sub-boards</li>
-                    <li>Players take turns placing their marks (X or O) in empty cells</li>
-                    <li>The location of your move determines which sub-board your opponent must play in next</li>
-                    <li>Win a sub-board by getting three in a row</li>
-                    <li>Win the game by winning three sub-boards in a row</li>
+                <h2 data-aos="fade-up" data-aos-duration="800">How to Play</h2>
+                <ul data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+                    <li data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">The game is played on a 3x3 grid of 3x3 sub-boards</li>
+                    <li data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">Players take turns placing their marks (X or O) in empty cells</li>
+                    <li data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">The location of your move determines which sub-board your opponent must play in next</li>
+                    <li data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">Win a sub-board by getting three in a row</li>
+                    <li data-aos="fade-up" data-aos-duration="800" data-aos-delay="500">Win the game by winning three sub-boards in a row</li>
                 </ul>
                 
-                <h2>AI Implementation</h2>
-                <p>The AI opponent uses Q-Learning, a type of reinforcement learning algorithm, to improve its gameplay over time:</p>
-                <ul>
-                    <li>The Q-table is saved after each game, preserving learned knowledge</li>
-                    <li>The AI learns from both wins and losses to optimize its strategy</li>
-                    <li>The model gradually improves as more games are played</li>
-                    <li>Three difficulty levels correspond to different training states of the AI</li>
+                <h2 data-aos="fade-up" data-aos-duration="800">AI Implementation</h2>
+                <p data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">The AI opponent uses Q-Learning, a type of reinforcement learning algorithm, to improve its gameplay over time:</p>
+                <ul data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+                    <li data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">The Q-table is saved after each game, preserving learned knowledge</li>
+                    <li data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">The AI learns from both wins and losses to optimize its strategy</li>
+                    <li data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">The model gradually improves as more games are played</li>
+                    <li data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">Three difficulty levels correspond to different training states of the AI</li>
                 </ul>
                 
-                <h2>Technical Features</h2>
+                <h2 data-aos="fade-up" data-aos-duration="800">Technical Features</h2>
                 <ul class="feature-list">
-                    <li>
+                    <li data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
                         <i class="fas fa-check-circle"></i>
                         <div>
                             <h3>Reinforcement Learning</h3>
                             <p>Implemented Q-Learning algorithm that allows the AI to learn from experience and improve its gameplay strategy over time through trial and error.</p>
                         </div>
                     </li>
-                    <li>
+                    <li data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
                         <i class="fas fa-check-circle"></i>
                         <div>
                             <h3>Interactive Web Interface</h3>
                             <p>Created a responsive frontend using HTML, CSS and JavaScript that clearly visualizes the nested board structure and provides an intuitive gaming experience.</p>
                         </div>
                     </li>
-                    <li>
+                    <li data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
                         <i class="fas fa-check-circle"></i>
                         <div>
                             <h3>Flask Backend</h3>
                             <p>Developed a Flask server that handles game state, processes moves, and integrates with the AI models to provide real-time responses.</p>
                         </div>
                     </li>
-                    <li>
+                    <li data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
                         <i class="fas fa-check-circle"></i>
                         <div>
                             <h3>Difficulty Levels</h3>
@@ -110,35 +115,35 @@
                     </li>
                 </ul>
                 
-                <h2>Project Structure</h2>
-                <p>The codebase is organized into the following key components:</p>
-                <ul>
-                    <li><strong>app.py:</strong> Flask server and API endpoints for game management</li>
-                    <li><strong>medium.py:</strong> Q-Learning implementation for the AI opponent</li>
-                    <li><strong>index.html:</strong> Main game interface and user interactions</li>
-                    <li><strong>css/styles.css:</strong> Styling for the game board and controls</li>
-                    <li><strong>js/game.js:</strong> Game logic and UI interactions</li>
+                <h2 data-aos="fade-up" data-aos-duration="800">Project Structure</h2>
+                <p data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">The codebase is organized into the following key components:</p>
+                <ul data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+                    <li data-aos="fade-up" data-aos-duration="800" data-aos-delay="100"><strong>app.py:</strong> Flask server and API endpoints for game management</li>
+                    <li data-aos="fade-up" data-aos-duration="800" data-aos-delay="200"><strong>medium.py:</strong> Q-Learning implementation for the AI opponent</li>
+                    <li data-aos="fade-up" data-aos-duration="800" data-aos-delay="300"><strong>index.html:</strong> Main game interface and user interactions</li>
+                    <li data-aos="fade-up" data-aos-duration="800" data-aos-delay="400"><strong>css/styles.css:</strong> Styling for the game board and controls</li>
+                    <li data-aos="fade-up" data-aos-duration="800" data-aos-delay="500"><strong>js/game.js:</strong> Game logic and UI interactions</li>
                 </ul>
                 
-                <h2>Learning Outcomes</h2>
-                <p>This project provided valuable experience in:</p>
-                <ul>
-                    <li>Implementing reinforcement learning algorithms in a practical application</li>
-                    <li>Developing a full-stack web application with Python backend and JavaScript frontend</li>
-                    <li>Creating intuitive user interfaces for complex game mechanics</li>
-                    <li>Designing systems that learn and improve from user interactions</li>
-                    <li>Building and training models that can adapt to different difficulty levels</li>
+                <h2 data-aos="fade-up" data-aos-duration="800">Learning Outcomes</h2>
+                <p data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">This project provided valuable experience in:</p>
+                <ul data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+                    <li data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">Implementing reinforcement learning algorithms in a practical application</li>
+                    <li data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">Developing a full-stack web application with Python backend and JavaScript frontend</li>
+                    <li data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">Creating intuitive user interfaces for complex game mechanics</li>
+                    <li data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">Designing systems that learn and improve from user interactions</li>
+                    <li data-aos="fade-up" data-aos-duration="800" data-aos-delay="500">Building and training models that can adapt to different difficulty levels</li>
                 </ul>
                 
-                <h2>Future Enhancements</h2>
-                <ul>
-                    <li>Implementing neural network-based deep Q-learning for more sophisticated play</li>
-                    <li>Adding multiplayer support for online play between users</li>
-                    <li>Creating a tournament mode where users can compete against different AI versions</li>
-                    <li>Visualizing the AI's learning process to help users understand reinforcement learning</li>
+                <h2 data-aos="fade-up" data-aos-duration="800">Future Enhancements</h2>
+                <ul data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+                    <li data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">Implementing neural network-based deep Q-learning for more sophisticated play</li>
+                    <li data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">Adding multiplayer support for online play between users</li>
+                    <li data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">Creating a tournament mode where users can compete against different AI versions</li>
+                    <li data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">Visualizing the AI's learning process to help users understand reinforcement learning</li>
                 </ul>
                 
-                <div class="project-nav">
+                <div class="project-nav" data-aos="fade-up" data-aos-duration="800">
                     <a href="../index.html#work" class="btn back-btn tag"><i class="fas fa-arrow-left"></i> Back to Projects</a>
                 </div>
             </div>
@@ -157,6 +162,13 @@
     </a>
 
     <script>
+        // Initialize AOS
+        AOS.init({
+            once: false,  // Whether animation should happen only once - while scrolling down
+            mirror: false, // Whether elements should animate out while scrolling past them
+            offset: 120,  // Offset (in px) from the original trigger point
+        });
+        
         // Profile Picture Modal
         const avatar = document.getElementById('avatar');
         const modal = document.getElementById('profileModal');

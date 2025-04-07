@@ -401,42 +401,17 @@ header .wrapper {
     border-radius: 8px;
     overflow: hidden;
     position: relative;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-    transition: all 0.5s ease;
-    border: 1px solid transparent;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid var(--accent);
     cursor: pointer;
     padding: 1rem;
+    animation: none !important;
 }
 
-.projects article::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border-radius: 8px;
-    padding: 2px;
-    background: linear-gradient(45deg, #3498db, #2ecc71, #3498db);
-    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-    -webkit-mask-composite: xor;
-    mask-composite: exclude;
-    opacity: 0;
-    transition: opacity 0.5s ease;
-}
-
-.projects article:hover::before {
-    opacity: 1;
-    animation: rotateBorder 2s linear infinite;
-}
-
-@keyframes rotateBorder {
-    0% {
-        background-position: 0% 0%;
-    }
-    100% {
-        background-position: 300% 0%;
-    }
+.projects article:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px rgba(52, 152, 219, 0.5);
 }
 
 .project-image {
@@ -821,9 +796,14 @@ footer p {
     }
 }
 
-.skill-category, .experience-item, .projects article {
+.skill-category, .experience-item {
     transition: transform 0.3s ease;
     animation: pulsateGlow 3s infinite;
+}
+
+/* Remove animation from projects article */
+.projects article {
+    animation: none !important;
 }
 
 /* Remove animation from certification items */
@@ -843,7 +823,7 @@ footer p {
     box-shadow: 0 0 25px rgba(52, 152, 219, 0.8);
 }
 
-.skill-category:hover, .experience-item:hover, .projects article:hover {
+.skill-category:hover, .experience-item:hover {
     transform: translateY(-5px);
     animation: pulsateGlow 1.5s infinite;
 }

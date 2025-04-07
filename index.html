@@ -6,7 +6,7 @@
     <!-- This is the Facicon imported from boxicons -->
     <link rel="icon" type="image/x-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAAyZJREFUWEfdmFuoTVEUhr+DkpAIkXINIVEuuUsoj8gtPDi5ExEehDyQohDl+iBFhBQpJRIRHtwVHsgt1yckeXCbv+Y+rb2sueZYbadOxttujfHPf4455j/G3FXUMauqY3z4bwgNBKYBg4G2QGuf6Q/AW+AacBS4WfQEimSoATAHWA50My70CNgOHAB+WGKshCYCO4F2FtAMn1fAAuBsLN5CaCWwBSqut5/AXJ+tIK8YoU3A6tiuCn5fAWwLxeQRmgkcKriY1X0CcCrLOURoCHAZUCHXhn0F+gMq+jLLIlQfuAf0MjD5BVwAHnpfxYwxxMnlCjDCQmg+sNcA+s4RmeKBk+6jgONASwPGeOB00i+dIf1+7cUuhjfOCeO5gNMkl+ETMQDgNtAvj9BQl/KrBqAbXqXzXO8DvQ1YnYDnJb90hnQdpcQx2wMsijjt97oTw5LObQ0RUnaUpZjt88qb5yefeTEgl8WTgI74j6Uz9MRpTxcDiJrmgIjfXaCPAeuWl4BMQl+AxgYQueQVtXqfdm6xj0DzUIY+u/NsakEB3gOTM669dOgI0MqIozWbhQg9dnNMdyOQ3CSM573iSlAVO7ZAvFyl1j1DhC4BIwsCVup+0WV5dIiQxoxVxhWUHYnoC+C7j1Hv6+DnptgkUVpGE8WaEKFBwPUIIZ35Dlcju3wdZbm3AZYAS4EmETwptRQ785ZpV5ruQpOhdGoG8NKYRamwWkhZe0jEPgM6J7Gy0rrQDe27MxZ86maYvoCkoYi1AO64SbF9RlA1cDBGSLflAdAjBaAOrpeGaqeIadPHvEQk40RSmSvDCxXecEA3rl5q5cO+P30zMmrkZ2htJGmKV4uqqZ1QDSWD9EpQE03bG/ekWeeV+FOAmJR3qtv9ejdbqcDTNt2/2/76ELuaelMty8mG+pVqS8UpLBVx18jYoc1sDGHGCCluLbDBeER5bqqVxYGs18RZCMlZV12zUunJXJSfpERkzsQCrYSE09Bp1Gyv5B1jwP67+tRmQJfhnz6l0+sPc2PnLK9L6uqlzl76s0Fqr45fq382GJNSmVuRI6tsJWN0nSP0G/XDgCWm/mQVAAAAAElFTkSuQmCC">
 	
-    <!--/ /---- Put your name in the title of the page ----/ /-->
+	<!--/ /---- Put your name in the title of the page ----/ /-->
 	<title>Pranav Mudar - Portfolio</title>
 	
 	<!--/ /-------- Normalize CSS --------/ /-->
@@ -29,6 +29,10 @@
             emailjs.init("NgnAcEufXLE6bvkiU"); // Public Key
         })();
     </script>
+
+    <!-- AOS - Animate On Scroll Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
 	<!--/ /---Put a short description for your site below. 20 words or less---/ /-->
 	<meta description="Pranav Mudar - Computer Science student and developer specializing in web technologies and AI/ML">
@@ -86,9 +90,9 @@
     <section id="hero">
         <div class="wrapper">
             <div class="hero-content">
-                <h2>Computer Science Student & Developer</h2>
-                <p>Passionate about Web Technologies, Programming, and Data Analytics</p>
-                <div class="contact-info">
+                <h2 data-aos="fade-up" data-aos-duration="1000">Computer Science Student & Developer</h2>
+                <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">Passionate about Web Technologies, Programming, and Data Analytics</p>
+                <div class="contact-info" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
                     <p><i class="fa fa-envelope" aria-hidden="true"></i><br><a href="mailto:mudarpranav3@gmail.com">mudarpranav3@gmail.com</a></p>
                     <p><i class="fa fa-phone" aria-hidden="true"></i><br>(+91) 9959956470</p>
                     <p><i class="fab fa-linkedin" aria-hidden="true"></i><br><a href="https://linkedin.com/in/Pranav-Mudar/" target="_blank">linkedin.com/in/Pranav-Mudar/</a></p>
@@ -102,7 +106,7 @@
         	<h2>Featured Projects</h2>
         	
             <section class="projects">
-                <article>
+                <article data-aos="fade-up" data-aos-duration="800">
                     <a href="projects/generative-ai-research.html" class="project-link"></a>
                 	<h3><i class="fas fa-brain"></i> Research Paper on Generative AI</h3>
                 	<a href="projects/generative-ai-research.html" class="project-image">
@@ -112,7 +116,7 @@
                     <p><strong><i class="fas fa-info-circle"></i> Description:</strong> Currently working on a Research Paper on a Generative AI model that creates a 3D model of the heart 🫀 based off of the given 2D input MRI scans. We are planing of using pre-trained models on the same thing but also modify it in such a way that it'll improve the overall accuracy by filling out the missing parts with the training data. 🔬</p>
                 </article>
 
-                <article>
+                <article data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
                     <a href="projects/elearning.html" class="project-link"></a>
                 	<h3><i class="fas fa-graduation-cap"></i> E-Learning Platform</h3>
                 	<a href="projects/elearning.html" class="project-image">
@@ -122,7 +126,7 @@
                     <p><strong><i class="fas fa-info-circle"></i> Description:</strong> Developed a comprehensive e-learning platform 📚 using MVC architecture that enables educational institutions to create, manage, and deliver online courses. Built with Java (OOP principles), Spring Boot for backend, React for frontend, and PostgreSQL for database, providing features like course management, student tracking, and interactive content delivery. 🎓</p>
                 </article>
 
-                <article>
+                <article data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
                     <a href="projects/disaster-management.html" class="project-link"></a>
                 	<h3><i class="fas fa-hands-helping"></i> National Disaster Management</h3>
                 	<a href="projects/disaster-management.html" class="project-image">
@@ -132,7 +136,7 @@
                     <p><strong><i class="fas fa-info-circle"></i> Description:</strong> Developed a dynamic website that facilitates NGOs to get help for Disasters within the country 🌊 where users and volunteers can check and access the disasters. Volunteers can apply for volunteering at the disasters and the admin can add disasters and training sessions. Demonstrated proficiency in database systems (MySQL) for storing volunteer records. 🆘</p>
                 </article>
                 
-                <article>
+                <article data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
                     <a href="projects/background-music-generation.html" class="project-link"></a>
                 	<h3><i class="fas fa-music"></i> Background Music Generation</h3>
                 	<a href="projects/background-music-generation.html" class="project-image">
@@ -142,7 +146,7 @@
                     <p><strong><i class="fas fa-info-circle"></i> Description:</strong> Developed an AI system that generates customized background music 🎵 for videos by analyzing their content. The system extracts video transcripts, converts them to music generation prompts, and creates tailored background music that matches the video's context and emotional tone. 🎼</p>
                 </article>
                 
-                <article>
+                <article data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
                     <a href="projects/ultimate-tic-tac-toe.html" class="project-link"></a>
                 	<h3><i class="fas fa-gamepad"></i> Ultimate Tic-Tac-Toe</h3>
                 	<a href="projects/ultimate-tic-tac-toe.html" class="project-image">
@@ -152,7 +156,7 @@
                     <p><strong><i class="fas fa-info-circle"></i> Description:</strong> Created an AI-powered Tic-Tac-Toe game 🎮 with three difficulty levels: Easy (random algorithm), Medium (Q-table learning), and Hard (deep Q-learning with neural networks). The system can train by playing against itself or learning from games against human players. 🤖</p>
                 </article>
                 
-                <article>
+                <article data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
                     <a href="projects/attendance-calculator.html" class="project-link"></a>
                 	<h3><i class="fas fa-tasks"></i> StudentTools Website</h3>
                 	<a href="projects/attendance-calculator.html" class="project-image">
@@ -161,8 +165,8 @@
                     <p><strong><i class="fas fa-cogs"></i> Technologies:</strong> HTML, JavaScript, Python, MySQL</p>
                     <p><strong><i class="fas fa-info-circle"></i> Description:</strong> Developed a dynamic website with an Attendance Calculator 📊 and a robust search engine, facilitating automated tracking and quick information retrieval. Utilized front-end technologies (HTML, CSS, JavaScript) and MySQL for storing attendance records and enabling efficient search functionalities. 🔍</p>
                 </article>
-                
-                <article>
+				
+                <article data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
                     <a href="projects/event-management.html" class="project-link"></a>
                 	<h3><i class="fas fa-calendar-alt"></i> Event Management Platform</h3>
                 	<a href="projects/event-management.html" class="project-image">
@@ -172,7 +176,7 @@
                     <p><strong><i class="fas fa-info-circle"></i> Description:</strong> Developed a comprehensive web platform for managing college events 🎭 both upcoming and ongoing. The system provides centralized solutions for event organizers, participants, and administrators with features like event registration, attendance tracking, and interactive calendar interfaces. 📅</p>
                 </article>
                 
-                <article>
+                <article data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
                     <a href="projects/chat-server.html" class="project-link"></a>
                 	<h3><i class="fas fa-comments"></i> Multi-Client Chat Server</h3>
                 	<a href="projects/chat-server.html" class="project-image">
@@ -182,7 +186,7 @@
                     <p><strong><i class="fas fa-info-circle"></i> Description:</strong> Implemented a robust chat server that supports multiple clients 💬 with features like file sharing, private messaging, and admin controls (kick/ban). Includes comprehensive logging of system events and chat history while maintaining efficient network communication. 🔐</p>
                 </article>
                 
-                <article>
+                <article data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
                     <a href="projects/collision-detection.html" class="project-link"></a>
                 	<h3><i class="fas fa-car-crash"></i> Collision Detection Device</h3>
                 	<a href="projects/collision-detection.html" class="project-image">
@@ -206,7 +210,7 @@
             <h2>Technical Skills</h2>
             
             <div class="skills-container">
-                <div class="skill-category">
+                <div class="skill-category" data-aos="fade-up" data-aos-duration="800">
                     <h3><i class="fas fa-code"></i> Programming Languages</h3>
                     <ul class="skill-list">
                         <li><i class="fab fa-python"></i> Python, Data Structures</li>
@@ -216,7 +220,7 @@
                     </ul>
                 </div>
                 
-                <div class="skill-category">
+                <div class="skill-category" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
                     <h3><i class="fas fa-brain"></i> Machine Learning Libraries</h3>
                     <ul class="skill-list">
                         <li><i class="fas fa-cogs"></i> Scikit-learn</li>
@@ -227,7 +231,7 @@
                     </ul>
                 </div>
                 
-                <div class="skill-category">
+                <div class="skill-category" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
                     <h3><i class="fas fa-tools"></i> Developer Tools</h3>
                     <ul class="skill-list">
                         <li><i class="fas fa-book-open"></i> Jupyter Notebook</li>
@@ -244,7 +248,7 @@
         <div class="wrapper">
             <h2><i class="fas fa-graduation-cap"></i> Education</h2>
             
-            <div class="education-item">
+            <div class="education-item" data-aos="fade-up" data-aos-duration="800">
                 <div class="education-details">
                     <h3><i class="fas fa-university"></i> People Education Society (PES) University, Bangalore, India</h3>
                     <p class="education-date"><i class="far fa-calendar-alt"></i> July 2022 - Present</p>
@@ -254,7 +258,7 @@
                 </div>
             </div>
             
-            <div class="education-item">
+            <div class="education-item" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
                 <div class="education-details">
                     <h3><i class="fas fa-school"></i> Narayana Jr. College, Anantapur, India</h3>
                     <p class="education-date"><i class="far fa-calendar-alt"></i> July 2020 - May 2022</p>
@@ -263,7 +267,7 @@
                 </div>
             </div>
             
-            <div class="education-item">
+            <div class="education-item" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
                 <div class="education-details">
                     <h3><i class="fas fa-school"></i> Vishwa Bharathi E.M. High School, Anantapur, India</h3>
                     <p class="education-date"><i class="far fa-calendar-alt"></i> July 2015 – May 2020</p>
@@ -279,42 +283,42 @@
             <h2><i class="fas fa-certificate"></i> Certifications</h2>
             
             <div class="certifications-container">
-                <div class="certification-item" onclick="window.open('https://www.coursera.org/account/accomplishments/verify/GY7UFSTVLHYE', '_blank')">
+                <div class="certification-item" data-aos="fade-up" data-aos-duration="800" onclick="window.open('https://www.coursera.org/account/accomplishments/verify/GY7UFSTVLHYE', '_blank')">
                     <h3><i class="fab fa-python"></i> Python Introduction Course</h3>
                     <p><i class="fas fa-university"></i> The University of Michigan</p>
                 </div>
                 
-                <div class="certification-item" onclick="window.open('https://www.coursera.org/account/accomplishments/verify/6NS74ZTWMRFB', '_blank')">
+                <div class="certification-item" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100" onclick="window.open('https://www.coursera.org/account/accomplishments/verify/6NS74ZTWMRFB', '_blank')">
                     <h3><i class="fas fa-robot"></i> Introduction to Artificial Intelligence</h3>
                     <p><i class="fab fa-ibm"></i> IBM</p>
                 </div>
                 
-                <div class="certification-item" onclick="window.open('https://www.coursera.org/account/accomplishments/verify/PPQLQGSH3GAU', '_blank')">
+                <div class="certification-item" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200" onclick="window.open('https://www.coursera.org/account/accomplishments/verify/PPQLQGSH3GAU', '_blank')">
                     <h3><i class="fas fa-brain"></i> Getting Started with AI using IBM Watson</h3>
                     <p><i class="fab fa-ibm"></i> IBM</p>
                 </div>
                 
-                <div class="certification-item" onclick="window.open('https://www.coursera.org/account/accomplishments/verify/78TX5G24H6LM', '_blank')">
+                <div class="certification-item" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300" onclick="window.open('https://www.coursera.org/account/accomplishments/verify/78TX5G24H6LM', '_blank')">
                     <h3><i class="fab fa-linux"></i> Tools of Trade: Linux and SQL</h3>
                     <p><i class="fab fa-google"></i> Google</p>
                 </div>
                 
-                <div class="certification-item" onclick="window.open('https://www.coursera.org/account/accomplishments/verify/VC7ZCH6XMTL7', '_blank')">
+                <div class="certification-item" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100" onclick="window.open('https://www.coursera.org/account/accomplishments/verify/VC7ZCH6XMTL7', '_blank')">
                     <h3><i class="fas fa-database"></i> Introduction to Databases</h3>
                     <p><i class="fab fa-facebook"></i> Meta</p>
                 </div>
                 
-                <div class="certification-item" onclick="window.open('https://www.coursera.org/account/accomplishments/verify/VHNSGW9VL9VW', '_blank')">
+                <div class="certification-item" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200" onclick="window.open('https://www.coursera.org/account/accomplishments/verify/VHNSGW9VL9VW', '_blank')">
                     <h3><i class="fas fa-robot"></i> Introduction to Generative AI</h3>
                     <p><i class="fab fa-google"></i> Google Cloud</p>
                 </div>
 
-                <div class="certification-item" onclick="window.open('https://www.coursera.org/account/accomplishments/verify/DQFHS4YLLVE5', '_blank')">
+                <div class="certification-item" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300" onclick="window.open('https://www.coursera.org/account/accomplishments/verify/DQFHS4YLLVE5', '_blank')">
                     <h3><i class="fab fa-java"></i> Introduction to Java</h3>
                     <p><i class="fas fa-graduation-cap"></i> Learn Quest</p>
                 </div>
 
-                <div class="certification-item" onclick="window.open('https://www.coursera.org/account/accomplishments/verify/PJURZC9Z7DUX', '_blank')">
+                <div class="certification-item" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100" onclick="window.open('https://www.coursera.org/account/accomplishments/verify/PJURZC9Z7DUX', '_blank')">
                     <h3><i class="fas fa-comment-dots"></i> Introduction to Large Language Models</h3>
                     <p><i class="fab fa-google"></i> Google Cloud</p>
                 </div>
@@ -326,7 +330,7 @@
         <div class="wrapper">
             <h2><i class="fas fa-briefcase"></i> Experience</h2>
             
-            <div class="experience-item">
+            <div class="experience-item" data-aos="fade-up" data-aos-duration="800">
                 <h3><i class="fas fa-laptop-code"></i> University AIML Club Coordinator, PES University, Bangalore, India</h3>
                 <p class="experience-date"><i class="far fa-calendar-alt"></i> Jan 2023 – Present</p>
                 <ul class="experience-details">
@@ -336,13 +340,13 @@
             </div>
         </div>
     </section>
-
+    
     <!-- Contact Section -->
     <section id="contact" class="secondary">
-        <div class="wrapper">
+    	<div class="wrapper">
             <h2><i class="fas fa-paper-plane"></i> Contact Me</h2>
             <div class="contact-container">
-                <div class="contact-info-section">
+                <div class="contact-info-section" data-aos="fade-up" data-aos-duration="800">
                     <h3>Get in Touch</h3>
                     <p>Feel free to reach out if you have any questions or would like to discuss potential collaboration opportunities. 👋</p>
                     <div class="contact-details">
@@ -360,7 +364,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="contact-form-section">
+                <div class="contact-form-section" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
                     <form id="contact-form" class="contact-form">
                         <div class="form-group">
                             <input type="text" id="name" name="name" placeholder="Your Name" required>
@@ -397,6 +401,13 @@
     </a>
 
     <script>
+        // Initialize AOS
+        AOS.init({
+            once: false,  // Whether animation should happen only once - while scrolling down
+            mirror: false, // Whether elements should animate out while scrolling past them
+            offset: 120,  // Offset (in px) from the original trigger point
+        });
+        
         // Profile Picture Modal
         const avatar = document.getElementById('avatar');
         const modal = document.getElementById('profileModal');
@@ -456,11 +467,12 @@
             // Create template parameters based on EmailJS template variables
             const templateParams = {
                 from_name: document.getElementById('name').value,
-                to_name: "Pranav",  // Add recipient name
+                to_name: "Pranav",
                 reply_to: document.getElementById('email').value,
                 subject: document.getElementById('subject').value,
                 message: document.getElementById('message').value,
-                sender_email: document.getElementById('email').value // Add email to the message body
+                sender_email: document.getElementById('email').value,
+                date: new Date().toLocaleString() // Add current date and time
             };
             
             // Make sure your service_id and template_id match exactly what's in your EmailJS dashboard
@@ -487,7 +499,7 @@
                         user_id: 'TtQe7-Jcwfae3lQhK',
                         error: error
                     });
-                });
+            });
         });
     </script>
 </body>

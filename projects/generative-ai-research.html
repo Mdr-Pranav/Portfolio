@@ -13,6 +13,11 @@
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/project-styles.css">
     <link rel="stylesheet" href="../css/dark-theme.css">
+    
+    <!-- AOS - Animate On Scroll Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="../scripts/apply-animations.js"></script>
 </head>
 <body>
     <header>
@@ -38,30 +43,27 @@
 
     <section class="project-hero">
         <div class="wrapper">
-            <h1>Generative AI Research Paper</h1>
-            <p>A comprehensive study on the applications and implications of generative AI in modern technology</p>
-            <div class="project-tags">
-                <span class="tag">Research</span>
-                <span class="tag">AI</span>
+            <h1 data-aos="fade-up" data-aos-duration="800">Research Paper on Generative AI</h1>
+            <p data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">3D heart model generation from 2D MRI scans using advanced generative AI techniques</p>
+            <div class="project-tags" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
                 <span class="tag">Machine Learning</span>
                 <span class="tag">Deep Learning</span>
+                <span class="tag">Python</span>
+                <span class="tag">TensorFlow</span>
+                <span class="tag">PyTorch</span>
             </div>
-            <!-- <div class="project-tags">
-                <a href="#" class="tag"><i class="fas fa-code"></i> Implementation</a>
-                <a href="#" class="tag"><i class="fab fa-github"></i> Repository</a>
-            </div> -->
         </div>
     </section>
 
     <section class="project-content">
         <div class="wrapper">
             <div class="project-details">
-                <div class="project-image-large">
+                <div class="project-image-large" data-aos="fade-up" data-aos-duration="800">
                     <img src="/projects/Pictures/GenAI1.jpeg" alt="Generative AI Research">
                 </div>
                 
-                <h2>Research Overview</h2>
-                <p>This ongoing research project focuses on developing an advanced generative AI model capable of creating accurate 3D models of human hearts based on 2D MRI scan inputs. The research aims to bridge the gap between conventional 2D medical imaging and comprehensive 3D visualization, potentially revolutionizing cardiac diagnosis and treatment planning. By leveraging and enhancing existing pre-trained models, our team is working to improve accuracy in areas where traditional approaches struggle with incomplete data.</p>
+                <h2 data-aos="fade-up" data-aos-duration="800">Research Overview</h2>
+                <p data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">This ongoing research project focuses on developing a generative AI model capable of creating accurate 3D heart models from 2D MRI scan inputs. The approach combines existing pre-trained models with novel techniques to improve accuracy in reconstructing complete 3D cardiac structures from limited 2D slice data.</p>
                 
                 <h2>Research Focus</h2>
                 <ul class="feature-list">
@@ -185,6 +187,13 @@
     </a>
 
     <script>
+        // Initialize AOS
+        AOS.init({
+            once: false,  // Whether animation should happen only once - while scrolling down
+            mirror: false, // Whether elements should animate out while scrolling past them
+            offset: 120,  // Offset (in px) from the original trigger point
+        });
+        
         // Profile Picture Modal
         const avatar = document.getElementById('avatar');
         const modal = document.getElementById('profileModal');

@@ -13,6 +13,11 @@
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/project-styles.css">
     <link rel="stylesheet" href="../css/dark-theme.css">
+    
+    <!-- AOS - Animate On Scroll Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="../scripts/apply-animations.js"></script>
 </head>
 <body>
     <header>
@@ -38,15 +43,14 @@
 
     <section class="project-hero">
         <div class="wrapper">
-            <h1>E-Learning Platform</h1>
-            <p>A comprehensive online learning platform with course management, student tracking, and interactive content delivery</p>
-            <div class="project-tags">
+            <h1 data-aos="fade-up" data-aos-duration="800">E-Learning Platform</h1>
+            <p data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">A comprehensive education management system for creating, delivering, and tracking online courses</p>
+            <div class="project-tags" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
                 <span class="tag">Java</span>
                 <span class="tag">Spring Boot</span>
                 <span class="tag">React</span>
                 <span class="tag">PostgreSQL</span>
-                <span class="tag">MVC</span>
-                <span class="tag">OOP</span>
+                <span class="tag">REST API</span>
             </div>
         </div>
     </section>
@@ -54,48 +58,34 @@
     <section class="project-content">
         <div class="wrapper">
             <div class="project-details">
-                <div class="project-image-large">
-                    <img src="/projects/pictures/elearning1.jpg" alt="E-Learning Platform">
+                <div class="project-image-large" data-aos="fade-up" data-aos-duration="800">
+                    <img src="/projects/Pictures/elearning1.jpg" alt="E-Learning Platform">
                 </div>
                 
-                <h2>Project Overview</h2>
-                <p>This project involved developing a robust e-learning platform that enables educational institutions to create, manage, and deliver online courses effectively. Built using an MVC architecture, the platform leverages Spring Boot for backend services, React for the frontend interface, and PostgreSQL for data persistence. The entire system is developed using object-oriented programming principles in Java, ensuring scalability, maintainability, and extensibility.</p>
+                <h2 data-aos="fade-up" data-aos-duration="800">Project Overview</h2>
+                <p data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">The E-Learning Platform is a full-featured educational technology solution that enables institutions to create and manage online courses, track student progress, and facilitate interactive learning experiences. Built with a modern tech stack including Java Spring Boot and React, the platform implements core principles of object-oriented programming and follows the MVC architectural pattern.</p>
                 
-                <h2>Key Features</h2>
+                <h2 data-aos="fade-up" data-aos-duration="800">Key Features</h2>
                 <ul class="feature-list">
-                    <li>
+                    <li data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
                         <i class="fas fa-check-circle"></i>
                         <div>
-                            <h3>Course Management System</h3>
-                            <p>Comprehensive tools for instructors to create, organize, and update course content with support for various media types including video, audio, documents, and interactive quizzes.</p>
+                            <h3>Course Management</h3>
+                            <p>Allows instructors to create, organize, and publish courses with various content types including video lectures, reading materials, quizzes, and assignments.</p>
                         </div>
                     </li>
-                    <li>
+                    <li data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
                         <i class="fas fa-check-circle"></i>
                         <div>
-                            <h3>Student Learning Dashboard</h3>
-                            <p>Personalized dashboard for students to track enrolled courses, progress, upcoming deadlines, and performance metrics with intuitive visualization tools.</p>
+                            <h3>Student Progress Tracking</h3>
+                            <p>Comprehensive analytics dashboard for instructors to monitor student engagement, completion rates, and assessment performance.</p>
                         </div>
                     </li>
-                    <li>
+                    <li data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
                         <i class="fas fa-check-circle"></i>
                         <div>
-                            <h3>Assessment and Grading System</h3>
-                            <p>Automated assessment tools including quizzes, assignments, and exams with immediate feedback and comprehensive grading functionalities for instructors.</p>
-                        </div>
-                    </li>
-                    <li>
-                        <i class="fas fa-check-circle"></i>
-                        <div>
-                            <h3>Interactive Learning Elements</h3>
-                            <p>Integration of discussion forums, live sessions, peer review capabilities, and collaborative projects to enhance the learning experience and student engagement.</p>
-                        </div>
-                    </li>
-                    <li>
-                        <i class="fas fa-check-circle"></i>
-                        <div>
-                            <h3>Analytics and Reporting</h3>
-                            <p>Detailed analytics on student performance, course effectiveness, and learning patterns to help instructors improve teaching methods and content delivery.</p>
+                            <h3>Interactive Learning Tools</h3>
+                            <p>Integrated discussion forums, live sessions, peer review functionality, and interactive content to enhance student engagement.</p>
                         </div>
                     </li>
                 </ul>
@@ -171,6 +161,13 @@
     </a>
 
     <script>
+        // Initialize AOS
+        AOS.init({
+            once: false,  // Whether animation should happen only once - while scrolling down
+            mirror: false, // Whether elements should animate out while scrolling past them
+            offset: 120,  // Offset (in px) from the original trigger point
+        });
+        
         // Profile Picture Modal
         const avatar = document.getElementById('avatar');
         const modal = document.getElementById('profileModal');
