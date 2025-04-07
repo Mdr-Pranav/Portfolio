@@ -508,9 +508,18 @@
         let isPaused = false;
         let currentX = 0;
         const scrollContainer = document.querySelector('.certifications-scroll');
-        const itemWidth = 320; // Width of card + gap
+        const itemWidth = window.innerWidth < 768 ? 200 : 300; // Adjust width based on screen size
         const totalItems = document.querySelectorAll('.certification-item').length;
         const totalWidth = itemWidth * totalItems;
+        
+        // Update itemWidth on window resize
+        window.addEventListener('resize', () => {
+            const newItemWidth = window.innerWidth < 768 ? 200 : 300;
+            if (newItemWidth !== itemWidth) {
+                currentX = Math.round(currentX / itemWidth) * newItemWidth;
+                scrollContainer.style.transform = `translateX(${currentX}px)`;
+            }
+        });
         
         function toggleCertificationScroll() {
             isPaused = !isPaused;
@@ -529,15 +538,36 @@
             scrollContainer.style.transform = `translateX(${currentX}px)`;
         }
         
+        // Touch events for mobile
+        let touchStartX = 0;
+        let touchStartY = 0;
+        
+        scrollContainer.addEventListener('touchstart', (e) => {
+            touchStartX = e.touches[0].clientX;
+            touchStartY = e.touches[0].clientY;
+        });
+        
+        scrollContainer.addEventListener('touchmove', (e) => {
+            e.preventDefault();
+            const touchEndX = e.touches[0].clientX;
+            const touchEndY = e.touches[0].clientY;
+            
+            // Calculate the difference in touch positions
+            const diffX = touchStartX - touchEndX;
+            const diffY = touchStartY - touchEndY;
+            
+            // Only scroll horizontally if the horizontal movement is greater than vertical
+            if (Math.abs(diffX) > Math.abs(diffY)) {
+                currentX = Math.max(-(totalWidth - itemWidth), Math.min(0, currentX - diffX));
+                scrollContainer.style.transform = `translateX(${currentX}px)`;
+                touchStartX = touchEndX;
+            }
+        });
+        
         // Cleanup
         window.addEventListener('beforeunload', () => {
-            scrollContainer.removeEventListener('mousedown', null);
-            scrollContainer.removeEventListener('mousemove', null);
-            scrollContainer.removeEventListener('mouseup', null);
-            scrollContainer.removeEventListener('mouseleave', null);
             scrollContainer.removeEventListener('touchstart', null);
             scrollContainer.removeEventListener('touchmove', null);
-            scrollContainer.removeEventListener('touchend', null);
         });
     </script>
 </body>

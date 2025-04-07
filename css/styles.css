@@ -603,11 +603,12 @@ header .wrapper {
     overflow: hidden;
     position: relative;
     margin: 0 auto;
+    padding: 0 1rem;
 }
 
 .certifications-scroll {
     display: flex;
-    gap: 1rem;
+    gap: 0.5rem;
     width: max-content;
     padding: 0.5rem;
     margin-bottom: 1rem;
@@ -617,33 +618,49 @@ header .wrapper {
 
 .certification-item {
     background: var(--card-bg);
-    padding: 1rem;
-    border-radius: 12px;
+    padding: 0.75rem;
+    border-radius: 8px;
     box-shadow: 0 0 10px rgba(52, 152, 219, 0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border: 1px solid rgba(52, 152, 219, 0.3);
     cursor: pointer;
-    min-width: 220px;
-    max-width: 260px;
+    min-width: 200px;
+    max-width: 200px;
     position: relative;
     overflow: hidden;
     user-select: none;
     -webkit-user-select: none;
 }
 
+.certification-item h3 {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.certification-item p {
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.certification-item a {
+    font-size: 0.8rem;
+    padding: 0.25rem 0.5rem;
+}
+
 .cert-nav-controls {
     display: flex;
     justify-content: center;
-    gap: 1rem;
+    gap: 0.75rem;
     margin-top: 1rem;
+    padding: 0 1rem;
 }
 
 .cert-nav-button {
     background: var(--card-bg);
     border: 1px solid rgba(52, 152, 219, 0.3);
     color: var(--text);
-    width: 40px;
-    height: 40px;
+    width: 36px;
+    height: 36px;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -652,18 +669,130 @@ header .wrapper {
     transition: all 0.3s ease;
     user-select: none;
     -webkit-user-select: none;
+    font-size: 1rem;
 }
 
-.cert-nav-button:hover {
-    background: rgba(52, 152, 219, 0.2);
-    transform: scale(1.1);
+/* Small devices (phones, 320px and up) */
+@media only screen and (min-width: 320px) {
+    .certifications-container {
+        padding: 0 0.5rem;
+    }
+    
+    .certification-item {
+        min-width: 180px;
+        max-width: 180px;
+        padding: 0.5rem;
+    }
+    
+    .certification-item h3 {
+        font-size: 0.8rem;
+    }
+    
+    .certification-item p {
+        font-size: 0.75rem;
+    }
+    
+    .cert-nav-button {
+        width: 32px;
+        height: 32px;
+        font-size: 0.9rem;
+    }
 }
 
+/* Medium devices (tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
+    .certifications-container {
+        padding: 0 2rem;
+    }
+    
+    .certifications-scroll {
+        gap: 1rem;
+    }
+    
+    .certification-item {
+        min-width: 250px;
+        max-width: 250px;
+        padding: 1rem;
+    }
+    
+    .certification-item h3 {
+        font-size: 1rem;
+    }
+    
+    .certification-item p {
+        font-size: 0.9rem;
+    }
+    
+    .cert-nav-controls {
+        gap: 1rem;
+    }
+    
+    .cert-nav-button {
+        width: 40px;
+        height: 40px;
+        font-size: 1.1rem;
+    }
+}
+
+/* Large devices (desktops, 1024px and up) */
+@media only screen and (min-width: 1024px) {
+    .certifications-container {
+        padding: 0 3rem;
+    }
+    
     .certification-item {
         min-width: 300px;
         max-width: 300px;
         padding: 1.5rem;
+    }
+    
+    .certification-item h3 {
+        font-size: 1.2rem;
+    }
+    
+    .certification-item p {
+        font-size: 1rem;
+    }
+    
+    .cert-nav-controls {
+        gap: 1.5rem;
+    }
+    
+    .cert-nav-button {
+        width: 45px;
+        height: 45px;
+        font-size: 1.2rem;
+    }
+}
+
+/* Extra large devices (large desktops, 1440px and up) */
+@media only screen and (min-width: 1440px) {
+    .certifications-container {
+        padding: 0 4rem;
+    }
+    
+    .certification-item {
+        min-width: 350px;
+        max-width: 350px;
+        padding: 2rem;
+    }
+    
+    .certification-item h3 {
+        font-size: 1.4rem;
+    }
+    
+    .certification-item p {
+        font-size: 1.1rem;
+    }
+    
+    .cert-nav-controls {
+        gap: 2rem;
+    }
+    
+    .cert-nav-button {
+        width: 50px;
+        height: 50px;
+        font-size: 1.4rem;
     }
 }
 
