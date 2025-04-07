@@ -405,7 +405,7 @@ header .wrapper {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border: 1px solid var(--accent);
     cursor: pointer;
-    padding: 1rem;
+    padding: 0;
     animation: none !important;
 }
 
@@ -447,12 +447,11 @@ header .wrapper {
 }
 
 .projects article img {
-    width: calc(100% - 2rem);
+    width: 100%;
     height: 200px;
     object-fit: cover;
-    border-radius: 8px;
     transition: transform 0.3s ease;
-    margin: 0 auto;
+    margin: 0;
     display: block;
 }
 
@@ -461,12 +460,14 @@ header .wrapper {
 }
 
 .projects h3 {
-    padding: 1.5rem 1.5rem 0.5rem;
+    padding: 1rem;
+    margin: 0;
 }
 
-.projects p {
-    padding: 0 1.5rem 1.5rem;
+.projects .tech-stack {
+    padding: 0 1rem 1rem;
     color: var(--text);
+    margin: 0;
 }
 
 .projects article a.project-link {
@@ -588,6 +589,8 @@ header .wrapper {
 /* Certifications Section */
 #certifications {
     padding: 4rem 0;
+    overflow: hidden;
+    position: relative;
 }
 
 #certifications h2 {
@@ -596,20 +599,55 @@ header .wrapper {
 }
 
 .certifications-container {
-    display: grid;
-    grid-template-columns: 1fr;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto;
+}
+
+.certifications-scroll {
+    display: flex;
     gap: 1.5rem;
+    animation: scroll 30s linear infinite;
+    width: max-content;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    transition: transform 0.3s ease;
+}
+
+.certifications-scroll.no-animation {
+    animation: none;
+    transform: translateX(0);
 }
 
 .certification-item {
     background: var(--card-bg);
     padding: 1.5rem;
-    border-radius: 8px;
+    border-radius: 15px;
     box-shadow: 0 0 10px rgba(52, 152, 219, 0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 1px solid var(--accent);
-    animation: none !important; /* Override any animation */
+    border: 1px solid rgba(52, 152, 219, 0.3);
+    animation: none !important;
     cursor: pointer;
+    min-width: 300px;
+    position: relative;
+    overflow: hidden;
+}
+
+.cert-number {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(52, 152, 219, 0.2);
+    color: #fff;
+    width: 30px;
+    height: 30px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 0.9rem;
 }
 
 .certification-item:hover {
@@ -620,11 +658,53 @@ header .wrapper {
 .certification-item h3 {
     margin-bottom: 0.5rem;
     color: #fff;
+    padding-right: 40px;
 }
 
 .certification-item p {
     color: var(--dark-gray);
     margin: 0;
+}
+
+.cert-nav-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.cert-nav-button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(52, 152, 219, 0.2);
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.cert-nav-button:hover {
+    background: rgba(52, 152, 219, 0.4);
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-300px * 8 - 1.5rem * 8));
+    }
+}
+
+/* Pause animation on hover */
+.certifications-container:hover .certifications-scroll {
+    animation-play-state: paused;
 }
 
 /* Experience Section */
