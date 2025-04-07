@@ -608,16 +608,11 @@ header .wrapper {
 .certifications-scroll {
     display: flex;
     gap: 1rem;
-    animation: scroll 40s linear infinite;
     width: max-content;
     padding: 0.5rem;
     margin-bottom: 1rem;
     transition: transform 0.3s ease;
-}
-
-.certifications-scroll.no-animation {
-    animation: none;
-    transform: translateX(0);
+    will-change: transform;
 }
 
 .certification-item {
@@ -627,125 +622,49 @@ header .wrapper {
     box-shadow: 0 0 10px rgba(52, 152, 219, 0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border: 1px solid rgba(52, 152, 219, 0.3);
-    animation: none !important;
     cursor: pointer;
     min-width: 220px;
     max-width: 260px;
     position: relative;
     overflow: hidden;
-}
-
-.cert-number {
-    position: absolute;
-    top: 8px;
-    right: 8px;
-    background: rgba(52, 152, 219, 0.2);
-    color: #fff;
-    width: 24px;
-    height: 24px;
-    border-radius: 6px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    font-size: 0.8rem;
-}
-
-.certification-item:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 0 25px rgba(52, 152, 219, 0.8);
-}
-
-.certification-item h3 {
-    margin-bottom: 0.5rem;
-    color: #fff;
-    padding-right: 30px;
-    font-size: 1rem;
-}
-
-.certification-item p {
-    color: var(--dark-gray);
-    margin: 0;
-    font-size: 0.9rem;
+    user-select: none;
+    -webkit-user-select: none;
 }
 
 .cert-nav-controls {
     display: flex;
     justify-content: center;
-    align-items: center;
-    gap: 0.75rem;
+    gap: 1rem;
     margin-top: 1rem;
 }
 
 .cert-nav-button {
-    width: 36px;
-    height: 36px;
+    background: var(--card-bg);
+    border: 1px solid rgba(52, 152, 219, 0.3);
+    color: var(--text);
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
-    background: rgba(52, 152, 219, 0.2);
-    border: none;
-    color: white;
-    font-size: 1rem;
-    cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
     transition: all 0.3s ease;
+    user-select: none;
+    -webkit-user-select: none;
 }
 
 .cert-nav-button:hover {
-    background: rgba(52, 152, 219, 0.4);
+    background: rgba(52, 152, 219, 0.2);
+    transform: scale(1.1);
 }
 
-@keyframes scroll {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(calc(-220px * 8 - 1rem * 8));
-    }
-}
-
-/* Media queries for certifications */
 @media only screen and (min-width: 768px) {
     .certification-item {
         min-width: 300px;
         max-width: 300px;
         padding: 1.5rem;
     }
-    
-    .certification-item h3 {
-        font-size: 1.2rem;
-    }
-    
-    .certification-item p {
-        font-size: 1rem;
-    }
-    
-    .cert-number {
-        width: 30px;
-        height: 30px;
-        font-size: 0.9rem;
-    }
-    
-    .cert-nav-button {
-        width: 40px;
-        height: 40px;
-        font-size: 1.2rem;
-    }
-    
-    @keyframes scroll {
-        0% {
-            transform: translateX(0);
-        }
-        100% {
-            transform: translateX(calc(-300px * 8 - 1rem * 8));
-        }
-    }
-}
-
-/* Pause animation on hover */
-.certifications-container:hover .certifications-scroll {
-    animation-play-state: paused;
 }
 
 /* Experience Section */
