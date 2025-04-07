@@ -629,8 +629,8 @@ header .wrapper {
     border: 1px solid rgba(52, 152, 219, 0.3);
     animation: none !important;
     cursor: pointer;
-    min-width: 260px;
-    max-width: 300px;
+    min-width: 220px;
+    max-width: 260px;
     position: relative;
     overflow: hidden;
 }
@@ -701,7 +701,7 @@ header .wrapper {
         transform: translateX(0);
     }
     100% {
-        transform: translateX(calc(-260px * 8 - 1rem * 8));
+        transform: translateX(calc(-220px * 8 - 1rem * 8));
     }
 }
 
@@ -709,6 +709,7 @@ header .wrapper {
 @media only screen and (min-width: 768px) {
     .certification-item {
         min-width: 300px;
+        max-width: 300px;
         padding: 1.5rem;
     }
     
@@ -737,7 +738,7 @@ header .wrapper {
             transform: translateX(0);
         }
         100% {
-            transform: translateX(calc(-300px * 8 - 1.5rem * 8));
+            transform: translateX(calc(-300px * 8 - 1rem * 8));
         }
     }
 }
