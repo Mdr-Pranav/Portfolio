@@ -608,7 +608,7 @@ header .wrapper {
 .certifications-scroll {
     display: flex;
     gap: 1rem;
-    animation: scroll 30s linear infinite;
+    animation: scroll 40s linear infinite;
     width: max-content;
     padding: 0.5rem;
     margin-bottom: 1rem;
