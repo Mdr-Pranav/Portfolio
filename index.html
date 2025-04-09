@@ -138,12 +138,11 @@
                 </div>
             </div>
         </div>
-        <div id="top"></div>
     </section>
     
     
 
-    <section>
+    <section id="top">
         <div class="wrapper">
             <div class="about-content" data-aos="fade-up" data-aos-duration="1000">
                 <div class="about-image">
@@ -407,11 +406,11 @@
                         <p class="company-name">Learn Quest</p>
                     </div>
                 </div>
-                <div class="cert-nav-controls">
+                <!-- <div class="cert-nav-controls">
                     <button class="cert-nav-button" onclick="scrollCertifications('prev')">←</button>
                     <button class="cert-nav-button" onclick="toggleCertificationScroll()">⏸</button>
                     <button class="cert-nav-button" onclick="scrollCertifications('next')">→</button>
-                </div>
+                </div> -->
             </div>
         </div>
     </section>
@@ -601,124 +600,88 @@
 
         // Certifications scroll control
         let isPaused = false;
+        let autoScrollInterval;
+        let currentPosition = 0;
         const scrollContainer = document.querySelector('.certifications-scroll');
         const pauseButton = document.querySelector('.cert-nav-button:nth-child(2)');
+        const itemWidth = window.innerWidth < 768 ? 200 : 300;
         
-        // Duplicate certificates for seamless scrolling
         function setupInfiniteScroll() {
             const certificates = document.querySelectorAll('.certification-item');
             const container = document.querySelector('.certifications-scroll');
-            
-            // Clear existing content
             container.innerHTML = '';
             
-            // Add original certificates
-            certificates.forEach(cert => {
-                container.appendChild(cert.cloneNode(true));
-            });
+            certificates.forEach(cert => container.appendChild(cert.cloneNode(true)));
+            certificates.forEach(cert => container.appendChild(cert.cloneNode(true)));
             
-            // Add duplicate certificates
-            certificates.forEach(cert => {
-                container.appendChild(cert.cloneNode(true));
-            });
-            
-            // Reset animation
-            container.style.animation = 'none';
-            container.offsetHeight; // Trigger reflow
-            container.style.animation = 'scrollCertificates 30s linear infinite';
-            if (isPaused) {
-                container.classList.add('paused');
-            }
+            if (!isPaused) startAutoScroll();
         }
         
-        // Initialize infinite scroll
-        setupInfiniteScroll();
+        function startAutoScroll() {
+            if (autoScrollInterval) clearInterval(autoScrollInterval);
+            autoScrollInterval = setInterval(() => {
+                if (!isPaused) {
+                    currentPosition -= 1;
+                    const totalWidth = itemWidth * document.querySelectorAll('.certification-item').length / 2;
+                    if (Math.abs(currentPosition) >= totalWidth) currentPosition = 0;
+                    scrollContainer.style.transform = `translateX(${currentPosition}px)`;
+                }
+            }, 20);
+        }
+        
+        function stopAutoScroll() {
+            if (autoScrollInterval) {
+                clearInterval(autoScrollInterval);
+                autoScrollInterval = null;
+            }
+        }
         
         function toggleCertificationScroll() {
             isPaused = !isPaused;
-            scrollContainer.classList.toggle('paused');
             pauseButton.textContent = isPaused ? '▶' : '⏸';
+            if (isPaused) stopAutoScroll();
+            else startAutoScroll();
         }
         
         function scrollCertifications(direction) {
-            // Stop the automatic animation temporarily
-            scrollContainer.classList.add('paused');
-            
-            const currentTransform = window.getComputedStyle(scrollContainer).transform;
-            const matrix = new DOMMatrix(currentTransform);
-            const currentX = matrix.m41;
-            
-            const itemWidth = window.innerWidth < 768 ? 200 : 300;
             const step = direction === 'next' ? -itemWidth : itemWidth;
-            const newX = currentX + step;
-            
-            // Handle wrapping around
-            const totalWidth = itemWidth * document.querySelectorAll('.certification-item').length;
-            if (Math.abs(newX) >= totalWidth) {
-                scrollContainer.style.transform = 'translateX(0)';
-            } else {
-                scrollContainer.style.transform = `translateX(${newX}px)`;
-            }
-            
-            // Resume automatic animation after a short delay
-            setTimeout(() => {
-                if (!isPaused) {
-                    scrollContainer.classList.remove('paused');
-                }
-            }, 1000);
+            currentPosition += step;
+            const totalWidth = itemWidth * document.querySelectorAll('.certification-item').length / 2;
+            if (Math.abs(currentPosition) >= totalWidth) currentPosition = 0;
+            scrollContainer.style.transform = `translateX(${currentPosition}px)`;
         }
         
-        // Touch events for mobile
         let touchStartX = 0;
-        let touchStartY = 0;
+        let isDragging = false;
         
         scrollContainer.addEventListener('touchstart', (e) => {
             touchStartX = e.touches[0].clientX;
-            touchStartY = e.touches[0].clientY;
-            scrollContainer.classList.add('paused');
+            isDragging = true;
+            stopAutoScroll();
         });
         
         scrollContainer.addEventListener('touchmove', (e) => {
+            if (!isDragging) return;
             e.preventDefault();
-            const touchEndX = e.touches[0].clientX;
-            const touchEndY = e.touches[0].clientY;
-            
-            const diffX = touchStartX - touchEndX;
-            const diffY = touchStartY - touchEndY;
-            
-            if (Math.abs(diffX) > Math.abs(diffY)) {
-                const currentTransform = window.getComputedStyle(scrollContainer).transform;
-                const matrix = new DOMMatrix(currentTransform);
-                const currentX = matrix.m41;
-                
-                const itemWidth = window.innerWidth < 768 ? 200 : 300;
-                const totalWidth = itemWidth * document.querySelectorAll('.certification-item').length / 2;
-                
-                let newX = currentX - diffX;
-                
-                // Handle wrapping around
-                if (Math.abs(newX) >= totalWidth) {
-                    newX = 0;
-                }
-                
-                scrollContainer.style.transform = `translateX(${newX}px)`;
-                touchStartX = touchEndX;
-            }
+            const diffX = touchStartX - e.touches[0].clientX;
+            currentPosition -= diffX;
+            const totalWidth = itemWidth * document.querySelectorAll('.certification-item').length / 2;
+            if (Math.abs(currentPosition) >= totalWidth) currentPosition = 0;
+            scrollContainer.style.transform = `translateX(${currentPosition}px)`;
+            touchStartX = e.touches[0].clientX;
         });
         
         scrollContainer.addEventListener('touchend', () => {
-            if (!isPaused) {
-                scrollContainer.classList.remove('paused');
-            }
+            isDragging = false;
+            if (!isPaused) startAutoScroll();
         });
         
-        // Handle window resize
-        window.addEventListener('resize', () => {
-            setupInfiniteScroll();
-        });
+        setupInfiniteScroll();
         
-        // Cleanup
+        window.addEventListener('resize', setupInfiniteScroll);
+        
         window.addEventListener('beforeunload', () => {
+            stopAutoScroll();
             scrollContainer.removeEventListener('touchstart', null);
             scrollContainer.removeEventListener('touchmove', null);
             scrollContainer.removeEventListener('touchend', null);
