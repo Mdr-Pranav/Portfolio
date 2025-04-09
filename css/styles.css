@@ -390,10 +390,12 @@ header .wrapper {
 
 .hero-text .greeting {
     font-size: 2rem;
-    color: var(--text);
+    color: #ffffff;
     margin-bottom: 0.5rem;
-    font-weight: 300;
+    font-weight: 400;
     letter-spacing: 1px;
+    display: block;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .hero-text .name {
@@ -402,6 +404,12 @@ header .wrapper {
     margin-bottom: 1.5rem;
     letter-spacing: 2px;
     font-weight: 800;
+    color: transparent;
+    background: linear-gradient(45deg, #4FD1C5 30%, #63B3ED 70%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    position: relative;
+    display: block;
 }
 
 .gradient-text {
@@ -500,11 +508,17 @@ header .wrapper {
 
     .hero-text .greeting {
         font-size: 1.5rem;
+        margin-bottom: 0.75rem;
+        color: #ffffff;
+        opacity: 1;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
     }
 
     .hero-text .name {
         font-size: 3.5rem;
         letter-spacing: 1px;
+        line-height: 1.2;
+        margin-bottom: 1.25rem;
     }
 
     .subtitle {
@@ -530,10 +544,16 @@ header .wrapper {
 
     .hero-text .greeting {
         font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+        color: #ffffff;
+        opacity: 1;
     }
 
     .hero-text .name {
         font-size: 2.5rem;
+        letter-spacing: 0.5px;
+        line-height: 1.2;
+        margin-bottom: 1rem;
     }
 
     .subtitle {

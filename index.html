@@ -40,6 +40,42 @@
 	<!--/ /-------- Needed For Mobile Devices --------/ /-->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <style>
+        .certifications-scroll {
+            display: flex;
+            animation: scrollCertificates 30s linear infinite;
+            animation-play-state: running;
+        }
+
+        @keyframes scrollCertificates {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        .certifications-scroll.paused {
+            animation-play-state: paused;
+        }
+
+        .certifications-container {
+            overflow: hidden;
+            position: relative;
+        }
+
+        .certifications-scroll::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.1));
+        }
+    </style>
+
 </head>
 
 <body>
@@ -328,41 +364,47 @@
             
             <div class="certifications-container">
                 <div class="certifications-scroll">
-                    <div class="certification-item" data-certificate="https://www.coursera.org/account/accomplishments/certificate/8QJQZQZQZQZQ">
+                    <div class="certification-item" data-certificate="https://www.coursera.org/account/accomplishments/records/VHNSGW9VL9VW">
                         <span class="cert-number">1</span>
                         <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google Cloud Logo" class="cert-logo">
                         <h3>Introduction to Generative AI</h3>
                         <p class="company-name">Google Cloud</p>
                     </div>
-                    <div class="certification-item" data-certificate="https://www.coursera.org/account/accomplishments/certificate/8QJQZQZQZQZQ">
+                    <div class="certification-item" data-certificate="https://www.coursera.org/account/accomplishments/records/6NS74ZTWMRFB">
                         <span class="cert-number">2</span>
                         <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" alt="IBM Logo" class="cert-logo">
                         <h3>Introduction to Artificial Intelligence</h3>
                         <p class="company-name">IBM</p>
                     </div>
-                    <div class="certification-item" data-certificate="https://www.coursera.org/account/accomplishments/certificate/8QJQZQZQZQZQ">
+                    <div class="certification-item" data-certificate="https://www.coursera.org/account/accomplishments/records/PPQLQGSH3GAU">
                         <span class="cert-number">3</span>
                         <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" alt="IBM Logo" class="cert-logo">
                         <h3>Getting Started with AI using IBM Watson</h3>
                         <p class="company-name">IBM</p>
                     </div>
-                    <div class="certification-item" data-certificate="https://www.coursera.org/account/accomplishments/certificate/8QJQZQZQZQZQ">
+                    <div class="certification-item" data-certificate="https://www.coursera.org/account/accomplishments/records/78TX5G24H6LM">
                         <span class="cert-number">4</span>
                         <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google Logo" class="cert-logo">
                         <h3>Tools of Trade: Linux and SQL</h3>
                         <p class="company-name">Google</p>
                     </div>
-                    <div class="certification-item" data-certificate="https://www.coursera.org/account/accomplishments/certificate/8QJQZQZQZQZQ">
+                    <div class="certification-item" data-certificate="https://www.coursera.org/account/accomplishments/records/VC7ZCH6XMTL7">
                         <span class="cert-number">5</span>
                         <img src="https://upload.wikimedia.org/wikipedia/commons/7/7b/Meta_Platforms_Inc._logo.svg" alt="Meta Logo" class="cert-logo">
                         <h3>Introduction to Databases</h3>
                         <p class="company-name">Meta</p>
                     </div>
-                    <div class="certification-item" data-certificate="https://www.coursera.org/account/accomplishments/certificate/8QJQZQZQZQZQ">
+                    <div class="certification-item" data-certificate="https://www.coursera.org/account/accomplishments/records/GY7UFSTVLHYE">
                         <span class="cert-number">6</span>
                         <img src="/Images/Michigan.jpeg" alt="University of Michigan Logo" class="cert-logo">
                         <h3>Python Introduction Course</h3>
                         <p class="company-name">University of Michigan</p>
+                    </div>
+                    <div class="certification-item" data-certificate="https://www.coursera.org/account/accomplishments/records/DQFHS4YLLVE5">
+                        <span class="cert-number">7</span>
+                        <img src="/Images/LearnQuest.png" alt="University of Michigan Logo" class="cert-logo">
+                        <h3>Introduction to Java</h3>
+                        <p class="company-name">Learn Quest</p>
                     </div>
                 </div>
                 <div class="cert-nav-controls">
@@ -559,36 +601,71 @@
 
         // Certifications scroll control
         let isPaused = false;
-        let currentX = 0;
         const scrollContainer = document.querySelector('.certifications-scroll');
-        const itemWidth = window.innerWidth < 768 ? 200 : 300; // Adjust width based on screen size
-        const totalItems = document.querySelectorAll('.certification-item').length;
-        const totalWidth = itemWidth * totalItems;
+        const pauseButton = document.querySelector('.cert-nav-button:nth-child(2)');
         
-        // Update itemWidth on window resize
-        window.addEventListener('resize', () => {
-            const newItemWidth = window.innerWidth < 768 ? 200 : 300;
-            if (newItemWidth !== itemWidth) {
-                currentX = Math.round(currentX / itemWidth) * newItemWidth;
-                scrollContainer.style.transform = `translateX(${currentX}px)`;
-            }
-        });
-        
-        function toggleCertificationScroll() {
-            isPaused = !isPaused;
-            const pauseIcon = document.querySelector('.cert-nav-button:nth-child(2)');
+        // Duplicate certificates for seamless scrolling
+        function setupInfiniteScroll() {
+            const certificates = document.querySelectorAll('.certification-item');
+            const container = document.querySelector('.certifications-scroll');
             
+            // Clear existing content
+            container.innerHTML = '';
+            
+            // Add original certificates
+            certificates.forEach(cert => {
+                container.appendChild(cert.cloneNode(true));
+            });
+            
+            // Add duplicate certificates
+            certificates.forEach(cert => {
+                container.appendChild(cert.cloneNode(true));
+            });
+            
+            // Reset animation
+            container.style.animation = 'none';
+            container.offsetHeight; // Trigger reflow
+            container.style.animation = 'scrollCertificates 30s linear infinite';
             if (isPaused) {
-                pauseIcon.textContent = '▶';
-            } else {
-                pauseIcon.textContent = '⏸';
+                container.classList.add('paused');
             }
         }
         
+        // Initialize infinite scroll
+        setupInfiniteScroll();
+        
+        function toggleCertificationScroll() {
+            isPaused = !isPaused;
+            scrollContainer.classList.toggle('paused');
+            pauseButton.textContent = isPaused ? '▶' : '⏸';
+        }
+        
         function scrollCertifications(direction) {
+            // Stop the automatic animation temporarily
+            scrollContainer.classList.add('paused');
+            
+            const currentTransform = window.getComputedStyle(scrollContainer).transform;
+            const matrix = new DOMMatrix(currentTransform);
+            const currentX = matrix.m41;
+            
+            const itemWidth = window.innerWidth < 768 ? 200 : 300;
             const step = direction === 'next' ? -itemWidth : itemWidth;
-            currentX = Math.max(-(totalWidth - itemWidth), Math.min(0, currentX + step));
-            scrollContainer.style.transform = `translateX(${currentX}px)`;
+            const newX = currentX + step;
+            
+            // Handle wrapping around
+            const totalWidth = itemWidth * document.querySelectorAll('.certification-item').length;
+            if (Math.abs(newX) >= totalWidth) {
+                scrollContainer.style.transform = 'translateX(0)';
+            } else {
+                scrollContainer.style.transform = `translateX(${newX}px)`;
+            }
+            
+            // Resume automatic animation after a short delay
+            setTimeout(() => {
+                if (!isPaused) {
+                    scrollContainer.classList.remove('paused');
+                }
+            }, 1000);
         }
         
         // Touch events for mobile
@@ -598,6 +675,7 @@
         scrollContainer.addEventListener('touchstart', (e) => {
             touchStartX = e.touches[0].clientX;
             touchStartY = e.touches[0].clientY;
+            scrollContainer.classList.add('paused');
         });
         
         scrollContainer.addEventListener('touchmove', (e) => {
@@ -605,22 +683,46 @@
             const touchEndX = e.touches[0].clientX;
             const touchEndY = e.touches[0].clientY;
             
-            // Calculate the difference in touch positions
             const diffX = touchStartX - touchEndX;
             const diffY = touchStartY - touchEndY;
             
-            // Only scroll horizontally if the horizontal movement is greater than vertical
             if (Math.abs(diffX) > Math.abs(diffY)) {
-                currentX = Math.max(-(totalWidth - itemWidth), Math.min(0, currentX - diffX));
-                scrollContainer.style.transform = `translateX(${currentX}px)`;
+                const currentTransform = window.getComputedStyle(scrollContainer).transform;
+                const matrix = new DOMMatrix(currentTransform);
+                const currentX = matrix.m41;
+                
+                const itemWidth = window.innerWidth < 768 ? 200 : 300;
+                const totalWidth = itemWidth * document.querySelectorAll('.certification-item').length / 2;
+                
+                let newX = currentX - diffX;
+                
+                // Handle wrapping around
+                if (Math.abs(newX) >= totalWidth) {
+                    newX = 0;
+                }
+                
+                scrollContainer.style.transform = `translateX(${newX}px)`;
                 touchStartX = touchEndX;
             }
+        });
+        
+        scrollContainer.addEventListener('touchend', () => {
+            if (!isPaused) {
+                scrollContainer.classList.remove('paused');
+            }
+        });
+        
+        // Handle window resize
+        window.addEventListener('resize', () => {
+            setupInfiniteScroll();
         });
         
         // Cleanup
         window.addEventListener('beforeunload', () => {
             scrollContainer.removeEventListener('touchstart', null);
             scrollContainer.removeEventListener('touchmove', null);
+            scrollContainer.removeEventListener('touchend', null);
+            window.removeEventListener('resize', null);
         });
 
         // Make certification items clickable
