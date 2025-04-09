@@ -257,6 +257,10 @@ header .wrapper {
     border-radius: 50%;
     border: 3px solid var(--accent);
     box-shadow: 0 0 30px rgba(52, 152, 219, 0.9);
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    width: min(90vw, 90vh);
+    height: min(90vw, 90vh);
 }
 
 .modal-close {
