@@ -50,16 +50,16 @@
 
     <section class="project-hero">
         <div class="wrapper">
-            <h1>Attendance Calculator</h1>
-            <p>A web application to calculate attendance percentage and required attendance for achieving target percentage</p>
-            <div class="project-tags">
+            <h1 data-aos="fade-up" data-aos-duration="800">Attendance Calculator</h1>
+            <p data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">A web application to calculate attendance percentage and required attendance for achieving target percentage</p>
+            <div class="project-tags" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
                 <span class="tag">HTML</span>
                 <span class="tag">CSS</span>
                 <span class="tag">JavaScript</span>
                 <span class="tag">Python</span>
                 <span class="tag">MySQL</span>
             </div>
-            <div class="project-tags">
+            <div class="project-tags" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
                 <a href="https://mdr-pranav.github.io/StudentTools/" class="tag"><i class="fas fa-code"></i> Implementation</a>
                 <a href="https://github.com/Mdr-Pranav/StudentTools" class="tag"><i class="fab fa-github"></i> Repository</a>
             </div>
@@ -69,30 +69,30 @@
     <section class="project-content">
         <div class="wrapper">
             <div class="project-details">
-                <div class="project-image-large">
-                    <img src="/projects/Pictures/StudentTools1.jpg" alt="Attendance Calculator Project">
+                <div class="project-image-large" data-aos="fade-up" data-aos-duration="800">
+                    <img src="../projects/Pictures/StudentTools1.jpg" alt="Attendance Calculator Project">
                 </div>
                 
-                <h2>Project Overview</h2>
-                <p>This dynamic website combines multiple useful tools for students including an Attendance Calculator, CGPA Calculator, and PDF Combiner. The platform is designed to help students manage their academic records efficiently and make quick calculations without the need for manual tracking.</p>
+                <h2 data-aos="fade-up" data-aos-duration="800">Project Overview</h2>
+                <p data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">This dynamic website combines multiple useful tools for students including an Attendance Calculator, CGPA Calculator, and PDF Combiner. The platform is designed to help students manage their academic records efficiently and make quick calculations without the need for manual tracking.</p>
                 
-                <h2>Key Features</h2>
+                <h2 data-aos="fade-up" data-aos-duration="800">Key Features</h2>
                 <ul class="feature-list">
-                    <li>
+                    <li data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
                         <i class="fas fa-check-circle"></i>
                         <div>
                             <h3>Attendance Calculator</h3>
                             <p>Automatically calculates current attendance percentages and predicts how many classes can be missed or should be attended to maintain required attendance levels.</p>
                         </div>
                     </li>
-                    <li>
+                    <li data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
                         <i class="fas fa-check-circle"></i>
                         <div>
                             <h3>CGPA & SGPA Calculator</h3>
                             <p>Allows students to input course grades and credits to calculate semester GPA and cumulative GPA with precision.</p>
                         </div>
                     </li>
-                    <li>
+                    <li data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
                         <i class="fas fa-check-circle"></i>
                         <div>
                             <h3>PDF Combiner</h3>
@@ -108,17 +108,17 @@
                     </li> -->
                 </ul>
                 
-                <h2>Technical Implementation</h2>
-                <p>The project was developed using modern web technologies:</p>
-                <ul>
+                <h2 data-aos="fade-up" data-aos-duration="800">Technical Implementation</h2>
+                <p data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">The project was developed using modern web technologies:</p>
+                <ul data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
                     <li><strong>Frontend:</strong> HTML5, CSS3, and JavaScript were used to create a responsive and intuitive user interface.</li>
                     <li><strong>Backend:</strong> Python was employed for server-side logic, particularly for complex calculations and PDF handling operations.</li>
                     <li><strong>Database:</strong> MySQL database stores attendance records, user information, and other relevant data (Currently not used for Onilne Implementation ).</li>
                     <li><strong>Data Storage:</strong> Efficient database schema design ensures quick data retrieval and optimal performance.</li>
                 </ul>
                 
-                <h2>Challenges & Solutions</h2>
-                <div class="challenge-solution">
+                <h2 data-aos="fade-up" data-aos-duration="800">Challenges & Solutions</h2>
+                <div class="challenge-solution" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
                     <div class="challenge">
                         <h3>Challenge</h3>
                         <p>The self-remembering values in the browser to not input the values again and again</p>
@@ -129,7 +129,7 @@
                     </div>
                 </div>
                 
-                <div class="challenge-solution">
+                <div class="challenge-solution" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
                     <div class="challenge">
                         <h3>Challenge</h3>
                         <p>Managing PDF merging with potentially large file sizes.</p>
@@ -140,16 +140,16 @@
                     </div>
                 </div>
                 
-                <h2>Learning Outcomes</h2>
-                <p>This project provided valuable experience in:</p>
-                <ul>
+                <h2 data-aos="fade-up" data-aos-duration="800">Learning Outcomes</h2>
+                <p data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">This project provided valuable experience in:</p>
+                <ul data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
                     <li>Creating useful academic tools that solve real student problems</li>
                     <li>Implementing complex calculations in a user-friendly interface</li>
                     <li>Managing document manipulation and processing in web applications</li>
                     <li>Designing and optimizing database schemas for efficient data retrieval</li>
                 </ul>
                 
-                <div class="project-nav">
+                <div class="project-nav" data-aos="fade-up" data-aos-duration="800">
                     <a href="../index.html#work" class="btn back-btn tag"><i class="fas fa-arrow-left"></i> Back to Projects</a>
                 </div>
             </div>
@@ -168,35 +168,52 @@
     </a>
 
     <script>
+        // Initialize AOS
+        AOS.init({
+            once: false,  // Whether animation should happen only once - while scrolling down
+            mirror: false, // Whether elements should animate out while scrolling past them
+            offset: 120,  // Offset (in px) from the original trigger point
+            duration: 800, // Default duration for all animations
+            easing: 'ease-in-out' // Default easing function
+        });
+
         // Profile Picture Modal
         const avatar = document.getElementById('avatar');
         const modal = document.getElementById('profileModal');
         const modalClose = document.querySelector('.modal-close');
 
-        avatar.addEventListener('click', () => {
-            modal.classList.add('active');
-        });
+        if (avatar) {
+            avatar.addEventListener('click', () => {
+                modal.classList.add('active');
+            });
+        }
 
-        modalClose.addEventListener('click', () => {
-            modal.classList.remove('active');
-        });
-
-        modal.addEventListener('click', (e) => {
-            if (e.target === modal) {
+        if (modalClose) {
+            modalClose.addEventListener('click', () => {
                 modal.classList.remove('active');
-            }
-        });
+            });
+        }
+
+        if (modal) {
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    modal.classList.remove('active');
+                }
+            });
+        }
         
         // Back to Top Button
         const backToTopButton = document.getElementById('backToTop');
         
-        window.addEventListener('scroll', () => {
-            if (window.pageYOffset > 300) {
-                backToTopButton.classList.add('visible');
-            } else {
-                backToTopButton.classList.remove('visible');
-            }
-        });
+        if (backToTopButton) {
+            window.addEventListener('scroll', () => {
+                if (window.pageYOffset > 300) {
+                    backToTopButton.classList.add('visible');
+                } else {
+                    backToTopButton.classList.remove('visible');
+                }
+            });
+        }
     </script>
 </body>
 </html> 

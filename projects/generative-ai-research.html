@@ -50,14 +50,17 @@
 
     <section class="project-hero">
         <div class="wrapper">
-            <h1 data-aos="fade-up" data-aos-duration="800">Research Paper on Generative AI</h1>
-            <p data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">3D heart model generation from 2D MRI scans using advanced generative AI techniques</p>
+            <h1 data-aos="fade-up" data-aos-duration="800">Generative AI Research</h1>
+            <p data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">Exploring advanced techniques in generative artificial intelligence and deep learning</p>
             <div class="project-tags" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
-                <span class="tag">Machine Learning</span>
-                <span class="tag">Deep Learning</span>
                 <span class="tag">Python</span>
                 <span class="tag">TensorFlow</span>
                 <span class="tag">PyTorch</span>
+                <span class="tag">Deep Learning</span>
+            </div>
+            <div class="project-tags" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
+                <a href="#" class="tag"><i class="fas fa-code"></i> Implementation</a>
+                <a href="#" class="tag"><i class="fab fa-github"></i> Repository</a>
             </div>
         </div>
     </section>
@@ -66,116 +69,79 @@
         <div class="wrapper">
             <div class="project-details">
                 <div class="project-image-large" data-aos="fade-up" data-aos-duration="800">
-                    <img src="/projects/Pictures/GenAI1.jpeg" alt="Generative AI Research">
+                    <img src="../projects/Pictures/GenerativeAI1.jpg" alt="Generative AI Research">
                 </div>
                 
-                <h2 data-aos="fade-up" data-aos-duration="800">Research Overview</h2>
-                <p data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">This ongoing research project focuses on developing a generative AI model capable of creating accurate 3D heart models from 2D MRI scan inputs. The approach combines existing pre-trained models with novel techniques to improve accuracy in reconstructing complete 3D cardiac structures from limited 2D slice data.</p>
+                <h2 data-aos="fade-up" data-aos-duration="800">Project Overview</h2>
+                <p data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">A research project focused on developing and improving generative AI models, exploring various architectures and training techniques for creating high-quality synthetic data.</p>
                 
-                <h2>Research Focus</h2>
+                <h2 data-aos="fade-up" data-aos-duration="800">Key Features</h2>
                 <ul class="feature-list">
-                    <li>
+                    <li data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
                         <i class="fas fa-check-circle"></i>
                         <div>
-                            <h3>2D to 3D Conversion of Medical Imagery</h3>
-                            <p>Developing algorithms that can accurately translate series of 2D MRI scans into comprehensive 3D heart models with high anatomical precision.</p>
+                            <h3>Model Architecture</h3>
+                            <p>Implementation of various GAN and transformer-based architectures for different generation tasks.</p>
                         </div>
                     </li>
-                    <li>
+                    <li data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
                         <i class="fas fa-check-circle"></i>
                         <div>
-                            <h3>Gap Filling in Medical Image Data</h3>
-                            <p>Creating mechanisms to intelligently fill in missing or low-quality data regions by leveraging patterns from training datasets of complete heart models.</p>
+                            <h3>Training Pipeline</h3>
+                            <p>Robust training and evaluation pipeline with support for distributed computing.</p>
                         </div>
                     </li>
-                    <li>
+                    <li data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
                         <i class="fas fa-check-circle"></i>
                         <div>
-                            <h3>Pre-trained Model Enhancement</h3>
-                            <p>Adapting and improving existing generative models specifically for cardiac imaging through specialized training and architecture modifications.</p>
-                        </div>
-                    </li>
-                    <li>
-                        <i class="fas fa-check-circle"></i>
-                        <div>
-                            <h3>Medical Accuracy Validation</h3>
-                            <p>Developing robust evaluation metrics and validation procedures to ensure the generated 3D models maintain clinical accuracy and usefulness.</p>
+                            <h3>Evaluation Metrics</h3>
+                            <p>Comprehensive set of metrics for assessing generation quality and diversity.</p>
                         </div>
                     </li>
                 </ul>
                 
-                <h2>Technical Approach</h2>
-                <p>Our research methodology encompasses several technical components:</p>
-                <ul>
-                    <li><strong>Neural Network Architecture:</strong> Utilizing advanced generative adversarial networks (GANs) and autoencoders specifically optimized for medical image processing.</li>
-                    <li><strong>Dataset Preparation:</strong> Curating and preprocessing diverse cardiac MRI datasets to create comprehensive training and validation sets.</li>
-                    <li><strong>Transfer Learning:</strong> Leveraging pre-trained models in the medical imaging domain and adapting them to our specific use case.</li>
-                    <li><strong>Anatomical Constraints:</strong> Incorporating domain-specific knowledge about cardiac anatomy as constraints in the generative process to ensure physiological accuracy.</li>
-                    <li><strong>Evaluation Framework:</strong> Developing quantitative metrics for assessing the accuracy, completeness, and clinical utility of the generated 3D models.</li>
+                <h2 data-aos="fade-up" data-aos-duration="800">Technical Implementation</h2>
+                <p data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">The project was built using modern deep learning technologies:</p>
+                <ul data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+                    <li><strong>Frameworks:</strong> TensorFlow and PyTorch for model development and training</li>
+                    <li><strong>Hardware:</strong> GPU-accelerated training with distributed computing support</li>
+                    <li><strong>Data Processing:</strong> Custom data pipelines for efficient training and evaluation</li>
+                    <li><strong>Visualization:</strong> Tools for analyzing model behavior and generation results</li>
                 </ul>
                 
-                <h2>Current Progress</h2>
-                <p>Our research is advancing through several key phases:</p>
-                <ol>
-                    <li><strong>Literature Review:</strong> Comprehensive analysis of existing approaches to medical image generation and 2D-to-3D conversion techniques.</li>
-                    <li><strong>Problem Definition:</strong> Precise formulation of the research questions and identification of specific challenges in cardiac 3D modeling.</li>
-                    <li><strong>Model Selection:</strong> Identification of promising pre-trained models that can be adapted for our specific application.</li>
-                    <li><strong>Data Collection:</strong> Gathering and organizing appropriate cardiac MRI datasets for training and validation.</li>
-                    <li><strong>Initial Experimentation:</strong> Preliminary testing of model architectures and training approaches with baseline performance assessment.</li>
-                </ol>
-                
-                <h2>Challenges & Approaches</h2>
-                <div class="challenge-solution">
+                <h2 data-aos="fade-up" data-aos-duration="800">Challenges & Solutions</h2>
+                <div class="challenge-solution" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
                     <div class="challenge">
                         <h3>Challenge</h3>
-                        <p>Limited availability of complete, high-quality annotated cardiac MRI datasets for training.</p>
+                        <p>Managing training stability and preventing mode collapse in generative models.</p>
                     </div>
                     <div class="solution">
-                        <h3>Approach</h3>
-                        <p>Implementing data augmentation techniques and exploring semi-supervised learning methods to maximize learning from limited datasets.</p>
+                        <h3>Solution</h3>
+                        <p>Implemented advanced training techniques and regularization methods to improve stability.</p>
                     </div>
                 </div>
                 
-                <div class="challenge-solution">
+                <div class="challenge-solution" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
                     <div class="challenge">
                         <h3>Challenge</h3>
-                        <p>Ensuring generated models maintain anatomical accuracy while filling gaps in input data.</p>
+                        <p>Scaling training to handle large datasets and complex model architectures.</p>
                     </div>
                     <div class="solution">
-                        <h3>Approach</h3>
-                        <p>Incorporating anatomical priors and constraints into the model architecture, and involving medical experts in the validation process.</p>
+                        <h3>Solution</h3>
+                        <p>Developed efficient data loading and distributed training strategies.</p>
                     </div>
                 </div>
                 
-                <div class="challenge-solution">
-                    <div class="challenge">
-                        <h3>Challenge</h3>
-                        <p>Developing appropriate quantitative metrics to evaluate the quality of generated 3D models.</p>
-                    </div>
-                    <div class="solution">
-                        <h3>Approach</h3>
-                        <p>Creating a multi-faceted evaluation framework that combines traditional image similarity metrics with domain-specific anatomical correctness measures.</p>
-                    </div>
-                </div>
-                
-                <h2>Expected Outcomes & Applications</h2>
-                <p>This research project aims to deliver several key outcomes:</p>
-                <ul>
-                    <li>A novel generative AI model capable of creating accurate 3D heart models from 2D MRI inputs</li>
-                    <li>Improved methodologies for filling missing data in medical imaging through AI-based inference</li>
-                    <li>Quantitative frameworks for evaluating the quality of AI-generated anatomical models</li>
-                    <li>A peer-reviewed research paper documenting our approach, findings, and contributions to the field</li>
+                <h2 data-aos="fade-up" data-aos-duration="800">Learning Outcomes</h2>
+                <p data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">This project provided valuable experience in:</p>
+                <ul data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+                    <li>Implementing and training complex deep learning architectures</li>
+                    <li>Working with distributed computing and GPU acceleration</li>
+                    <li>Developing robust evaluation metrics for generative models</li>
+                    <li>Optimizing training pipelines for large-scale machine learning</li>
                 </ul>
                 
-                <p>The potential applications of this research include:</p>
-                <ul>
-                    <li>Enhanced cardiac diagnostic capabilities through more comprehensive visualization</li>
-                    <li>Improved surgical planning for cardiac procedures</li>
-                    <li>Educational tools for medical training and patient understanding</li>
-                    <li>Framework for extending similar approaches to other anatomical structures and medical imaging modalities</li>
-                </ul>
-                
-                <div class="project-nav">
+                <div class="project-nav" data-aos="fade-up" data-aos-duration="800">
                     <a href="../index.html#work" class="btn back-btn tag"><i class="fas fa-arrow-left"></i> Back to Projects</a>
                 </div>
             </div>

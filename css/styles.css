@@ -877,6 +877,7 @@ header .wrapper {
 .projects h3 {
     padding: 1rem;
     margin: 0;
+    margin-top: 1.6rem;
 }
 
 .projects .tech-stack {
@@ -892,6 +893,83 @@ header .wrapper {
     width: 100%;
     height: 100%;
     z-index: 10;
+}
+
+.project-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    z-index: 2;
+    backdrop-filter: blur(5px);
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.project-badge.research {
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.project-badge.deployed {
+    background: linear-gradient(135deg, var(--accent), #2980b9);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.project-badge.hardware {
+    background: linear-gradient(135deg, #ff9800, #ff5722);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.project-badge.coded {
+    background: linear-gradient(135deg, #607d8b, #37474f);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.projects article:hover .project-badge {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.projects article:hover .project-badge.research {
+    background: linear-gradient(135deg, #4f46e5, #7c3aed);
+}
+
+.projects article:hover .project-badge.deployed {
+    background: linear-gradient(135deg, #2980b9, #1a5fa0);
+}
+
+.projects article:hover .project-badge.hardware {
+    background: linear-gradient(135deg, #fb8c00, #e65100);
+}
+
+.projects article:hover .project-badge.coded {
+    background: linear-gradient(135deg, #455a64, #263238);
+}
+
+@keyframes badgePulse {
+    0% {
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+    50% {
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    }
+    100% {
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+}
+
+.project-badge {
+    animation: badgePulse 2s infinite;
 }
 
 /* Skills Section */

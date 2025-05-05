@@ -54,118 +54,98 @@
 
     <section class="project-hero">
         <div class="wrapper">
-            <h1>Collision Detection Device</h1>
-            <p>A hardware-software solution for detecting and preventing vehicle collisions</p>
-            <div class="project-tags">
-                <span class="tag">Arduino</span>
+            <h1 data-aos="fade-up" data-aos-duration="800">Collision Detection System</h1>
+            <p data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">A real-time collision detection system for 3D objects using advanced algorithms</p>
+            <div class="project-tags" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
                 <span class="tag">C++</span>
-                <span class="tag">Hardware</span>
-                <span class="tag">Sensors</span>
+                <span class="tag">OpenGL</span>
+                <span class="tag">Physics</span>
+                <span class="tag">3D Graphics</span>
             </div>
-            <!-- <div class="project-tags">
+            <div class="project-tags" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
                 <a href="#" class="tag"><i class="fas fa-code"></i> Implementation</a>
                 <a href="#" class="tag"><i class="fab fa-github"></i> Repository</a>
-            </div> -->
+            </div>
         </div>
     </section>
 
     <section class="project-content">
         <div class="wrapper">
             <div class="project-details">
-                <div class="project-image-large">
-                    <img src="https://cdn.pixabay.com/photo/2017/03/23/12/32/arduino-2168193_1280.png" alt="Collision Detection Device">
+                <div class="project-image-large" data-aos="fade-up" data-aos-duration="800">
+                    <img src="../projects/Pictures/CollisionDetection1.jpg" alt="Collision Detection Project">
                 </div>
                 
-                <h2>Project Overview</h2>
-                <p>This project involved developing a practical device that uses UV sensors to detect nearby objects and prevents collisions by alerting users through a combination of audio and visual signals. The device serves as a safety measure that could be implemented in various settings where collision avoidance is crucial.</p>
+                <h2 data-aos="fade-up" data-aos-duration="800">Project Overview</h2>
+                <p data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">A sophisticated collision detection system that efficiently handles complex 3D object interactions in real-time. The system implements various collision detection algorithms optimized for different types of objects and scenarios.</p>
                 
-                <h2>Key Features</h2>
+                <h2 data-aos="fade-up" data-aos-duration="800">Key Features</h2>
                 <ul class="feature-list">
-                    <li>
+                    <li data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
                         <i class="fas fa-check-circle"></i>
                         <div>
-                            <h3>Proximity Detection</h3>
-                            <p>Uses UV sensors to accurately detect objects within a specified range, providing real-time distance measurements.</p>
+                            <h3>Broad Phase Detection</h3>
+                            <p>Efficient initial collision filtering using spatial partitioning and bounding volume hierarchies.</p>
                         </div>
                     </li>
-                    <li>
+                    <li data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
                         <i class="fas fa-check-circle"></i>
                         <div>
-                            <h3>Multi-Sensory Alerts</h3>
-                            <p>Implements both audio (speakers) and visual (LED lights) alerts that increase in intensity as objects get closer to the sensor.</p>
+                            <h3>Narrow Phase Detection</h3>
+                            <p>Precise collision detection between complex 3D objects using advanced geometric algorithms.</p>
                         </div>
                     </li>
-                    <li>
+                    <li data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
                         <i class="fas fa-check-circle"></i>
                         <div>
-                            <h3>Adjustable Sensitivity</h3>
-                            <p>Features configurable detection thresholds that can be adjusted based on the environment and specific use case requirements.</p>
-                        </div>
-                    </li>
-                    <li>
-                        <i class="fas fa-check-circle"></i>
-                        <div>
-                            <h3>Compact Design</h3>
-                            <p>Built as a portable, self-contained unit that can be easily mounted or integrated into existing systems.</p>
+                            <h3>Response System</h3>
+                            <p>Realistic collision response with physics-based calculations for object interactions.</p>
                         </div>
                     </li>
                 </ul>
                 
-                <h2>Technical Implementation</h2>
-                <p>The project was developed using the following technologies and components:</p>
-                <ul>
-                    <li><strong>Hardware Platform:</strong> Arduino microcontroller served as the central processing unit for the device.</li>
-                    <li><strong>Sensors:</strong> UV distance sensors provided accurate proximity detection of nearby objects.</li>
-                    <li><strong>Output Devices:</strong> Speakers for audio alerts and LED lights for visual indicators were integrated into the system.</li>
-                    <li><strong>Power Management:</strong> Efficient power management system to ensure optimal battery life for portable use.</li>
-                    <li><strong>Programming:</strong> Arduino programming language (based on C/C++) was used to create the logic for the device.</li>
+                <h2 data-aos="fade-up" data-aos-duration="800">Technical Implementation</h2>
+                <p data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">The project was built using modern technologies and algorithms:</p>
+                <ul data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+                    <li><strong>Core Engine:</strong> C++ with OpenGL for 3D rendering and visualization</li>
+                    <li><strong>Collision Detection:</strong> Implementation of GJK and EPA algorithms for convex objects</li>
+                    <li><strong>Physics:</strong> Custom physics engine for handling collision responses</li>
+                    <li><strong>Optimization:</strong> Spatial partitioning using octrees for efficient broad phase detection</li>
                 </ul>
                 
-                <h2>Development Process</h2>
-                <p>The project followed a structured development approach:</p>
-                <ol>
-                    <li><strong>Research & Planning:</strong> Investigated different sensor types and alert mechanisms to determine the most effective combination.</li>
-                    <li><strong>Prototyping:</strong> Created initial breadboard prototypes to test sensor accuracy and alert systems.</li>
-                    <li><strong>Circuit Design:</strong> Developed a compact circuit layout that integrated all components efficiently.</li>
-                    <li><strong>Programming:</strong> Wrote and refined the Arduino code to optimize sensor readings and alert triggers.</li>
-                    <li><strong>Assembly:</strong> Built the physical device with proper housing and connection points.</li>
-                    <li><strong>Testing & Validation:</strong> Conducted comprehensive testing in various environments and received validation from the project coordinator.</li>
-                </ol>
-                
-                <h2>Challenges & Solutions</h2>
-                <div class="challenge-solution">
+                <h2 data-aos="fade-up" data-aos-duration="800">Challenges & Solutions</h2>
+                <div class="challenge-solution" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
                     <div class="challenge">
                         <h3>Challenge</h3>
-                        <p>Ensuring accurate distance detection in different lighting conditions and with various object materials.</p>
+                        <p>Handling complex collisions between non-convex objects efficiently.</p>
                     </div>
                     <div class="solution">
                         <h3>Solution</h3>
-                        <p>Implemented a calibration routine and filtering algorithm to compensate for environmental variables and improve detection reliability.</p>
+                        <p>Implemented convex decomposition and hierarchical collision detection for complex objects.</p>
                     </div>
                 </div>
                 
-                <div class="challenge-solution">
+                <div class="challenge-solution" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
                     <div class="challenge">
                         <h3>Challenge</h3>
-                        <p>Balancing alert intensity with user experience to avoid unnecessary distraction while ensuring safety.</p>
+                        <p>Maintaining real-time performance with large numbers of objects.</p>
                     </div>
                     <div class="solution">
                         <h3>Solution</h3>
-                        <p>Designed a graduated alert system that scales in intensity based on proximity and incorporates user-adjustable threshold settings.</p>
+                        <p>Developed efficient spatial partitioning and parallel processing techniques.</p>
                     </div>
                 </div>
                 
-                <h2>Learning Outcomes</h2>
-                <p>This project provided valuable experience in:</p>
-                <ul>
-                    <li>Working with microcontrollers and embedded systems development</li>
-                    <li>Sensor integration and calibration for real-world applications</li>
-                    <li>Circuit design and physical hardware prototyping</li>
-                    <li>Developing systems that interface between digital sensing and physical feedback</li>
-                    <li>Creating user-focused safety devices with practical applications</li>
+                <h2 data-aos="fade-up" data-aos-duration="800">Learning Outcomes</h2>
+                <p data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">This project provided valuable experience in:</p>
+                <ul data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+                    <li>Implementing complex geometric algorithms for collision detection</li>
+                    <li>Optimizing performance for real-time 3D applications</li>
+                    <li>Working with 3D graphics and physics simulation</li>
+                    <li>Developing efficient data structures for spatial queries</li>
                 </ul>
                 
-                <div class="project-nav">
+                <div class="project-nav" data-aos="fade-up" data-aos-duration="800">
                     <a href="../index.html#work" class="btn back-btn tag"><i class="fas fa-arrow-left"></i> Back to Projects</a>
                 </div>
             </div>

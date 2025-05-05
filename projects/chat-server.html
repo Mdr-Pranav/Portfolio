@@ -50,18 +50,17 @@
 
     <section class="project-hero">
         <div class="wrapper">
-            <h1>Chat Server</h1>
-            <p>A real-time chat application with user authentication and message history</p>
-            <div class="project-tags">
-                <span class="tag">HTML</span>
-                <span class="tag">CSS</span>
-                <span class="tag">JavaScript</span>
+            <h1 data-aos="fade-up" data-aos-duration="800">Chat Server</h1>
+            <p data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">A real-time chat application with support for multiple rooms and user authentication</p>
+            <div class="project-tags" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
                 <span class="tag">Node.js</span>
-                <span class="tag">Socket.io</span>
+                <span class="tag">Socket.IO</span>
+                <span class="tag">Express</span>
+                <span class="tag">MongoDB</span>
             </div>
-            <div class="project-tags">
-                <!-- <a href="#" class="tag"><i class="fas fa-code"></i> Implementation</a> -->
-                <a href="https://github.com/Mdr-Pranav/ChatServer.git" class="tag"><i class="fab fa-github"></i> Repository</a>
+            <div class="project-tags" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
+                <a href="#" class="tag"><i class="fas fa-code"></i> Implementation</a>
+                <a href="#" class="tag"><i class="fab fa-github"></i> Repository</a>
             </div>
         </div>
     </section>
@@ -69,107 +68,80 @@
     <section class="project-content">
         <div class="wrapper">
             <div class="project-details">
-                <div class="project-image-large">
-                    <img src="/projects/Pictures/Chatserver1.webp" alt="Chat Server Project">
+                <div class="project-image-large" data-aos="fade-up" data-aos-duration="800">
+                    <img src="../projects/Pictures/ChatServer1.jpg" alt="Chat Server Project">
                 </div>
                 
-                <h2>Project Overview</h2>
-                <p>This project implements a robust chat server that enables communication between multiple systems with additional functionality including file sharing, administrative controls, and multi-client support within a single system. The server maintains comprehensive logs of system entries/exits and chat history for security and reference purposes.</p>
+                <h2 data-aos="fade-up" data-aos-duration="800">Project Overview</h2>
+                <p data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">A full-featured chat application that enables real-time communication between users. The system supports multiple chat rooms, user authentication, and message persistence.</p>
                 
-                <h2>Key Features</h2>
+                <h2 data-aos="fade-up" data-aos-duration="800">Key Features</h2>
                 <ul class="feature-list">
-                    <li>
+                    <li data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
                         <i class="fas fa-check-circle"></i>
                         <div>
-                            <h3>Multi-System Communication</h3>
-                            <p>Allows seamless communication between multiple computers connected to the server, enabling real-time messaging across different devices.</p>
+                            <h3>Real-time Messaging</h3>
+                            <p>Instant message delivery using WebSocket technology for seamless communication.</p>
                         </div>
                     </li>
-                    <li>
+                    <li data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
                         <i class="fas fa-check-circle"></i>
                         <div>
-                            <h3>File Sharing</h3>
-                            <p>Users can exchange files of various formats through the chat interface, streamlining collaboration and data sharing without needing separate file transfer tools.</p>
+                            <h3>Multiple Chat Rooms</h3>
+                            <p>Support for creating and joining different chat rooms with separate message histories.</p>
                         </div>
                     </li>
-                    <li>
+                    <li data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
                         <i class="fas fa-check-circle"></i>
                         <div>
-                            <h3>Admin Controls</h3>
-                            <p>Administrators have special privileges to kick or ban systems from the server, helping maintain a controlled environment and manage inappropriate behavior.</p>
-                        </div>
-                    </li>
-                    <li>
-                        <i class="fas fa-check-circle"></i>
-                        <div>
-                            <h3>Multiple Clients per System</h3>
-                            <p>Supports running multiple client instances on a single computer, allowing for greater flexibility in testing and deployment scenarios.</p>
-                        </div>
-                    </li>
-                    <li>
-                        <i class="fas fa-check-circle"></i>
-                        <div>
-                            <h3>Comprehensive Logging</h3>
-                            <p>Maintains detailed logs of system connections/disconnections and message history for security auditing and record-keeping.</p>
+                            <h3>User Authentication</h3>
+                            <p>Secure user registration and login system with session management.</p>
                         </div>
                     </li>
                 </ul>
                 
-                <h2>Technical Implementation</h2>
-                <p>The project was developed using the following technologies and approaches:</p>
-                <ul>
-                    <li><strong>Socket Programming:</strong> Used Python's socket library to establish and maintain network connections between clients and the server.</li>
-                    <li><strong>Threading:</strong> Implemented multi-threading to handle concurrent client connections and operations without blocking.</li>
-                    <li><strong>File Handling:</strong> Created protocols for breaking down, transferring, and reassembling files over the network.</li>
-                    <li><strong>Security:</strong> Implemented basic authentication and permission systems to control user access and privileges.</li>
-                    <li><strong>Data Persistence:</strong> Developed logging mechanisms to record chat history and connection events.</li>
+                <h2 data-aos="fade-up" data-aos-duration="800">Technical Implementation</h2>
+                <p data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">The project was built using modern web technologies:</p>
+                <ul data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+                    <li><strong>Backend:</strong> Node.js with Express framework for handling HTTP requests and WebSocket connections</li>
+                    <li><strong>Real-time Communication:</strong> Socket.IO for managing WebSocket connections and real-time events</li>
+                    <li><strong>Database:</strong> MongoDB for storing user data and message history</li>
+                    <li><strong>Authentication:</strong> JWT-based authentication system with secure password hashing</li>
                 </ul>
                 
-                <h2>Challenges & Solutions</h2>
-                <div class="challenge-solution">
+                <h2 data-aos="fade-up" data-aos-duration="800">Challenges & Solutions</h2>
+                <div class="challenge-solution" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
                     <div class="challenge">
                         <h3>Challenge</h3>
-                        <p>Managing simultaneous connections and preventing race conditions in the chat application.</p>
+                        <p>Handling concurrent connections and ensuring message delivery in real-time.</p>
                     </div>
                     <div class="solution">
                         <h3>Solution</h3>
-                        <p>Implemented thread synchronization mechanisms and locks to ensure data integrity when multiple clients interact with the server simultaneously.</p>
+                        <p>Implemented efficient WebSocket connection management and message queuing system.</p>
                     </div>
                 </div>
                 
-                <div class="challenge-solution">
+                <div class="challenge-solution" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
                     <div class="challenge">
                         <h3>Challenge</h3>
-                        <p>Handling large file transfers efficiently without overwhelming network resources.</p>
+                        <p>Managing chat room state and user presence across multiple rooms.</p>
                     </div>
                     <div class="solution">
                         <h3>Solution</h3>
-                        <p>Developed a chunking system that breaks files into smaller packets for transmission and implements progress tracking and error recovery.</p>
+                        <p>Developed a robust room management system with real-time user tracking and state synchronization.</p>
                     </div>
                 </div>
                 
-                <div class="challenge-solution">
-                    <div class="challenge">
-                        <h3>Challenge</h3>
-                        <p>Implementing robust admin controls without compromising system security.</p>
-                    </div>
-                    <div class="solution">
-                        <h3>Solution</h3>
-                        <p>Created a role-based permission system with secure authentication for administrator accounts and detailed logging of administrative actions.</p>
-                    </div>
-                </div>
-                
-                <h2>Learning Outcomes</h2>
-                <p>This project provided valuable experience in:</p>
-                <ul>
-                    <li>Understanding and implementing network communication protocols</li>
-                    <li>Managing concurrent operations through multi-threading in Python</li>
-                    <li>Designing systems for file transfers over networks</li>
-                    <li>Implementing user authentication and permission systems</li>
-                    <li>Building logging and auditing systems for network applications</li>
+                <h2 data-aos="fade-up" data-aos-duration="800">Learning Outcomes</h2>
+                <p data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">This project provided valuable experience in:</p>
+                <ul data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+                    <li>Building real-time web applications with WebSocket technology</li>
+                    <li>Implementing secure user authentication systems</li>
+                    <li>Managing concurrent connections and real-time data synchronization</li>
+                    <li>Designing scalable database schemas for chat applications</li>
                 </ul>
                 
-                <div class="project-nav">
+                <div class="project-nav" data-aos="fade-up" data-aos-duration="800">
                     <a href="../index.html#work" class="btn back-btn tag"><i class="fas fa-arrow-left"></i> Back to Projects</a>
                 </div>
             </div>

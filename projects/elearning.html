@@ -51,13 +51,16 @@
     <section class="project-hero">
         <div class="wrapper">
             <h1 data-aos="fade-up" data-aos-duration="800">E-Learning Platform</h1>
-            <p data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">A comprehensive education management system for creating, delivering, and tracking online courses</p>
+            <p data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">A comprehensive online learning platform with interactive courses and progress tracking</p>
             <div class="project-tags" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
-                <span class="tag">Java</span>
-                <span class="tag">Spring Boot</span>
                 <span class="tag">React</span>
-                <span class="tag">PostgreSQL</span>
-                <span class="tag">REST API</span>
+                <span class="tag">Node.js</span>
+                <span class="tag">MongoDB</span>
+                <span class="tag">Redux</span>
+            </div>
+            <div class="project-tags" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
+                <a href="#" class="tag"><i class="fas fa-code"></i> Implementation</a>
+                <a href="#" class="tag"><i class="fab fa-github"></i> Repository</a>
             </div>
         </div>
     </section>
@@ -66,90 +69,79 @@
         <div class="wrapper">
             <div class="project-details">
                 <div class="project-image-large" data-aos="fade-up" data-aos-duration="800">
-                    <img src="/projects/Pictures/elearning1.jpg" alt="E-Learning Platform">
+                    <img src="../projects/Pictures/Elearning1.jpg" alt="E-Learning Platform">
                 </div>
                 
                 <h2 data-aos="fade-up" data-aos-duration="800">Project Overview</h2>
-                <p data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">The E-Learning Platform is a full-featured educational technology solution that enables institutions to create and manage online courses, track student progress, and facilitate interactive learning experiences. Built with a modern tech stack including Java Spring Boot and React, the platform implements core principles of object-oriented programming and follows the MVC architectural pattern.</p>
+                <p data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">A modern e-learning platform that provides interactive courses, real-time progress tracking, and personalized learning experiences for students and educators.</p>
                 
                 <h2 data-aos="fade-up" data-aos-duration="800">Key Features</h2>
                 <ul class="feature-list">
                     <li data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
                         <i class="fas fa-check-circle"></i>
                         <div>
-                            <h3>Course Management</h3>
-                            <p>Allows instructors to create, organize, and publish courses with various content types including video lectures, reading materials, quizzes, and assignments.</p>
+                            <h3>Interactive Courses</h3>
+                            <p>Engaging course content with videos, quizzes, and interactive exercises.</p>
                         </div>
                     </li>
                     <li data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
                         <i class="fas fa-check-circle"></i>
                         <div>
-                            <h3>Student Progress Tracking</h3>
-                            <p>Comprehensive analytics dashboard for instructors to monitor student engagement, completion rates, and assessment performance.</p>
+                            <h3>Progress Tracking</h3>
+                            <p>Real-time monitoring of student progress and performance analytics.</p>
                         </div>
                     </li>
                     <li data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
                         <i class="fas fa-check-circle"></i>
                         <div>
-                            <h3>Interactive Learning Tools</h3>
-                            <p>Integrated discussion forums, live sessions, peer review functionality, and interactive content to enhance student engagement.</p>
+                            <h3>Discussion Forums</h3>
+                            <p>Interactive forums for student-teacher communication and peer learning.</p>
                         </div>
                     </li>
                 </ul>
                 
-                <h2>Technical Implementation</h2>
-                <p>The platform was developed using a modern technology stack following MVC architecture:</p>
-                <ul>
-                    <li><strong>Backend (Model & Controller):</strong> Java with Spring Boot framework handling business logic, data processing, and API endpoints with robust error handling and validation.</li>
-                    <li><strong>Frontend (View):</strong> React.js creating a responsive and interactive single-page application with component-based architecture for reusability and maintainability.</li>
-                    <li><strong>Database:</strong> PostgreSQL storing structured data with optimized schemas, relationships, and indexes for efficient querying and data integrity.</li>
-                    <li><strong>Authentication:</strong> JWT-based authentication and role-based authorization system ensuring secure access to platform features based on user roles.</li>
-                    <li><strong>File Storage:</strong> Cloud-based storage solution for course materials with efficient caching mechanisms for improved content delivery.</li>
+                <h2 data-aos="fade-up" data-aos-duration="800">Technical Implementation</h2>
+                <p data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">The project was built using modern web technologies:</p>
+                <ul data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+                    <li><strong>Frontend:</strong> React with Redux for state management and Material-UI for components</li>
+                    <li><strong>Backend:</strong> Node.js with Express for RESTful API endpoints</li>
+                    <li><strong>Database:</strong> MongoDB for flexible data storage and real-time updates</li>
+                    <li><strong>Authentication:</strong> JWT-based authentication with role-based access control</li>
                 </ul>
                 
-                <h2>Architectural Highlights</h2>
-                <ul>
-                    <li><strong>MVC Pattern:</strong> Clear separation of concerns with Models representing data structures, Views handling presentation, and Controllers managing application flow and business logic.</li>
-                    <li><strong>Object-Oriented Design:</strong> Extensive use of OOP principles including inheritance, encapsulation, polymorphism, and abstraction for modular and maintainable code.</li>
-                    <li><strong>Microservices:</strong> Core functionalities separated into microservices (user management, course delivery, assessment handling) for better scalability and development workflow.</li>
-                    <li><strong>RESTful APIs:</strong> Well-defined API endpoints following REST principles for seamless communication between frontend and backend components.</li>
-                </ul>
-                
-                <h2>Challenges & Solutions</h2>
-                <div class="challenge-solution">
+                <h2 data-aos="fade-up" data-aos-duration="800">Challenges & Solutions</h2>
+                <div class="challenge-solution" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
                     <div class="challenge">
                         <h3>Challenge</h3>
-                        <p>Handling concurrent user interactions and maintaining data consistency during peak usage periods.</p>
+                        <p>Managing complex state and real-time updates across multiple components.</p>
                     </div>
                     <div class="solution">
                         <h3>Solution</h3>
-                        <p>Implemented optimistic locking mechanisms, connection pooling, and caching strategies to handle high concurrent loads while ensuring data integrity.</p>
+                        <p>Implemented Redux for centralized state management and WebSocket for real-time updates.</p>
                     </div>
                 </div>
                 
-                <div class="challenge-solution">
+                <div class="challenge-solution" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
                     <div class="challenge">
                         <h3>Challenge</h3>
-                        <p>Creating an intuitive content management system that allows instructors with varying technical expertise to create engaging course materials.</p>
+                        <p>Handling large video content and ensuring smooth playback.</p>
                     </div>
                     <div class="solution">
                         <h3>Solution</h3>
-                        <p>Developed a user-friendly WYSIWYG editor with drag-and-drop functionality and reusable content components that simplifies course creation while maintaining quality.</p>
+                        <p>Implemented video streaming with adaptive bitrate and CDN integration.</p>
                     </div>
                 </div>
                 
-                <h2>Learning Outcomes</h2>
-                <p>This project provided valuable experience in:</p>
-                <ul>
-                    <li>Designing and implementing complex enterprise-level applications using MVC architecture</li>
-                    <li>Building scalable backend services with Spring Boot and robust data persistence with PostgreSQL</li>
-                    <li>Creating responsive and interactive user interfaces with React.js</li>
-                    <li>Applying object-oriented programming principles to real-world problems</li>
-                    <li>Implementing secure authentication and authorization mechanisms</li>
-                    <li>Performance optimization for web applications handling large amounts of data and concurrent users</li>
+                <h2 data-aos="fade-up" data-aos-duration="800">Learning Outcomes</h2>
+                <p data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">This project provided valuable experience in:</p>
+                <ul data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+                    <li>Building complex web applications with React and Redux</li>
+                    <li>Implementing real-time features with WebSocket technology</li>
+                    <li>Managing media content and streaming services</li>
+                    <li>Developing scalable and maintainable code architecture</li>
                 </ul>
                 
-                <div class="project-nav">
+                <div class="project-nav" data-aos="fade-up" data-aos-duration="800">
                     <a href="../index.html#work" class="btn back-btn tag"><i class="fas fa-arrow-left"></i> Back to Projects</a>
                 </div>
             </div>

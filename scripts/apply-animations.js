@@ -1,61 +1,91 @@
-// Script to apply animations to all project page elements
+// Initialize AOS with consistent settings
+AOS.init({
+    once: false,  // Whether animation should happen only once - while scrolling down
+    mirror: false, // Whether elements should animate out while scrolling past them
+    offset: 120,  // Offset (in px) from the original trigger point
+    duration: 800, // Default duration for all animations
+    easing: 'ease-in-out' // Default easing function
+});
+
+// Apply animations to project page elements
 document.addEventListener('DOMContentLoaded', function() {
-    // Apply animations to the content elements if AOS library is available
-    if (typeof AOS !== 'undefined') {
-        // Apply animations to hero section elements
-        applyAnimation('.project-hero h1', 'fade-up', 800);
-        applyAnimation('.project-hero p', 'fade-up', 800, 200);
-        applyAnimation('.project-hero .project-tags', 'fade-up', 800, 300);
-        
-        // Apply animations to main content elements
-        applyAnimation('.project-image-large', 'fade-up', 800);
-        applyAnimation('.project-details h2', 'fade-up', 800);
-        applyAnimation('.project-details h3', 'fade-up', 800, 100);
-        applyAnimation('.project-details > p', 'fade-up', 800, 100);
-        
-        // Apply staggered animations to lists and special elements
-        applyStaggeredAnimation('.feature-list li', 'fade-up', 800, 100);
-        applyStaggeredAnimation('.challenge-solution', 'fade-up', 800, 100);
-        applyStaggeredAnimation('.project-details > ul > li', 'fade-up', 800, 100);
-        applyStaggeredAnimation('.project-details > ol > li', 'fade-up', 800, 100);
-        
-        // Apply animation to navigation
-        applyAnimation('.project-nav', 'fade-up', 800);
-        
-        // Initialize AOS with desired settings
-        AOS.init({
-            once: false,         // Whether animation should happen only once
-            mirror: false,       // Whether elements should animate out while scrolling past them
-            offset: 120,         // Offset (in px) from the original trigger point
-            duration: 800,       // Default duration
-            easing: 'ease-in-out' // Default easing function
-        });
+    // Hero section animations
+    const heroTitle = document.querySelector('.project-hero h1');
+    const heroDescription = document.querySelector('.project-hero p');
+    const heroTags = document.querySelectorAll('.project-hero .project-tags');
+    
+    if (heroTitle) {
+        heroTitle.setAttribute('data-aos', 'fade-up');
+        heroTitle.setAttribute('data-aos-duration', '800');
     }
     
-    // Helper function to apply animation to elements
-    function applyAnimation(selector, animation, duration, delay = 0) {
-        const elements = document.querySelectorAll(selector);
-        elements.forEach(el => {
-            if (!el.hasAttribute('data-aos')) {
-                el.setAttribute('data-aos', animation);
-                el.setAttribute('data-aos-duration', duration);
-                if (delay) {
-                    el.setAttribute('data-aos-delay', delay);
-                }
-            }
-        });
+    if (heroDescription) {
+        heroDescription.setAttribute('data-aos', 'fade-up');
+        heroDescription.setAttribute('data-aos-duration', '800');
+        heroDescription.setAttribute('data-aos-delay', '200');
     }
     
-    // Helper function to apply staggered animations
-    function applyStaggeredAnimation(selector, animation, duration, baseDelay) {
-        const elements = document.querySelectorAll(selector);
-        elements.forEach((el, index) => {
-            if (!el.hasAttribute('data-aos')) {
-                el.setAttribute('data-aos', animation);
-                el.setAttribute('data-aos-duration', duration);
-                const staggeredDelay = baseDelay + (index * 100);
-                el.setAttribute('data-aos-delay', staggeredDelay);
-            }
-        });
+    heroTags.forEach((tagGroup, index) => {
+        tagGroup.setAttribute('data-aos', 'fade-up');
+        tagGroup.setAttribute('data-aos-duration', '800');
+        tagGroup.setAttribute('data-aos-delay', (300 + (index * 100)).toString());
+    });
+
+    // Project content animations
+    const projectImages = document.querySelectorAll('.project-image-large');
+    const projectSections = document.querySelectorAll('.project-details > h2');
+    const projectParagraphs = document.querySelectorAll('.project-details > p');
+    const projectLists = document.querySelectorAll('.project-details > ul');
+    const projectNav = document.querySelector('.project-nav');
+    const featureList = document.querySelectorAll('.feature-list li');
+    const challengeSolutions = document.querySelectorAll('.challenge-solution');
+
+    // Apply animations to project images
+    projectImages.forEach((img, index) => {
+        img.setAttribute('data-aos', 'fade-up');
+        img.setAttribute('data-aos-duration', '800');
+        img.setAttribute('data-aos-delay', (index * 100).toString());
+    });
+
+    // Apply animations to section headings
+    projectSections.forEach((section, index) => {
+        section.setAttribute('data-aos', 'fade-up');
+        section.setAttribute('data-aos-duration', '800');
+        section.setAttribute('data-aos-delay', (index * 100).toString());
+    });
+
+    // Apply animations to paragraphs
+    projectParagraphs.forEach((p, index) => {
+        p.setAttribute('data-aos', 'fade-up');
+        p.setAttribute('data-aos-duration', '800');
+        p.setAttribute('data-aos-delay', (index * 100).toString());
+    });
+
+    // Apply animations to lists
+    projectLists.forEach((list, index) => {
+        list.setAttribute('data-aos', 'fade-up');
+        list.setAttribute('data-aos-duration', '800');
+        list.setAttribute('data-aos-delay', (index * 100).toString());
+    });
+
+    // Apply animations to feature list items
+    featureList.forEach((item, index) => {
+        item.setAttribute('data-aos', 'fade-up');
+        item.setAttribute('data-aos-duration', '800');
+        item.setAttribute('data-aos-delay', (index * 100).toString());
+    });
+
+    // Apply animations to challenge-solution pairs
+    challengeSolutions.forEach((pair, index) => {
+        pair.setAttribute('data-aos', 'fade-up');
+        pair.setAttribute('data-aos-duration', '800');
+        pair.setAttribute('data-aos-delay', (index * 100).toString());
+    });
+
+    // Apply animation to navigation
+    if (projectNav) {
+        projectNav.setAttribute('data-aos', 'fade-up');
+        projectNav.setAttribute('data-aos-duration', '800');
+        projectNav.setAttribute('data-aos-delay', '200');
     }
 }); 

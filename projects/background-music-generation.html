@@ -51,13 +51,16 @@
     <section class="project-hero">
         <div class="wrapper">
             <h1 data-aos="fade-up" data-aos-duration="800">Background Music Generation</h1>
-            <p data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">A system for generating appropriate background music for videos using AI models and techniques like Retrieval-Augmented Generation (RAG)</p>
+            <p data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">AI-powered system for generating background music based on video content and mood</p>
             <div class="project-tags" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
                 <span class="tag">Python</span>
-                <span class="tag">Deep Learning</span>
-                <span class="tag">Audio Processing</span>
-                <span class="tag">RAG</span>
-                <span class="tag">LLMs</span>
+                <span class="tag">TensorFlow</span>
+                <span class="tag">Music Theory</span>
+                <span class="tag">Machine Learning</span>
+            </div>
+            <div class="project-tags" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
+                <a href="#" class="tag"><i class="fas fa-code"></i> Implementation</a>
+                <a href="#" class="tag"><i class="fab fa-github"></i> Repository</a>
             </div>
         </div>
     </section>
@@ -66,129 +69,79 @@
         <div class="wrapper">
             <div class="project-details">
                 <div class="project-image-large" data-aos="fade-up" data-aos-duration="800">
-                    <img src="/projects/Pictures/backgroundmusic1.jpg" alt="Background Music Generation">
+                    <img src="../projects/Pictures/BackgroundMusic1.jpg" alt="Background Music Generation Project">
                 </div>
                 
                 <h2 data-aos="fade-up" data-aos-duration="800">Project Overview</h2>
-                <p data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">This project aims to automatically generate suitable background music for videos by analyzing video content and generating or retrieving matching music. The system combines video analysis, text description generation, and music generation technologies to create a seamless end-to-end solution that enhances viewer engagement and emotional impact without requiring manual music selection or composition.</p>
+                <p data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">This research project explores the application of machine learning in generating contextually appropriate background music for videos. The system analyzes video content, scene changes, and emotional context to create music that enhances the viewing experience.</p>
                 
                 <h2 data-aos="fade-up" data-aos-duration="800">Key Features</h2>
                 <ul class="feature-list">
                     <li data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
                         <i class="fas fa-check-circle"></i>
                         <div>
-                            <h3>Video Analysis</h3>
-                            <p>Extracts frames from videos and uses AI models (Google Gemini) to analyze content, mood, and themes, providing a comprehensive understanding of the video's context.</p>
+                            <h3>Video Content Analysis</h3>
+                            <p>Advanced algorithms analyze video content to detect scene changes, motion patterns, and emotional context.</p>
                         </div>
                     </li>
                     <li data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
                         <i class="fas fa-check-circle"></i>
                         <div>
-                            <h3>Retrieval-Augmented Generation (RAG)</h3>
-                            <p>Uses a dataset of music descriptions (MusicCaps) to retrieve relevant music based on video content, enhancing the quality and relevance of generated music through reference examples.</p>
+                            <h3>Music Generation</h3>
+                            <p>Neural networks generate appropriate background music based on the analyzed video content and desired mood.</p>
                         </div>
                     </li>
                     <li data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
                         <i class="fas fa-check-circle"></i>
                         <div>
-                            <h3>Music Generation</h3>
-                            <p>Creates custom background music using models like AudioCraft/MusicGen, producing original compositions tailored to the specific video content.</p>
-                        </div>
-                    </li>
-                    <li data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
-                        <i class="fas fa-check-circle"></i>
-                        <div>
-                            <h3>Agentic Workflow</h3>
-                            <p>Implements a conversational agent using LangGraph to guide users through the process, making the system accessible to users without technical expertise.</p>
-                        </div>
-                    </li>
-                    <li data-aos="fade-up" data-aos-duration="800" data-aos-delay="500">
-                        <i class="fas fa-check-circle"></i>
-                        <div>
-                            <h3>User Preference Integration</h3>
-                            <p>Takes into account user preferences for music style and mood, allowing for customization of the generated music to better match user expectations.</p>
+                            <h3>Style Adaptation</h3>
+                            <p>System can adapt to different music styles and genres while maintaining coherence with the video content.</p>
                         </div>
                     </li>
                 </ul>
                 
-                <h2 data-aos="fade-up" data-aos-duration="800">System Architecture</h2>
-                <p data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">The system consists of several interconnected components:</p>
-                <ul>
-                    <li><strong>Video Analysis Module:</strong> Extracts frames from the input video and uses Gemini model to analyze video content and generate descriptions.</li>
-                    <li><strong>Video Transcript Analysis:</strong> Obtains transcript from the given video input and performs NLP tasks to understand context and themes.</li>
-                    <li><strong>Description Engine:</strong> Processes video analysis into detailed descriptions for music generation and incorporates user preferences for music style.</li>
-                    <li><strong>Music Generation System:</strong> Uses RAG approach to retrieve similar music descriptions from the MusicCaps dataset and AudioCraft/MusicGen to generate appropriate music.</li>
-                    <li><strong>Agent-based Orchestration:</strong> Uses LangGraph to create a conversational workflow that guides users through the process and collects feedback.</li>
+                <h2 data-aos="fade-up" data-aos-duration="800">Technical Implementation</h2>
+                <p data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">The project utilizes several advanced technologies:</p>
+                <ul data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+                    <li><strong>Video Processing:</strong> OpenCV and custom algorithms for scene detection and content analysis</li>
+                    <li><strong>Music Generation:</strong> TensorFlow-based neural networks trained on diverse music datasets</li>
+                    <li><strong>Audio Processing:</strong> Librosa for music analysis and synthesis</li>
+                    <li><strong>Integration:</strong> Custom middleware for seamless video-music synchronization</li>
                 </ul>
-                
-                <h2 data-aos="fade-up" data-aos-duration="800">Technologies Used</h2>
-                <p data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">The project leverages cutting-edge AI and machine learning technologies:</p>
-                <ul>
-                    <li><strong>Google Gemini:</strong> For video content analysis and text generation</li>
-                    <li><strong>MusicGen/AudioCraft:</strong> For music generation</li>
-                    <li><strong>Sentence Transformers:</strong> For embedding and similarity search in MusicCaps dataset</li>
-                    <li><strong>FAISS:</strong> For efficient similarity search</li>
-                    <li><strong>LangGraph:</strong> For agent-based workflow orchestration</li>
-                    <li><strong>OpenCV/Pillow:</strong> For video frame extraction and image processing</li>
-                    <li><strong>PyTorch:</strong> For deep learning model implementation</li>
-                </ul>
-                
-                <h2 data-aos="fade-up" data-aos-duration="800">Implementation Process</h2>
-                <ol>
-                    <li><strong>Video Input:</strong> User uploads a video file or provides a link to a video that requires background music.</li>
-                    <li><strong>Content Analysis:</strong> The system extracts key frames and transcripts, analyzing them with Gemini to understand context and mood.</li>
-                    <li><strong>Description Generation:</strong> Based on video analysis, the system generates detailed descriptions of the appropriate music.</li>
-                    <li><strong>Retrieval Step:</strong> Using RAG, the system searches the MusicCaps dataset for similar music descriptions to enhance generation quality.</li>
-                    <li><strong>Music Generation:</strong> AudioCraft/MusicGen creates original background music based on the enhanced descriptions.</li>
-                    <li><strong>User Refinement:</strong> The system allows users to provide feedback and adjust parameters to refine the generated music.</li>
-                    <li><strong>Final Output:</strong> The system integrates the generated music with the original video for seamless playback.</li>
-                </ol>
                 
                 <h2 data-aos="fade-up" data-aos-duration="800">Challenges & Solutions</h2>
-                <div class="challenge-solution">
+                <div class="challenge-solution" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
                     <div class="challenge">
                         <h3>Challenge</h3>
-                        <p>Accurately matching music to video content with sufficient emotional and contextual alignment.</p>
+                        <p>Ensuring smooth transitions between different musical segments while maintaining emotional coherence.</p>
                     </div>
                     <div class="solution">
                         <h3>Solution</h3>
-                        <p>Implemented the RAG approach using the MusicCaps dataset, which significantly improved the relevance of generated music by providing high-quality reference examples.</p>
+                        <p>Implemented a sophisticated transition system that analyzes musical patterns and creates natural bridges between segments.</p>
                     </div>
                 </div>
                 
-                <div class="challenge-solution">
+                <div class="challenge-solution" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
                     <div class="challenge">
                         <h3>Challenge</h3>
-                        <p>Creating dynamic music that adapts to changing scenes and emotional shifts within a single video.</p>
+                        <p>Balancing computational efficiency with high-quality music generation.</p>
                     </div>
                     <div class="solution">
                         <h3>Solution</h3>
-                        <p>Developed a segmentation approach that analyzes the video in chunks, generating music for each segment and then seamlessly combining them with proper transitions.</p>
+                        <p>Developed a hybrid approach combining pre-trained models with real-time processing for optimal performance.</p>
                     </div>
                 </div>
                 
-                <div class="challenge-solution">
-                    <div class="challenge">
-                        <h3>Challenge</h3>
-                        <p>Making the system accessible to users without technical expertise in AI or music composition.</p>
-                    </div>
-                    <div class="solution">
-                        <h3>Solution</h3>
-                        <p>Created an agent-based conversational interface with LangGraph that guides users through the process, explaining options and collecting preferences in natural language.</p>
-                    </div>
-                </div>
-                
-                <h2 data-aos="fade-up" data-aos-duration="800">Results and Impact</h2>
-                <p data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">The Background Music Generation system delivers several significant benefits:</p>
-                <ul>
-                    <li>Reduces the time content creators spend finding appropriate background music from hours to minutes</li>
-                    <li>Eliminates copyright concerns by generating original, royalty-free music</li>
-                    <li>Enhances viewer engagement through emotionally resonant audio-visual experiences</li>
-                    <li>Provides accessible music creation for creators without musical expertise</li>
-                    <li>Creates unique soundtracks tailored specifically to individual video content</li>
+                <h2 data-aos="fade-up" data-aos-duration="800">Learning Outcomes</h2>
+                <p data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">This project provided valuable experience in:</p>
+                <ul data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+                    <li>Implementing complex machine learning systems for creative applications</li>
+                    <li>Working with audio processing and music theory in a computational context</li>
+                    <li>Developing algorithms for real-time content analysis and adaptation</li>
+                    <li>Creating systems that bridge the gap between technical and creative domains</li>
                 </ul>
                 
-                <div class="project-nav">
+                <div class="project-nav" data-aos="fade-up" data-aos-duration="800">
                     <a href="../index.html#work" class="btn back-btn tag"><i class="fas fa-arrow-left"></i> Back to Projects</a>
                 </div>
             </div>
