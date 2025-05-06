@@ -34,7 +34,6 @@
             <div class="logo-container">
                 <h1>Pranav Mudar</h1>
             </div>
-            
             <nav id="mainnav">
                 <ul>
                     <li><a href="../index.html">Home</a></li>
@@ -50,6 +49,7 @@
 
     <section class="project-hero">
         <div class="wrapper">
+            <span class="project-badge coded" style="position:absolute;top:2rem;right:2rem;z-index:2;">Coded</span>
             <h1 data-aos="fade-up" data-aos-duration="800">Event Management System</h1>
             <p data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">A comprehensive platform for organizing and managing events with real-time updates</p>
             <div class="project-tags" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
@@ -58,10 +58,10 @@
                 <span class="tag">MongoDB</span>
                 <span class="tag">Socket.IO</span>
             </div>
-            <div class="project-tags" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
+            <!-- <div class="project-tags" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
                 <a href="#" class="tag"><i class="fas fa-code"></i> Implementation</a>
                 <a href="#" class="tag"><i class="fab fa-github"></i> Repository</a>
-            </div>
+            </div> -->
         </div>
     </section>
 
@@ -69,7 +69,7 @@
         <div class="wrapper">
             <div class="project-details">
                 <div class="project-image-large" data-aos="fade-up" data-aos-duration="800">
-                    <img src="../projects/Pictures/EventManagement1.jpg" alt="Event Management System">
+                    <img src="https://cdn.pixabay.com/photo/2018/05/10/11/34/concert-3387324_640.jpg" alt="Event Management System">
                 </div>
                 
                 <h2 data-aos="fade-up" data-aos-duration="800">Project Overview</h2>
@@ -160,33 +160,24 @@
     </a>
 
     <script>
-        // Profile Picture Modal
-        const avatar = document.getElementById('avatar');
-        const modal = document.getElementById('profileModal');
-        const modalClose = document.querySelector('.modal-close');
-
-        avatar.addEventListener('click', () => {
-            modal.classList.add('active');
-        });
-
-        modalClose.addEventListener('click', () => {
-            modal.classList.remove('active');
-        });
-
-        modal.addEventListener('click', (e) => {
-            if (e.target === modal) {
-                modal.classList.remove('active');
-            }
-        });
-        
         // Back to Top Button
         const backToTopButton = document.getElementById('backToTop');
-        
         window.addEventListener('scroll', () => {
             if (window.pageYOffset > 300) {
                 backToTopButton.classList.add('visible');
             } else {
                 backToTopButton.classList.remove('visible');
+            }
+        });
+
+        // Initialize AOS animations
+        document.addEventListener('DOMContentLoaded', function() {
+            if (window.AOS) {
+                AOS.init({
+                    once: false,
+                    mirror: false,
+                    offset: 120
+                });
             }
         });
     </script>
