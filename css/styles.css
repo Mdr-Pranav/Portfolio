@@ -606,7 +606,7 @@ header .wrapper {
 /***************** About Section *****************/
 #about {
     padding: 4rem 0;
-    background: var(--primary);
+    background: var(--secondary);
 }
 
 .about-content {
@@ -667,7 +667,7 @@ header .wrapper {
 
 /* Project Hero Section */
 .project-hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('https://cdn.pixabay.com/photo/2016/11/19/14/00/code-1839406_1280.jpg') no-repeat center center/cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('/projects/Pictures/proj_bck.jpg') no-repeat center center/cover;
     color: white;
     padding: 4rem 0;
     text-align: center;
@@ -1104,22 +1104,14 @@ header .wrapper {
 }
 
 #education {
-    background: var(--secondary);
+    background: var(--primary) !important;
     padding: 4rem 0;
     position: relative;
     overflow: hidden;
 }
 
 #education::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(135deg, rgba(52, 152, 219, 0.1) 0%, rgba(52, 152, 219, 0.05) 100%);
-    pointer-events: none;
-    z-index: 1;
+    display: none;
 }
 
 #education .wrapper {
@@ -1526,7 +1518,7 @@ a:hover {
 
 /***************** Section Specific Rules *****************/
 #work {
-	background: var(--secondary);
+	background: var(--primary);
 	padding: 4rem 0;
 }
 
@@ -1776,21 +1768,13 @@ a:hover {
 /* Skills Section */
 #skills {
     padding: 4rem 0;
-    background: var(--primary);
+    background: var(--secondary) !important;
     position: relative;
     overflow: hidden;
 }
 
 #skills::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(135deg, rgba(52, 152, 219, 0.1) 0%, rgba(52, 152, 219, 0.05) 100%);
-    pointer-events: none;
-    z-index: 1;
+    display: none;
 }
 
 #skills .wrapper {
@@ -1828,14 +1812,7 @@ a:hover {
 }
 
 .skill-category::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(52, 152, 219, 0.1), transparent);
-    transition: left 0.6s ease;
+    display: none;
 }
 
 .skill-category:hover {
@@ -1930,7 +1907,7 @@ a:hover {
 /* Education Section */
 #education {
     padding: 4rem 0;
-    background: var(--secondary);
+    background: var(--primary);
 }
 
 #education h2 {
@@ -1939,22 +1916,47 @@ a:hover {
 }
 
 .education-item {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 2rem;
     margin-bottom: 2.5rem;
     padding-bottom: 2.5rem;
     border-bottom: 1px solid var(--border-color);
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    animation: fadeInUp 0.6s ease forwards;
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.education-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(52, 152, 219, 0.1), transparent);
+    transition: left 0.6s ease;
+}
+
+.education-item:hover {
+    border-color: var(--accent);
+    box-shadow: 0 8px 25px rgba(52, 152, 219, 0.2);
+    transform: translateY(-5px);
+}
+
+.education-item:hover::before {
+    left: 100%;
 }
 
 .education-item:last-child {
     border-bottom: none;
     margin-bottom: 0;
-    padding-bottom: 0;
-}
-
-/* Education item entrance animations */
-.education-item {
-    animation: fadeInUp 0.6s ease forwards;
-    opacity: 0;
-    transform: translateY(30px);
+    padding-bottom: 2rem;
 }
 
 .education-item:nth-child(1) {
@@ -2038,6 +2040,7 @@ a:hover {
     padding: 4rem 0;
     overflow: hidden;
     position: relative;
+    background: var(--secondary);
 }
 
 #certifications h2 {
@@ -2523,13 +2526,7 @@ footer p {
     animation: pulsateGlow 1.5s infinite;
 }
 
-.education-item {
-    transition: transform 0.3s ease;
-}
-
-.education-item:hover {
-    transform: translateY(-5px);
-}
+/* Removed conflicting education-item rule */
 
 /* Staggered animation delays for projects and skills only */
 .skill-category:nth-child(1), .projects article:nth-child(1) {
@@ -2592,6 +2589,7 @@ html {
     transform: translateY(-3px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     color: white;
+    text-decoration: none;
 }
 
 .back-to-top i {
@@ -2664,6 +2662,7 @@ html {
 /* Contact Section */
 #contact {
     padding: 4rem 0;
+    background: var(--secondary);
 }
 
 #contact h2 {
@@ -2885,6 +2884,7 @@ html {
     .education-item {
         padding: 1.5rem;
         margin-bottom: 1.5rem;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     }
 
     .education-details h3 {

@@ -23,8 +23,6 @@
     
     <!-- AOS - Animate On Scroll Library -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="../scripts/apply-animations.js"></script>
 </head>
 <body>
     <header>
@@ -67,7 +65,7 @@
         <div class="wrapper">
             <div class="project-details">
                 <div class="project-image-large" data-aos="fade-up" data-aos-duration="800">
-                    <img src="../projects/Pictures/Elearning1.jpg" alt="E-Learning Platform">
+                    <img src="Pictures/elearning1.jpg" alt="E-Learning Platform">
                 </div>
                 
                 <h2 data-aos="fade-up" data-aos-duration="800">Project Overview</h2>
@@ -149,7 +147,7 @@
     <!-- Profile Picture Modal -->
     <div class="modal" id="profileModal">
         <span class="modal-close">&times;</span>
-        <img src="../Me2.jpg" alt="Pranav Mudar">
+        <img src="../dp/Me2.jpg" alt="Pranav Mudar">
     </div>
 
     <!-- Back to Top Button -->
@@ -157,42 +155,48 @@
         <i class="fas fa-arrow-up"></i>
     </a>
 
+    <!-- AOS Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
     <script>
-        // Initialize AOS
-        AOS.init({
-            once: false,  // Whether animation should happen only once - while scrolling down
-            mirror: false, // Whether elements should animate out while scrolling past them
-            offset: 120,  // Offset (in px) from the original trigger point
-        });
-        
-        // Profile Picture Modal
-        const avatar = document.getElementById('avatar');
-        const modal = document.getElementById('profileModal');
-        const modalClose = document.querySelector('.modal-close');
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize AOS
+            AOS.init({
+                once: false,
+                mirror: false,
+                offset: 120,
+                duration: 800,
+                easing: 'ease-in-out'
+            });
+            
+            // Profile Picture Modal
+            const modal = document.getElementById('profileModal');
+            const modalClose = document.querySelector('.modal-close');
 
-        avatar.addEventListener('click', () => {
-            modal.classList.add('active');
-        });
-
-        modalClose.addEventListener('click', () => {
-            modal.classList.remove('active');
-        });
-
-        modal.addEventListener('click', (e) => {
-            if (e.target === modal) {
-                modal.classList.remove('active');
+            if (modalClose) {
+                modalClose.addEventListener('click', () => {
+                    modal.classList.remove('active');
+                });
             }
-        });
-        
-        // Back to Top Button
-        const backToTopButton = document.getElementById('backToTop');
-        
-        window.addEventListener('scroll', () => {
-            if (window.pageYOffset > 300) {
-                backToTopButton.classList.add('visible');
-            } else {
-                backToTopButton.classList.remove('visible');
+
+            if (modal) {
+                modal.addEventListener('click', (e) => {
+                    if (e.target === modal) {
+                        modal.classList.remove('active');
+                    }
+                });
             }
+            
+            // Back to Top Button
+            const backToTopButton = document.getElementById('backToTop');
+            
+            window.addEventListener('scroll', () => {
+                if (window.pageYOffset > 300) {
+                    backToTopButton.classList.add('visible');
+                } else {
+                    backToTopButton.classList.remove('visible');
+                }
+            });
         });
     </script>
 </body>
