@@ -606,7 +606,7 @@ header .wrapper {
 /***************** About Section *****************/
 #about {
     padding: 4rem 0;
-    background: var(--secondary);
+    background: #0a0a0a !important;
 }
 
 .about-content {
@@ -1104,7 +1104,7 @@ header .wrapper {
 }
 
 #education {
-    background: var(--primary) !important;
+    background: var(--secondary) !important;
     padding: 4rem 0;
     position: relative;
     overflow: hidden;
@@ -1197,7 +1197,7 @@ header .wrapper {
 }
 
 #certifications {
-    background: var(--light-gray);
+    background: var(--primary);
 }
 
 .certification-item {
@@ -2040,7 +2040,7 @@ a:hover {
     padding: 4rem 0;
     overflow: hidden;
     position: relative;
-    background: var(--secondary);
+    background: var(--primary);
 }
 
 #certifications h2 {
@@ -2054,6 +2054,28 @@ a:hover {
     position: relative;
     margin: 0 auto;
     padding: 0 1rem;
+}
+
+/* Add fade effect on both sides */
+.certifications-container::before,
+.certifications-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100px;
+    z-index: 10;
+    pointer-events: none;
+}
+
+.certifications-container::before {
+    left: 0;
+    background: linear-gradient(to right, var(--primary) 0%, transparent 100%);
+}
+
+.certifications-container::after {
+    right: 0;
+    background: linear-gradient(to left, var(--primary) 0%, transparent 100%);
 }
 
 .certifications-scroll {
@@ -2301,6 +2323,7 @@ a:hover {
 
 /* Experience Section */
 #experience {
+    background: var(--secondary);
     padding: 4rem 0;
     color: white;
 }
@@ -2662,7 +2685,7 @@ html {
 /* Contact Section */
 #contact {
     padding: 4rem 0;
-    background: var(--secondary);
+    background: var(--primary);
 }
 
 #contact h2 {
@@ -3089,4 +3112,21 @@ input, textarea {
 .about-text h2:after {
     left: 0;
     transform: none;
+}
+
+/* Header gradient text effect */
+.logo-container h1 a {
+    background: linear-gradient(45deg, #4FD1C5 30%, #63B3ED 70%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    position: relative;
+    display: inline-block;
+    animation: gradientFlow 8s linear infinite;
+    background-size: 200% auto;
+    text-decoration: none;
+}
+
+.logo-container h1 a:hover {
+    text-decoration: none;
 }

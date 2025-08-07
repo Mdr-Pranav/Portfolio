@@ -77,6 +77,7 @@
         .about-section {
             padding-top: 80px;
             scroll-margin-top: 80px;
+            background: #0a0a0a !important;
         }
 
         #hero {
@@ -100,7 +101,7 @@
         <div class="wrapper">
             
 			<div class="logo-container">
-				<h1>Pranav M</h1>
+				<h1><a href="#top">Pranav</a></h1>
             </div>       
             
 			<!-- ------------------------------------------------------
@@ -109,11 +110,9 @@
             ------------------------------------------------------- -->
 			<nav id="mainnav">
             	<ul>
-                	<li><a href="#top">Home</a></li>
-                	<li><a href="#work">Projects</a></li>
+                	<li><a href="#experience">Experience</a></li>
                     <li><a href="#skills">Skills</a></li>
-                    <li><a href="#education">Education</a></li>
-                    <li><a href="#certifications">Certificates</a></li>
+                	<li><a href="#work">Projects</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
@@ -184,6 +183,42 @@
                         </a>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="experience">
+        <div class="wrapper">
+            <h2><i class="fas fa-briefcase"></i> Experience</h2>
+            
+            <div class="experience-item" data-aos="fade-up" data-aos-duration="800">
+                <div class="experience-header">
+                    <img src="Images/isro-logo.png" alt="ISRO Logo" class="company-logo">
+                    <div class="experience-title">
+                        <h3>AIML- Intern, ISRO (ISTRAC Centre), Bangalore, India</h3>
+                        <p class="experience-date"><i class="far fa-calendar-alt"></i> Jun 2025 – Aug 2025</p>
+                    </div>
+                </div>
+                <ul class="experience-details">
+                    <li><i class="fas fa-brain"></i> Explored ST-GNN, YOLO, LSTM Autoencoders, and Vision Transformers for anomaly detection in satellite telemetry; pivoted based on data structure and model limitations.</li>
+                    <li><i class="fas fa-project-diagram"></i> Developed a multi-model anomaly detection pipeline for satellite telemetry using CAE, One-Class SVM, and GMM, achieving 90% accuracy on unlabeled data.</li>
+                    <li><i class="fas fa-eye"></i> Applied YOLOv8 for visual anomaly localization by converting time-series data into plots, enabling feature-level diagnostics with bounding boxes.</li>
+                    <li><i class="fas fa-desktop"></i> Built a web-based dashboard (Flask + JS) for real-time upload, analysis, and visualization of anomalies in satellite health monitoring.</li>
+                </ul>
+            </div>
+
+            <div class="experience-item" data-aos="fade-up" data-aos-duration="800">
+                <div class="experience-header">
+                    <img src="Images/pes-logo.png" alt="PES University Logo" class="company-logo">
+                    <div class="experience-title">
+                        <h3>University AIML Club Coordinator, PES University, Bangalore, India</h3>
+                        <p class="experience-date"><i class="far fa-calendar-alt"></i> Jan 2023 – Dec 2024</p>
+                    </div>
+                </div>
+                <ul class="experience-details">
+                    <li><i class="fas fa-users"></i> Led the organization's design domain and managed 15 club meetings, workshops, hackathons, and events focused on AI and ML technologies, engaging an average of 30 attendees per session.</li>
+                    <li><i class="fas fa-project-diagram"></i> Collaborated on five projects and research endeavors applying AI and ML techniques to real-world challenges, resulting in the development of solutions that garnered recognition within the club community.</li>
+                </ul>
             </div>
         </div>
     </section>
@@ -341,40 +376,6 @@
         </div>
     </section>
     
-    <section id="education">
-        <div class="wrapper">
-            <h2><i class="fas fa-graduation-cap"></i> Education</h2>
-            
-            <div class="education-item" data-aos="fade-up" data-aos-duration="800">
-                <div class="education-details">
-                    <h3><i class="fas fa-university"></i> People Education Society (PES) University, Bangalore, India</h3>
-                    <p class="education-date"><i class="far fa-calendar-alt"></i> July 2022 - Present</p>
-                    <p class="education-degree"><i class="fas fa-book"></i> Bachelors of Science, Computer Science and Engineering (Senior)</p>
-                    <p class="education-gpa"><i class="fas fa-star"></i> CGPA: 8.68/10</p>
-                    <p class="education-achievements"><i class="fas fa-trophy"></i> Won 2 university-level hackathons</p>
-                </div>
-            </div>
-            
-            <div class="education-item" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
-                <div class="education-details">
-                    <h3><i class="fas fa-school"></i> Narayana Jr. College, Anantapur, India</h3>
-                    <p class="education-date"><i class="far fa-calendar-alt"></i> July 2020 - May 2022</p>
-                    <p class="education-degree"><i class="fas fa-atom"></i> Maths, Physics, Chemistry</p>
-                    <p class="education-percentage"><i class="fas fa-chart-line"></i> Percentage: 84.6%</p>
-                </div>
-            </div>
-            
-            <div class="education-item" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
-                <div class="education-details">
-                    <h3><i class="fas fa-school"></i> Vishwa Bharathi E.M. High School, Anantapur, India</h3>
-                    <p class="education-date"><i class="far fa-calendar-alt"></i> July 2015 – May 2020</p>
-                    <p class="education-degree"><i class="fas fa-book"></i> High School</p>
-                    <p class="education-percentage"><i class="fas fa-chart-line"></i> Percentage: 98.67%</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    
     <section id="certifications">
         <div class="wrapper">
             <h2><i class="fas fa-certificate"></i> Certifications</h2>
@@ -433,42 +434,39 @@
         </div>
     </section>
     
-    <section id="experience">
+    <section id="education">
         <div class="wrapper">
-            <h2><i class="fas fa-briefcase"></i> Experience</h2>
+            <h2><i class="fas fa-graduation-cap"></i> Education</h2>
             
-            <div class="experience-item" data-aos="fade-up" data-aos-duration="800">
-                <div class="experience-header">
-                    <img src="Images/isro-logo.png" alt="ISRO Logo" class="company-logo">
-                    <div class="experience-title">
-                        <h3>AIML- Intern, ISRO (ISTRAC Centre), Bangalore, India</h3>
-                        <p class="experience-date"><i class="far fa-calendar-alt"></i> Jun 2025 – Aug 2025</p>
-                    </div>
+            <div class="education-item" data-aos="fade-up" data-aos-duration="800">
+                <div class="education-details">
+                    <h3><i class="fas fa-university"></i> People Education Society (PES) University, Bangalore, India</h3>
+                    <p class="education-date"><i class="far fa-calendar-alt"></i> July 2022 - Present</p>
+                    <p class="education-degree"><i class="fas fa-book"></i> Bachelors of Science, Computer Science and Engineering (Senior)</p>
+                    <p class="education-gpa"><i class="fas fa-star"></i> CGPA: 8.68/10</p>
+                    <p class="education-achievements"><i class="fas fa-trophy"></i> Won 2 university-level hackathons</p>
                 </div>
-                <ul class="experience-details">
-                    <li><i class="fas fa-brain"></i> Explored ST-GNN, YOLO, LSTM Autoencoders, and Vision Transformers for anomaly detection in satellite telemetry; pivoted based on data structure and model limitations.</li>
-                    <li><i class="fas fa-project-diagram"></i> Developed a multi-model anomaly detection pipeline for satellite telemetry using CAE, One-Class SVM, and GMM, achieving 90% accuracy on unlabeled data.</li>
-                    <li><i class="fas fa-eye"></i> Applied YOLOv8 for visual anomaly localization by converting time-series data into plots, enabling feature-level diagnostics with bounding boxes.</li>
-                    <li><i class="fas fa-desktop"></i> Built a web-based dashboard (Flask + JS) for real-time upload, analysis, and visualization of anomalies in satellite health monitoring.</li>
-                </ul>
             </div>
-
-            <div class="experience-item" data-aos="fade-up" data-aos-duration="800">
-                <div class="experience-header">
-                    <img src="Images/pes-logo.png" alt="PES University Logo" class="company-logo">
-                    <div class="experience-title">
-                        <h3>University AIML Club Coordinator, PES University, Bangalore, India</h3>
-                        <p class="experience-date"><i class="far fa-calendar-alt"></i> Jan 2023 – Dec 2024</p>
-                    </div>
+            
+            <div class="education-item" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+                <div class="education-details">
+                    <h3><i class="fas fa-school"></i> Narayana Jr. College, Anantapur, India</h3>
+                    <p class="education-date"><i class="far fa-calendar-alt"></i> July 2020 - May 2022</p>
+                    <p class="education-degree"><i class="fas fa-atom"></i> Maths, Physics, Chemistry</p>
+                    <p class="education-percentage"><i class="fas fa-chart-line"></i> Percentage: 84.6%</p>
                 </div>
-                <ul class="experience-details">
-                    <li><i class="fas fa-users"></i> Led the organization's design domain and managed 15 club meetings, workshops, hackathons, and events focused on AI and ML technologies, engaging an average of 30 attendees per session.</li>
-                    <li><i class="fas fa-project-diagram"></i> Collaborated on five projects and research endeavors applying AI and ML techniques to real-world challenges, resulting in the development of solutions that garnered recognition within the club community.</li>
-                </ul>
+            </div>
+            
+            <div class="education-item" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
+                <div class="education-details">
+                    <h3><i class="fas fa-school"></i> Vishwa Bharathi E.M. High School, Anantapur, India</h3>
+                    <p class="education-date"><i class="far fa-calendar-alt"></i> July 2015 – May 2020</p>
+                    <p class="education-degree"><i class="fas fa-book"></i> High School</p>
+                    <p class="education-percentage"><i class="fas fa-chart-line"></i> Percentage: 98.67%</p>
+                </div>
             </div>
         </div>
-    </section>
-    
+
     <!-- Contact Section -->
     <section id="contact">
     	<div class="wrapper">
