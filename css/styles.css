@@ -339,12 +339,19 @@ header .wrapper {
 /***************** Hero Section *****************/
 #hero {
     position: relative;
-    min-height: 60vh;
+    min-height: auto;
     display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
     overflow: hidden;
     background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(/Images/background.webp) no-repeat center center/cover;
-    padding: 4rem 0;
+    padding: 0;
+}
+
+.hero-wrapper {
+    padding: 0 2rem 0.1rem 2rem !important;
+    margin: 0 !important;
 }
 
 .hero-background {
@@ -384,15 +391,15 @@ header .wrapper {
 .hero-content {
     position: relative;
     z-index: 1;
-    text-align: left;
+    text-align: center;
     max-width: 800px;
-    margin: 0 auto;
+    margin: 0 auto 3rem auto;
     padding: 0 2rem;
 }
 
 .hero-text {
     margin-bottom: 2rem;
-    text-align: left;
+    text-align: center;
 }
 
 .hero-text .greeting {
@@ -509,8 +516,13 @@ header .wrapper {
 /* Mobile Responsive Styles for Hero */
 @media only screen and (max-width: 768px) {
     #hero {
-        min-height: 50vh;
-        padding: 3rem 0;
+        min-height: auto;
+        padding: 0;
+    }
+
+    .hero-wrapper {
+        padding: 0 1rem 0.05rem 1rem !important;
+        margin: 0 !important;
     }
 
     .hero-text .greeting {
@@ -526,6 +538,26 @@ header .wrapper {
         letter-spacing: 1px;
         line-height: 1.2;
         margin-bottom: 1.25rem;
+    }
+
+    .name-section .greeting {
+        font-size: 1.5rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .name-section .name {
+        font-size: 3.5rem;
+        letter-spacing: 1px;
+        line-height: 1.2;
+    }
+
+    .about-text .about-image {
+        width: 250px;
+        height: 250px;
+    }
+
+    .about-text .subtitle {
+        font-size: 1.2rem;
     }
 
     .subtitle {
@@ -545,8 +577,13 @@ header .wrapper {
 
 @media only screen and (max-width: 480px) {
     #hero {
-        min-height: 40vh;
-        padding: 2rem 0;
+        min-height: auto;
+        padding: 0;
+    }
+
+    .hero-wrapper {
+        padding: 0 1rem 0.02rem 1rem !important;
+        margin: 0 !important;
     }
 
     .hero-text .greeting {
@@ -561,6 +598,26 @@ header .wrapper {
         letter-spacing: 0.5px;
         line-height: 1.2;
         margin-bottom: 1rem;
+    }
+
+    .name-section .greeting {
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .name-section .name {
+        font-size: 2.5rem;
+        letter-spacing: 0.5px;
+        line-height: 1.2;
+    }
+
+    .about-text .about-image {
+        width: 200px;
+        height: 200px;
+    }
+
+    .about-text .subtitle {
+        font-size: 1rem;
     }
 
     .subtitle {
@@ -616,6 +673,8 @@ header .wrapper {
     gap: 2rem;
     max-width: 1200px;
     margin: 0 auto;
+    position: relative;
+    z-index: 1;
 }
 
 .about-image {
@@ -647,20 +706,58 @@ header .wrapper {
 }
 
 .about-text {
-    text-align: left;
+    text-align: center;
     flex: 1;
+    width: 100%;
 }
 
-.about-text h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1.5rem;
-    color: var(--text);
-    text-align: left;
+.name-section {
+    text-align: center;
+    margin: 0 0 1.5rem 0;
+}
+
+.name-section .greeting {
+    font-size: 2rem;
+    color: #ffffff;
+    margin: 0 0 0.5rem 0;
+    font-weight: 400;
+    letter-spacing: 1px;
+    display: block;
+}
+
+.name-section .name {
+    font-size: 5rem;
+    line-height: 1.1;
+    margin: 0;
+    letter-spacing: 2px;
+    font-weight: 800;
+    color: transparent;
+    position: relative;
+    display: block;
 }
 
 .about-text h2:after {
-    left: 0;
-    transform: none;
+    display: none;
+}
+
+.about-text .about-image {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(52, 152, 219, 0.7);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex-shrink: 0;
+    margin: 2rem auto;
+    display: block;
+}
+
+.about-text .subtitle {
+    font-size: 1.5rem;
+    color: var(--accent);
+    margin-bottom: 2rem;
+    font-weight: 500;
+    opacity: 0.9;
 }
 
 /****************** PROJECT PAGE SPECIFIC STYLES ****************/

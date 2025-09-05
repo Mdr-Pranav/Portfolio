@@ -75,15 +75,15 @@
         }
 
         .about-section {
-            padding-top: 80px;
-            scroll-margin-top: 80px;
+            padding-top: 0px;
+            scroll-margin-top: 0px;
             background: #0a0a0a !important;
         }
 
         #hero {
-            min-height: 100vh;
+            min-height: auto;
             display: flex;
-            align-items: center;
+            align-items: flex-start;
         }
     </style>
 
@@ -101,7 +101,7 @@
         <div class="wrapper">
             
 			<div class="logo-container">
-				<h1><a href="#top">Pranav</a></h1>
+				<h1><a href="#hero">Pranav</a></h1>
             </div>       
             
 			<!-- ------------------------------------------------------
@@ -126,40 +126,24 @@
 	section and the projects section.
     ------------------------------------------------------- -->
     
-    <section id="hero">
+    <section id="hero" class="about-section">
         <div class="hero-background">
             <div class="hero-grid"></div>
             <div class="hero-glow"></div>
         </div>
-        <div class="wrapper">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <p class="greeting" data-aos="fade-up" data-aos-duration="1000">Hi, I'm</p>
-                    <h1 class="name" data-aos="fade-up" data-aos-duration="1000">
-                        <span class="gradient-text">PRANAV MUDAR</span>
-                    </h1>
-                    <p class="subtitle" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-                        Computer Science student at PES University
-                    </p>
-                    <p class="description" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
-                        Exploring the intersection of technology and creativity. Passionate about building innovative solutions and learning new technologies.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="about-section" id="top">
-        <div class="wrapper">
-            <div class="about-content" data-aos="fade-up" data-aos-duration="1000">
-                <div class="about-image">
-                    <img src="/dp/Me2.jpg" alt="Pranav Mudar" id="about-avatar" class="clickable-avatar">
-                </div>
+        <div class="wrapper hero-wrapper">
+            <div class="about-content" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
                 <div class="about-text">
-                    <h2>About Me</h2>
-                    <p>I am a passionate Computer Science student with a strong interest in web technologies, artificial intelligence, and data analytics. My journey in technology began with a curiosity about how things work, which has evolved into a deep passion for creating innovative solutions to real-world problems.</p>
-                    <p>Through my academic journey and personal projects, I've developed expertise in full-stack web development, machine learning, and software engineering. I believe in continuous learning and staying updated with the latest technological advancements.</p>
-                    <p>When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or working on personal projects that challenge my skills and creativity.</p>
+                    <div class="name-section">
+                        <p class="greeting">Hi, I'm</p>
+                        <h1 class="name"><span class="gradient-text">PRANAV MUDAR</span></h1>
+                    </div>
+                    <div class="about-image">
+                        <img src="/dp/Me2.jpg" alt="Pranav Mudar" id="about-avatar" class="clickable-avatar">
+                    </div>
+                    <p class="subtitle">Computer Science student at PES University</p>
+                    <p>I'm a passionate Computer Science student with strong interests in web technologies, artificial intelligence, and data analytics. What began as simple curiosity about how things work has grown into a drive to build innovative, real-world solutions.</p>
+                    <p>Through academics and personal projects, I've developed hands-on experience in full-stack web development, machine learning, and software engineering, and I'm committed to continuous learning and staying current with new tools and trends. When I'm not coding, I'm exploring emerging tech, contributing to open source, or building personal projects that push my skills and creativity.</p>
                     <div class="about-social-links">
                         <a href="mailto:mudarpranav3@gmail.com" class="social-link" title="Email">
                             <i class="fas fa-envelope"></i>
@@ -522,7 +506,7 @@
     </div>
 
     <!-- Back to Top Button -->
-    <a href="#top" class="back-to-top" id="backToTop">
+    <a href="#hero" class="back-to-top" id="backToTop">
         <i class="fas fa-arrow-up"></i>
     </a>
 
